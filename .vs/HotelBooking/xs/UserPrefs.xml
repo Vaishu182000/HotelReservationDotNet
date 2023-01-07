@@ -1,4 +1,41 @@
 ﻿<Properties StartupConfiguration="{14CD16ED-23CD-4328-B47A-3B4CD2C66B62}|https">
-  <MonoDevelop.Ide.ItemProperties.HotelBooking FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="HotelBooking/Models/Booking.cs">
+    <Files>
+      <File FileName="HotelBooking/Models/Location.cs" />
+      <File FileName="HotelBooking/Models/Hotel.cs" />
+      <File FileName="HotelBooking/Models/Room.cs" />
+      <File FileName="HotelBooking/Models/Availability.cs" />
+      <File FileName="HotelBooking/Models/Booking.cs" Line="10" Column="62" />
+      <File FileName="HotelBooking/Models/User.cs" />
+      <File FileName="HotelBooking/Data/DbInitializer.cs" />
+      <File FileName="HotelBooking/Program.cs" />
+      <File FileName="HotelBooking/appsettings.json" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="HotelBooking" expanded="True">
+            <Node name="HotelBooking" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.HotelBooking PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

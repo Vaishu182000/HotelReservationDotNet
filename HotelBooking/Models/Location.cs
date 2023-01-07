@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HotelBooking.Models
 {
@@ -8,7 +9,10 @@ namespace HotelBooking.Models
 		public string location { get; set; }
 
 		[Key]
-		public int location_id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int location_id { get; set; }
+
+		public ICollection<Hotel> hotels { get; set; }
 	}
 }
 
