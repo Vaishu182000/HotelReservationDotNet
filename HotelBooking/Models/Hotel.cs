@@ -8,14 +8,13 @@ namespace HotelBooking.Models
 	{
 		[Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int hotel_id { get; set; }
-		public string hotel_name { get; set; }
-		public int no_of_rooms { get; set; }
+        public int hotelId { get; set; }
+		public string hotelName { get; set; }
+		public int noOfRooms { get; set; }
 
 		public int LocationId { get; set; }
-		public Location location { get; set; }
-
-		public ICollection<Room> rooms { get; set; }
+		[ForeignKey("LocationId")]
+		public virtual Location location { get; set; }
 	}
 }
 

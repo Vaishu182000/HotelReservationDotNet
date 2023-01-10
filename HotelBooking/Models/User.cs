@@ -8,13 +8,11 @@ namespace HotelBooking.Models
 	{
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int user_id { get; set; }
-		public string user_name { get; set; }
-		public string user_email { get; set; }
+        public int userId { get; set; }
+		public string userName { get; set; }
+		public string userEmail { get; set; }
 		public string phone { get; set; }
-
-		public int BookingId { get; set; }
-		public Booking booking { get; set; }
+		public string password { get; set; }
 	}
 }
 

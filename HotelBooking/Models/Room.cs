@@ -8,15 +8,14 @@ namespace HotelBooking.Models
 	{
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int room_id { get; set; }
-		public string room_name { get; set; }
-		public float room_rate { get; set; }
-		public int room_capacity { get; set; }
+        public int roomId { get; set; }
+		public string roomName { get; set; }
+		public float roomRate { get; set; }
+		public int roomCapacity { get; set; }
 
 		public int HotelId { get; set; }
-		public Hotel hotel { get; set; }
-
-		public ICollection<Booking> bookings { get; set; }
+		[ForeignKey("HotelId")]
+		public virtual Hotel hotel { get; set; }
 	}
 }
 

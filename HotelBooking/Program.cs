@@ -1,4 +1,5 @@
 ﻿using HotelBooking.Data;
+using HotelBooking.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DbInitializer>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("mssql")));
+builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<LocationService>();
+builder.Services.AddScoped<HotelService>();
+builder.Services.AddScoped<RoomService>();
+builder.Services.AddScoped<BookingService>();
+builder.Services.AddScoped<AvailabilityService>();
 
 var app = builder.Build();
 

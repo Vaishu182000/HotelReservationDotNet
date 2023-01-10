@@ -8,7 +8,7 @@ namespace HotelBooking.Models
 	{
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int availability_id { get; set; }
+        public int availabilityId { get; set; }
         public DateTime checkInTime { get; set; }
         public DateTime checkOutTime { get; set; }
 

@@ -10,9 +10,7 @@ namespace HotelBooking.Models
 
 		[Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int location_id { get; set; }
-
-		public ICollection<Hotel> hotels { get; set; }
+        public int locationId { get; set; }
 	}
 }
 
