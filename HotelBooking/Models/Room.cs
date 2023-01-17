@@ -10,6 +10,7 @@ namespace HotelBooking.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int roomId { get; set; }
 		public string roomName { get; set; }
+		public string roomImage { get; set; }
 		public float roomRate { get; set; }
 		public int roomCapacity { get; set; }
 

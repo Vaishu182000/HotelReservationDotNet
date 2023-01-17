@@ -1,5 +1,7 @@
 ﻿using System;
+using AutoMapper;
 using HotelBooking.Data;
+using HotelBooking.Data.ViewModels;
 using HotelBooking.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,13 +10,15 @@ namespace HotelBooking.Services
 	public class UserService
 	{
         private DbInitializer _dbContext;
+        public readonly IMapper _mapper;
 
-        public UserService(DbInitializer dbContext)
+        public UserService(DbInitializer dbContext, IMapper mapper)
 		{
             _dbContext = dbContext;
+            _mapper = mapper;
         }
 
-        public bool UserSignUp(User user)
+        public bool UserSignUp(UserVM user)
         {
             if (user == null)
             {
@@ -24,7 +28,9 @@ namespace HotelBooking.Services
             {
                 try
                 {
-                    _dbContext.User.Add(user);
+                    var _mappedUser = _mapper.Map<User>(user);
+                    
+                    _dbContext.User.Add(_mappedUser);
                     _dbContext.SaveChanges();
                     return true;
                 }

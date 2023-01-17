@@ -16,9 +16,11 @@ namespace HotelBooking.Controllers
     public class HotelController : ControllerBase
     {
         private HotelService _hotelService;
-        public HotelController(HotelService hotelService)
+        private readonly ILogger<HotelController> _logger;
+        public HotelController(HotelService hotelService, ILogger<HotelController> logger)
         {
             _hotelService = hotelService;
+            _logger = logger;
         }
 
         [Route("[Action]")]
@@ -27,26 +29,53 @@ namespace HotelBooking.Controllers
         {
             var _result = _hotelService.AddHotel(hotel);
 
-            if (_result) return Ok("Hotel Added Successfully");
-            else return NotFound();
+            if (_result)
+            {
+                _logger.LogInformation("Hotel Added Successfully");
+                return Ok("Hotel Added Successfully");
+            }
+            else
+            {
+                _logger.LogError("Error in Added the Hotel to DB");
+                return NotFound();
+            }
         }
 
         [Route("[Action]")]
         [HttpGet]
         public IActionResult HotelList(string location)
         {
-            List<string> hotel = _hotelService.HotelListByLocation(location);
-            return Ok(hotel);
+            try
+            {
+                List<string> hotel = _hotelService.HotelListByLocation(location);
+                _logger.LogInformation("Retreived Hotel List based on Location");
+                return Ok(hotel);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.Message);
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
         [Route("[Action]")]
         [HttpGet]
         public IActionResult ListOfAllHotels()
         {
-            var _hotelList = _hotelService.GetAllHotels();
-
-            if (_hotelList != null) return Ok(_hotelList);
-            else return NotFound();
+            try
+            {
+                var _hotelList = _hotelService.GetAllHotels();
+                _logger.LogInformation("Retreived Hotel List");
+                return Ok(_hotelList);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                _logger.LogError(e.Message);
+                return NotFound();
+                throw;
+            }
         }
     }
 }

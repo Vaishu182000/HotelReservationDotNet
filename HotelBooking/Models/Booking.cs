@@ -11,8 +11,9 @@ namespace HotelBooking.Models
         public int bookingId { get; set; }
 		public int noOfPersons { get; set; }
 		public bool paid { get; set; }
-
-		public Availability availability { get; set; }
+		
+		public DateTime checkInTime { get; set; }
+		public DateTime checkOutTime { get; set; }
 
 		public int RoomId { get; set; }
 		public Room room { get; set; }

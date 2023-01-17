@@ -1,0 +1,912 @@
+2023-01-13 10:22:56.284 +05:30  INF  Application is shutting down...
+2023-01-13 10:27:34.047 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-13 10:27:34.137 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-13 10:27:34.142 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-13 10:27:34.142 +05:30  INF  Hosting environment: Development
+2023-01-13 10:27:34.142 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-13 10:28:04.482 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-13 10:28:04.931 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 452.3058ms
+2023-01-13 10:28:05.006 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui.css - -
+2023-01-13 10:28:05.043 +05:30  INF  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-01-13 10:28:05.044 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui.css - - - 200 143943 text/css 37.8702ms
+2023-01-13 10:28:05.050 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui-bundle.js - -
+2023-01-13 10:28:05.079 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui-standalone-preset.js - -
+2023-01-13 10:28:05.093 +05:30  INF  Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-01-13 10:28:05.094 +05:30  INF  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-01-13 10:28:05.099 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 49.1350ms
+2023-01-13 10:28:05.099 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 20.1734ms
+2023-01-13 10:28:05.432 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-13 10:28:05.650 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 218.7100ms
+2023-01-13 10:28:15.146 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Location/GetLocations - -
+2023-01-13 10:28:15.157 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.LocationController.GetLocations (HotelBooking)'
+2023-01-13 10:28:15.184 +05:30  INF  Route matched with {action = "GetLocations", controller = "Location"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetLocations() on controller HotelBooking.Controllers.LocationController (HotelBooking).
+2023-01-13 10:28:51.637 +05:30  ERR  An error occurred using the connection to database 'hotelreservation' on server 'tcp:dotnet-training-server.database.windows.net,1433'.
+2023-01-13 10:28:51.665 +05:30  ERR  An exception occurred while iterating over the results of a query for context type 'HotelBooking.Data.DbInitializer'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 35 - An internal exception was caught)
+ ---> System.Net.Sockets.SocketException (00000005, 0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Int64 startingTimestamp)
+   at System.Net.Dns.GetHostAddresses(String hostNameOrAddress, AddressFamily family)
+   at Microsoft.Data.SqlClient.SNI.SNICommon.GetDnsIpAddresses(String serverName)
+   at Microsoft.Data.SqlClient.SNI.SNITCPHandle.Connect(String serverName, Int32 port, TimeSpan timeout, Boolean isInfiniteTimeout, SqlConnectionIPAddressPreference ipPreference, String cachedFQDN, SQLDNSInfo& pendingDNSInfo)
+   at Microsoft.Data.SqlClient.SNI.SNITCPHandle..ctor(String serverName, Int32 port, Int64 timerExpire, Boolean parallel, SqlConnectionIPAddressPreference ipPreference, String cachedFQDN, SQLDNSInfo& pendingDNSInfo, Boolean tlsFirst, String hostNameInCertificate)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:00000000-0000-0000-0000-000000000000Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 35 - An internal exception was caught)
+ ---> System.Net.Sockets.SocketException (00000005, 0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Int64 startingTimestamp)
+   at System.Net.Dns.GetHostAddresses(String hostNameOrAddress, AddressFamily family)
+   at Microsoft.Data.SqlClient.SNI.SNICommon.GetDnsIpAddresses(String serverName)
+   at Microsoft.Data.SqlClient.SNI.SNITCPHandle.Connect(String serverName, Int32 port, TimeSpan timeout, Boolean isInfiniteTimeout, SqlConnectionIPAddressPreference ipPreference, String cachedFQDN, SQLDNSInfo& pendingDNSInfo)
+   at Microsoft.Data.SqlClient.SNI.SNITCPHandle..ctor(String serverName, Int32 port, Int64 timerExpire, Boolean parallel, SqlConnectionIPAddressPreference ipPreference, String cachedFQDN, SQLDNSInfo& pendingDNSInfo, Boolean tlsFirst, String hostNameInCertificate)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+
+2023-01-13 10:28:51.787 +05:30  ERR  A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 35 - An internal exception was caught)
+2023-01-13 10:28:51.801 +05:30  INF  Executed action HotelBooking.Controllers.LocationController.GetLocations (HotelBooking) in 36606.323ms
+2023-01-13 10:28:51.807 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.LocationController.GetLocations (HotelBooking)'
+2023-01-13 10:28:51.815 +05:30  ERR  An unhandled exception has occurred while executing the request.Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 35 - An internal exception was caught)
+ ---> System.Net.Sockets.SocketException (00000005, 0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Int64 startingTimestamp)
+   at System.Net.Dns.GetHostAddresses(String hostNameOrAddress, AddressFamily family)
+   at Microsoft.Data.SqlClient.SNI.SNICommon.GetDnsIpAddresses(String serverName)
+   at Microsoft.Data.SqlClient.SNI.SNITCPHandle.Connect(String serverName, Int32 port, TimeSpan timeout, Boolean isInfiniteTimeout, SqlConnectionIPAddressPreference ipPreference, String cachedFQDN, SQLDNSInfo& pendingDNSInfo)
+   at Microsoft.Data.SqlClient.SNI.SNITCPHandle..ctor(String serverName, Int32 port, Int64 timerExpire, Boolean parallel, SqlConnectionIPAddressPreference ipPreference, String cachedFQDN, SQLDNSInfo& pendingDNSInfo, Boolean tlsFirst, String hostNameInCertificate)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at HotelBooking.Services.LocationService.GetLocations() in /Users/presidio/Projects/HotelBooking/HotelBooking/Services/LocationService.cs:line 39
+   at HotelBooking.Controllers.LocationController.GetLocations() in /Users/presidio/Projects/HotelBooking/HotelBooking/Controllers/LocationController.cs:line 50
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+
+2023-01-13 10:28:51.866 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Location/GetLocations - - - 500 - text/plain;+charset=utf-8 36720.3814ms
+2023-01-13 10:31:17.059 +05:30  INF  Application is shutting down...
+2023-01-13 10:31:42.124 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-13 10:31:42.183 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-13 10:31:42.186 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-13 10:31:42.187 +05:30  INF  Hosting environment: Development
+2023-01-13 10:31:42.187 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-13 10:31:42.478 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-13 10:31:42.778 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 303.1038ms
+2023-01-13 10:31:43.185 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-13 10:31:43.433 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 248.1599ms
+2023-01-13 10:31:47.855 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Location/GetLocations - -
+2023-01-13 10:31:47.871 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.LocationController.GetLocations (HotelBooking)'
+2023-01-13 10:31:47.890 +05:30  INF  Route matched with {action = "GetLocations", controller = "Location"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetLocations() on controller HotelBooking.Controllers.LocationController (HotelBooking).
+2023-01-13 10:31:55.392 +05:30  INF  Executed DbCommand (279ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+2023-01-13 10:31:55.549 +05:30  INF  Extracted Locations from DB
+2023-01-13 10:31:55.557 +05:30  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelBooking.Models.Location, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-01-13 10:31:55.571 +05:30  INF  Executed action HotelBooking.Controllers.LocationController.GetLocations (HotelBooking) in 7673.2375ms
+2023-01-13 10:31:55.571 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.LocationController.GetLocations (HotelBooking)'
+2023-01-13 10:31:55.585 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Location/GetLocations - - - 200 - application/json;+charset=utf-8 7730.0095ms
+2023-01-13 10:32:30.009 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Hotel/CreateHotel application/json 68
+2023-01-13 10:32:30.010 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking)'
+2023-01-13 10:32:30.033 +05:30  INF  Route matched with {action = "CreateHotel", controller = "Hotel"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateHotel(HotelBooking.Data.ViewModels.HotelVM) on controller HotelBooking.Controllers.HotelController (HotelBooking).
+2023-01-13 10:32:32.374 +05:30  INF  Executed DbCommand (1,670ms) [Parameters=[@__location_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+WHERE [l].[location] = @__location_0
+2023-01-13 10:32:32.636 +05:30  INF  Executed DbCommand (230ms) [Parameters=[@__location_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+WHERE [l].[location] = @__location_0
+2023-01-13 10:32:33.123 +05:30  INF  Executed DbCommand (238ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Hotel] ([LocationId], [hotelName], [noOfRooms])
+OUTPUT INSERTED.[hotelId]
+VALUES (@p0, @p1, @p2);
+2023-01-13 10:32:33.162 +05:30  INF  Hotel Added Successfully
+2023-01-13 10:32:33.163 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-13 10:32:33.164 +05:30  INF  Executed action HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking) in 3131.264ms
+2023-01-13 10:32:33.164 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking)'
+2023-01-13 10:32:33.166 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Hotel/CreateHotel application/json 68 - 200 - text/plain;+charset=utf-8 3156.8675ms
+2023-01-13 10:33:19.637 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Room/CreateRoom application/json 87
+2023-01-13 10:33:19.638 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking)'
+2023-01-13 10:33:19.640 +05:30  INF  Route matched with {action = "CreateRoom", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateRoom(HotelBooking.Data.ViewModels.RoomVM) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-13 10:33:20.016 +05:30  INF  Executed DbCommand (239ms) [Parameters=[@__hotel_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelName] = @__hotel_0
+2023-01-13 10:33:20.039 +05:30  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-01-13 10:33:20.052 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking) in 412.0351ms
+2023-01-13 10:33:20.052 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking)'
+2023-01-13 10:33:20.053 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Room/CreateRoom application/json 87 - 400 - application/problem+json;+charset=utf-8 415.5611ms
+2023-01-13 10:33:51.289 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Room/CreateRoom application/json 87
+2023-01-13 10:33:51.291 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking)'
+2023-01-13 10:33:51.292 +05:30  INF  Route matched with {action = "CreateRoom", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateRoom(HotelBooking.Data.ViewModels.RoomVM) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-13 10:33:51.531 +05:30  INF  Executed DbCommand (232ms) [Parameters=[@__hotel_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelName] = @__hotel_0
+2023-01-13 10:33:51.533 +05:30  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-01-13 10:33:51.533 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking) in 241.0606ms
+2023-01-13 10:33:51.533 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking)'
+2023-01-13 10:33:51.533 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Room/CreateRoom application/json 87 - 400 - application/problem+json;+charset=utf-8 244.0525ms
+2023-01-13 10:34:55.402 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Room/CreateRoom application/json 87
+2023-01-13 10:34:55.402 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking)'
+2023-01-13 10:34:55.404 +05:30  INF  Route matched with {action = "CreateRoom", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateRoom(HotelBooking.Data.ViewModels.RoomVM) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-13 10:34:55.656 +05:30  INF  Executed DbCommand (232ms) [Parameters=[@__hotel_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelName] = @__hotel_0
+2023-01-13 10:34:55.889 +05:30  INF  Executed DbCommand (229ms) [Parameters=[@__hotel_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelName] = @__hotel_0
+2023-01-13 10:34:56.206 +05:30  INF  Executed DbCommand (250ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Room] ([HotelId], [roomCapacity], [roomName], [roomRate])
+OUTPUT INSERTED.[roomId]
+VALUES (@p0, @p1, @p2, @p3);
+2023-01-13 10:34:56.213 +05:30  INF  Created Room Successfully
+2023-01-13 10:34:56.213 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-13 10:34:56.214 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking) in 809.022ms
+2023-01-13 10:34:56.214 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking)'
+2023-01-13 10:34:56.214 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Room/CreateRoom application/json 87 - 200 - text/plain;+charset=utf-8 812.1031ms
+2023-01-13 10:35:12.328 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Booking/CreateBooking application/json 193
+2023-01-13 10:35:12.330 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-01-13 10:35:12.334 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-01-13 10:35:12.681 +05:30  INF  Executed DbCommand (237ms) [Parameters=[@__roomName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomName] = @__roomName_0
+2023-01-13 10:35:12.922 +05:30  INF  Executed DbCommand (232ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-13 10:35:13.176 +05:30  INF  Executed DbCommand (231ms) [Parameters=[@__roomName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomName] = @__roomName_0
+2023-01-13 10:35:13.415 +05:30  INF  Executed DbCommand (238ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-13 10:35:13.832 +05:30  INF  Executed DbCommand (346ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-01-13 10:35:13.838 +05:30  INF  Created Booking Successfully
+2023-01-13 10:35:13.838 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-13 10:35:13.838 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 1503.9343ms
+2023-01-13 10:35:13.838 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-01-13 10:35:13.838 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Booking/CreateBooking application/json 193 - 200 - text/plain;+charset=utf-8 1510.0508ms
+2023-01-13 10:35:26.210 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Booking/BookingHistory?userEmail=vaishnavis%40presidio.com - -
+2023-01-13 10:35:26.211 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking)'
+2023-01-13 10:35:26.213 +05:30  INF  Route matched with {action = "BookingHistory", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult BookingHistory(System.String) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-01-13 10:35:26.468 +05:30  INF  Executed DbCommand (230ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-13 10:35:26.470 +05:30  INF  Retrieved Booking Information of vaishnavis@presidio.com
+2023-01-13 10:35:26.470 +05:30  INF  Executing OkObjectResult, writing value of type 'Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[[HotelBooking.Models.Booking, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-01-13 10:35:26.783 +05:30  INF  Executed DbCommand (278ms) [Parameters=[@___user_userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[bookingId], [b].[RoomId], [b].[UserId], [b].[checkInTime], [b].[checkOutTime], [b].[noOfPersons], [b].[paid]
+FROM [Booking] AS [b]
+WHERE [b].[UserId] = @___user_userId_0
+2023-01-13 10:35:26.827 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking) in 613.1256ms
+2023-01-13 10:35:26.828 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking)'
+2023-01-13 10:35:26.838 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Booking/BookingHistory?userEmail=vaishnavis%40presidio.com - - - 200 - application/json;+charset=utf-8 628.0219ms
+2023-01-13 10:35:35.244 +05:30  INF  Request starting HTTP/1.1 DELETE https://localhost:42275/Booking/CancelBooking?id=1 - -
+2023-01-13 10:35:35.244 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CancelBooking (HotelBooking)'
+2023-01-13 10:35:35.252 +05:30  INF  Route matched with {action = "CancelBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CancelBooking(Int32) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-01-13 10:35:35.545 +05:30  INF  Executed DbCommand (239ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[bookingId], [b].[RoomId], [b].[UserId], [b].[checkInTime], [b].[checkOutTime], [b].[noOfPersons], [b].[paid]
+FROM [Booking] AS [b]
+WHERE [b].[bookingId] = @__p_0
+2023-01-13 10:35:35.799 +05:30  INF  Executed DbCommand (237ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Booking]
+OUTPUT 1
+WHERE [bookingId] = @p0;
+2023-01-13 10:35:35.803 +05:30  INF  Deleted Information of Booking with 1
+2023-01-13 10:35:35.803 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-13 10:35:35.804 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CancelBooking (HotelBooking) in 551.0212ms
+2023-01-13 10:35:35.804 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CancelBooking (HotelBooking)'
+2023-01-13 10:35:35.804 +05:30  INF  Request finished HTTP/1.1 DELETE https://localhost:42275/Booking/CancelBooking?id=1 - - - 200 - text/plain;+charset=utf-8 559.7422ms
+2023-01-13 10:35:43.227 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Booking/BookingHistory?userEmail=vaishnavis%40presidio.com - -
+2023-01-13 10:35:43.227 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking)'
+2023-01-13 10:35:43.227 +05:30  INF  Route matched with {action = "BookingHistory", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult BookingHistory(System.String) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-01-13 10:35:43.457 +05:30  INF  Executed DbCommand (229ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-13 10:35:43.458 +05:30  INF  Retrieved Booking Information of vaishnavis@presidio.com
+2023-01-13 10:35:43.458 +05:30  INF  Executing OkObjectResult, writing value of type 'Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[[HotelBooking.Models.Booking, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-01-13 10:35:43.689 +05:30  INF  Executed DbCommand (230ms) [Parameters=[@___user_userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[bookingId], [b].[RoomId], [b].[UserId], [b].[checkInTime], [b].[checkOutTime], [b].[noOfPersons], [b].[paid]
+FROM [Booking] AS [b]
+WHERE [b].[UserId] = @___user_userId_0
+2023-01-13 10:35:43.690 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking) in 463.3048ms
+2023-01-13 10:35:43.690 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking)'
+2023-01-13 10:35:43.691 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Booking/BookingHistory?userEmail=vaishnavis%40presidio.com - - - 200 - application/json;+charset=utf-8 463.9414ms
+2023-01-13 11:30:45.810 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Location/AddLocation application/json 26
+2023-01-13 11:30:45.845 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.LocationController.AddLocation (HotelBooking)'
+2023-01-13 11:30:45.894 +05:30  INF  Route matched with {action = "AddLocation", controller = "Location"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddLocation(HotelBooking.Data.ViewModels.LocationVM) on controller HotelBooking.Controllers.LocationController (HotelBooking).
+2023-01-13 11:30:49.865 +05:30  INF  Executed DbCommand (270ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Location] ([location])
+OUTPUT INSERTED.[locationId]
+VALUES (@p0);
+2023-01-13 11:30:49.877 +05:30  INF  Location Added Successfully
+2023-01-13 11:30:49.878 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-13 11:30:49.879 +05:30  INF  Executed action HotelBooking.Controllers.LocationController.AddLocation (HotelBooking) in 3983.7443ms
+2023-01-13 11:30:49.879 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.LocationController.AddLocation (HotelBooking)'
+2023-01-13 11:30:49.880 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Location/AddLocation application/json 26 - 200 - text/plain;+charset=utf-8 4080.6902ms
+2023-01-13 12:36:08.965 +05:30  INF  Application is shutting down...
+2023-01-13 12:37:04.818 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-13 12:37:04.914 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-13 12:37:04.918 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-13 12:37:04.936 +05:30  INF  Hosting environment: Development
+2023-01-13 12:37:04.936 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-13 12:37:06.358 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-13 12:37:06.654 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 299.4517ms
+2023-01-13 12:37:06.770 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui-bundle.js - -
+2023-01-13 12:37:06.834 +05:30  INF  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-01-13 12:37:06.838 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 67.3985ms
+2023-01-13 12:37:07.049 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-13 12:37:07.247 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 198.0829ms
+2023-01-13 12:37:49.802 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Booking/CreateBooking application/json 202
+2023-01-13 12:37:49.814 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-01-13 12:37:49.848 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-01-13 12:37:57.302 +05:30  INF  Executed DbCommand (466ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-13 12:37:57.885 +05:30  INF  Executed DbCommand (404ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-01-13 12:37:58.453 +05:30  INF  Executed DbCommand (259ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-01-13 12:37:58.490 +05:30  INF  Created Booking Successfully
+2023-01-13 12:37:58.495 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-13 12:37:58.503 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 8646.5612ms
+2023-01-13 12:37:58.503 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-01-13 12:37:58.518 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Booking/CreateBooking application/json 202 - 200 - text/plain;+charset=utf-8 8716.5070ms
+2023-01-13 12:38:09.402 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Booking/BookingHistory?userEmail=vaishnavis%40presidio.com - -
+2023-01-13 12:38:09.404 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking)'
+2023-01-13 12:38:09.415 +05:30  INF  Route matched with {action = "BookingHistory", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult BookingHistory(System.String) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-01-13 12:38:09.717 +05:30  INF  Executed DbCommand (252ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-13 12:38:09.719 +05:30  INF  Retrieved Booking Information of vaishnavis@presidio.com
+2023-01-13 12:38:09.720 +05:30  INF  Executing OkObjectResult, writing value of type 'Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[[HotelBooking.Models.Booking, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-01-13 12:38:10.082 +05:30  INF  Executed DbCommand (323ms) [Parameters=[@___user_userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[bookingId], [b].[RoomId], [b].[UserId], [b].[checkInTime], [b].[checkOutTime], [b].[noOfPersons], [b].[paid]
+FROM [Booking] AS [b]
+WHERE [b].[UserId] = @___user_userId_0
+2023-01-13 12:38:10.116 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking) in 701.0666ms
+2023-01-13 12:38:10.117 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking)'
+2023-01-13 12:38:10.118 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Booking/BookingHistory?userEmail=vaishnavis%40presidio.com - - - 200 - application/json;+charset=utf-8 716.7353ms
+2023-01-13 13:15:44.511 +05:30  INF  Application is shutting down...
+2023-01-13 13:16:28.059 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-13 13:16:28.158 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-13 13:16:28.162 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-13 13:16:28.162 +05:30  INF  Hosting environment: Development
+2023-01-13 13:16:28.162 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-13 13:16:28.401 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-13 13:16:28.636 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 238.7610ms
+2023-01-13 13:16:28.931 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-13 13:16:29.130 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 198.3442ms
+2023-01-13 13:17:00.181 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 121
+2023-01-13 13:17:00.192 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-13 13:17:00.219 +05:30  INF  Route matched with {action = "UserSignUp", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserSignUp(HotelBooking.Data.ViewModels.UserVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-13 13:17:00.827 +05:30  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-01-13 13:17:00.838 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserSignUp (HotelBooking) in 611.2734ms
+2023-01-13 13:17:00.840 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-13 13:17:00.843 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 121 - 400 - application/problem+json;+charset=utf-8 661.7344ms
+2023-01-13 13:17:09.445 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 121
+2023-01-13 13:17:09.450 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-13 13:17:09.451 +05:30  INF  Route matched with {action = "UserSignUp", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserSignUp(HotelBooking.Data.ViewModels.UserVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-13 13:17:15.877 +05:30  INF  Executed DbCommand (323ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [User] ([password], [phone], [userEmail], [userName])
+OUTPUT INSERTED.[userId]
+VALUES (@p0, @p1, @p2, @p3);
+2023-01-13 13:17:15.962 +05:30  INF  User Signed Up Successfully
+2023-01-13 13:17:15.963 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-13 13:17:15.963 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserSignUp (HotelBooking) in 6511.9502ms
+2023-01-13 13:17:15.963 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-13 13:17:15.975 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 121 - 200 - text/plain;+charset=utf-8 6529.7560ms
+2023-01-13 13:17:33.971 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/User/UserLogin?userEmail=sridhars%40presidio.com&userPassword=Sridhar%2A1 - -
+2023-01-13 13:17:33.972 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-01-13 13:17:33.983 +05:30  INF  Route matched with {action = "UserLogin", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserLogin(System.String, System.String) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-13 13:17:34.806 +05:30  INF  Executed DbCommand (326ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-13 13:17:35.064 +05:30  INF  Executed DbCommand (240ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+2023-01-13 13:17:35.076 +05:30  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelBooking.Models.Location, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-01-13 13:17:35.079 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserLogin (HotelBooking) in 1096.209ms
+2023-01-13 13:17:35.079 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-01-13 13:17:35.080 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/User/UserLogin?userEmail=sridhars%40presidio.com&userPassword=Sridhar%2A1 - - - 200 - application/json;+charset=utf-8 1108.8285ms
+2023-01-13 13:22:21.299 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Location/AddLocation application/json 25
+2023-01-13 13:22:21.304 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.LocationController.AddLocation (HotelBooking)'
+2023-01-13 13:22:21.311 +05:30  INF  Route matched with {action = "AddLocation", controller = "Location"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddLocation(HotelBooking.Data.ViewModels.LocationVM) on controller HotelBooking.Controllers.LocationController (HotelBooking).
+2023-01-13 13:22:21.317 +05:30  INF  Executed action HotelBooking.Controllers.LocationController.AddLocation (HotelBooking) in 5.1996ms
+2023-01-13 13:22:21.319 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.LocationController.AddLocation (HotelBooking)'
+2023-01-13 13:22:21.324 +05:30  ERR  An unhandled exception has occurred while executing the request.System.MissingMethodException: Attempted to access a missing method.
+   at HotelBooking.Services.LocationService..ctor(DbInitializer dbContext)
+   at ResolveService(ILEmitResolverBuilderRuntimeContext, ServiceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method95(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
+2023-01-13 13:22:21.351 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Location/AddLocation application/json 25 - 500 - text/plain;+charset=utf-8 51.1676ms
+2023-01-13 13:22:35.680 +05:30  INF  Application is shutting down...
+2023-01-13 13:23:11.715 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-13 13:23:11.791 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-13 13:23:11.793 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-13 13:23:11.793 +05:30  INF  Hosting environment: Development
+2023-01-13 13:23:11.793 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-13 13:23:15.705 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-13 13:23:15.967 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 264.6877ms
+2023-01-13 13:23:16.171 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-13 13:23:16.431 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 259.7283ms
+2023-01-13 13:23:31.404 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Location/AddLocation application/json 25
+2023-01-13 13:23:31.435 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.LocationController.AddLocation (HotelBooking)'
+2023-01-13 13:23:31.489 +05:30  INF  Route matched with {action = "AddLocation", controller = "Location"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddLocation(HotelBooking.Data.ViewModels.LocationVM) on controller HotelBooking.Controllers.LocationController (HotelBooking).
+2023-01-13 13:23:38.755 +05:30  INF  Executed DbCommand (563ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Location] ([location])
+OUTPUT INSERTED.[locationId]
+VALUES (@p0);
+2023-01-13 13:23:38.839 +05:30  INF  Location Added Successfully
+2023-01-13 13:23:38.846 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-13 13:23:38.853 +05:30  INF  Executed action HotelBooking.Controllers.LocationController.AddLocation (HotelBooking) in 7357.7004ms
+2023-01-13 13:23:38.853 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.LocationController.AddLocation (HotelBooking)'
+2023-01-13 13:23:38.868 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Location/AddLocation application/json 25 - 200 - text/plain;+charset=utf-8 7464.6174ms
+2023-01-13 15:13:33.461 +05:30  INF  Application is shutting down...
+2023-01-13 15:14:23.388 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-13 15:14:23.474 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-13 15:14:23.477 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-13 15:14:23.477 +05:30  INF  Hosting environment: Development
+2023-01-13 15:14:23.477 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-13 15:14:39.109 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/ - -
+2023-01-13 15:14:39.174 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/ - - - 404 0 - 67.8564ms
+2023-01-13 15:15:09.431 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-13 15:15:09.707 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 276.1336ms
+2023-01-13 15:15:10.541 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-13 15:15:10.895 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 354.0187ms
+2023-01-13 15:15:29.171 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Location/GetLocations - -
+2023-01-13 15:15:29.179 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.LocationController.GetLocations (HotelBooking)'
+2023-01-13 15:15:29.221 +05:30  INF  Route matched with {action = "GetLocations", controller = "Location"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetLocations() on controller HotelBooking.Controllers.LocationController (HotelBooking).
+2023-01-13 15:15:36.025 +05:30  INF  Executed DbCommand (369ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+2023-01-13 15:15:36.160 +05:30  INF  Extracted Locations from DB
+2023-01-13 15:15:36.169 +05:30  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelBooking.Models.Location, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-01-13 15:15:36.181 +05:30  INF  Executed action HotelBooking.Controllers.LocationController.GetLocations (HotelBooking) in 6953.647ms
+2023-01-13 15:15:36.182 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.LocationController.GetLocations (HotelBooking)'
+2023-01-13 15:15:36.196 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Location/GetLocations - - - 200 - application/json;+charset=utf-8 7025.3146ms
+2023-01-13 15:15:53.160 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Hotel/ListOfAllHotels - -
+2023-01-13 15:15:53.161 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.HotelController.ListOfAllHotels (HotelBooking)'
+2023-01-13 15:15:53.166 +05:30  INF  Route matched with {action = "ListOfAllHotels", controller = "Hotel"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ListOfAllHotels() on controller HotelBooking.Controllers.HotelController (HotelBooking).
+2023-01-13 15:15:53.444 +05:30  INF  Executed DbCommand (237ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+2023-01-13 15:15:53.461 +05:30  INF  Retreived Hotel List
+2023-01-13 15:15:53.462 +05:30  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelBooking.Models.Hotel, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-01-13 15:15:53.466 +05:30  INF  Executed action HotelBooking.Controllers.HotelController.ListOfAllHotels (HotelBooking) in 300.4721ms
+2023-01-13 15:15:53.466 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.HotelController.ListOfAllHotels (HotelBooking)'
+2023-01-13 15:15:53.467 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Hotel/ListOfAllHotels - - - 200 - application/json;+charset=utf-8 307.1607ms
+2023-01-13 15:16:07.510 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Room/ViewRoomDetails?hotelName=AAA - -
+2023-01-13 15:16:07.511 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking)'
+2023-01-13 15:16:07.531 +05:30  INF  Route matched with {action = "ViewRoomDetails", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ViewRoomDetails(System.String) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-13 15:16:08.061 +05:30  INF  Executed DbCommand (278ms) [Parameters=[@__hotel_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelName] = @__hotel_0
+2023-01-13 15:16:08.064 +05:30  INF  Viewing Room Details
+2023-01-13 15:16:08.064 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Linq.IQueryable`1[[HotelBooking.Models.Room, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Linq.Expressions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+2023-01-13 15:16:08.327 +05:30  INF  Executed DbCommand (243ms) [Parameters=[@___hotel_hotelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[HotelId] = @___hotel_hotelId_0
+2023-01-13 15:16:08.364 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking) in 832.7612ms
+2023-01-13 15:16:08.364 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking)'
+2023-01-13 15:16:08.364 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Room/ViewRoomDetails?hotelName=AAA - - - 200 - application/json;+charset=utf-8 853.8982ms
+2023-01-13 15:16:27.927 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Hotel/CreateHotel application/json 60
+2023-01-13 15:16:27.928 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking)'
+2023-01-13 15:16:27.930 +05:30  INF  Route matched with {action = "CreateHotel", controller = "Hotel"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateHotel(HotelBooking.Data.ViewModels.HotelVM) on controller HotelBooking.Controllers.HotelController (HotelBooking).
+2023-01-13 15:16:28.051 +05:30  ERR  Error in Added the Hotel to DB
+2023-01-13 15:16:28.052 +05:30  INF  Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2023-01-13 15:16:28.053 +05:30  INF  Executed action HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking) in 122.5779ms
+2023-01-13 15:16:28.053 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking)'
+2023-01-13 15:16:28.053 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Hotel/CreateHotel application/json 60 - 404 - application/problem+json;+charset=utf-8 126.4939ms
+2023-01-13 15:18:43.304 +05:30  INF  Application is shutting down...
+2023-01-13 15:19:23.897 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-13 15:19:23.976 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-13 15:19:23.978 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-13 15:19:23.978 +05:30  INF  Hosting environment: Development
+2023-01-13 15:19:23.979 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-13 15:19:25.106 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-13 15:19:25.353 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 248.5782ms
+2023-01-13 15:19:25.535 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-13 15:19:25.738 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 202.1273ms
+2023-01-13 15:20:03.551 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Hotel/CreateHotel application/json 61
+2023-01-13 15:20:03.566 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking)'
+2023-01-13 15:20:03.593 +05:30  INF  Route matched with {action = "CreateHotel", controller = "Hotel"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateHotel(HotelBooking.Data.ViewModels.HotelVM) on controller HotelBooking.Controllers.HotelController (HotelBooking).
+2023-01-13 15:20:04.417 +05:30  ERR  Error in Added the Hotel to DB
+2023-01-13 15:20:04.424 +05:30  INF  Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2023-01-13 15:20:04.433 +05:30  INF  Executed action HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking) in 833.4532ms
+2023-01-13 15:20:04.435 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking)'
+2023-01-13 15:20:04.437 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Hotel/CreateHotel application/json 61 - 404 - application/problem+json;+charset=utf-8 886.4450ms
+2023-01-13 15:21:09.043 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Hotel/CreateHotel application/json 61
+2023-01-13 15:21:09.044 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking)'
+2023-01-13 15:21:09.048 +05:30  INF  Route matched with {action = "CreateHotel", controller = "Hotel"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateHotel(HotelBooking.Data.ViewModels.HotelVM) on controller HotelBooking.Controllers.HotelController (HotelBooking).
+2023-01-13 15:21:09.087 +05:30  ERR  Error in Added the Hotel to DB
+2023-01-13 15:21:09.088 +05:30  INF  Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2023-01-13 15:21:09.089 +05:30  INF  Executed action HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking) in 38.7099ms
+2023-01-13 15:21:09.089 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking)'
+2023-01-13 15:21:09.089 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Hotel/CreateHotel application/json 61 - 404 - application/problem+json;+charset=utf-8 46.2910ms
+2023-01-13 15:40:12.164 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Hotel/CreateHotel application/json 61
+2023-01-13 15:40:12.170 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking)'
+2023-01-13 15:40:12.179 +05:30  INF  Route matched with {action = "CreateHotel", controller = "Hotel"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateHotel(HotelBooking.Data.ViewModels.HotelVM) on controller HotelBooking.Controllers.HotelController (HotelBooking).
+2023-01-13 15:40:12.219 +05:30  INF  Executed action HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking) in 39.3818ms
+2023-01-13 15:40:12.220 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking)'
+2023-01-13 15:40:12.225 +05:30  ERR  An unhandled exception has occurred while executing the request.AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+HotelVM -> Hotel
+HotelBooking.Data.ViewModels.HotelVM -> HotelBooking.Models.Hotel
+
+Type Map configuration:
+HotelVM -> Hotel
+HotelBooking.Data.ViewModels.HotelVM -> HotelBooking.Models.Hotel
+
+Destination Member:
+location
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Int32 -> Location
+System.Int32 -> HotelBooking.Models.Location
+
+Destination Member:
+location
+
+   at lambda_method13(Closure, Int32, Location, ResolutionContext)
+   at lambda_method12(Closure, Object, Hotel, ResolutionContext)
+   --- End of inner exception stack trace ---
+   at lambda_method12(Closure, Object, Hotel, ResolutionContext)
+   at HotelBooking.Services.HotelService.AddHotel(HotelVM hotel)
+   at HotelBooking.Controllers.HotelController.CreateHotel(HotelVM hotel)
+   at lambda_method16(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
+2023-01-13 15:40:12.260 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Hotel/CreateHotel application/json 61 - 500 - text/plain;+charset=utf-8 96.9367ms
+2023-01-13 15:42:24.890 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Hotel/CreateHotel application/json 61
+2023-01-13 15:42:24.895 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking)'
+2023-01-13 15:42:24.906 +05:30  INF  Route matched with {action = "CreateHotel", controller = "Hotel"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateHotel(HotelBooking.Data.ViewModels.HotelVM) on controller HotelBooking.Controllers.HotelController (HotelBooking).
+2023-01-13 15:42:24.943 +05:30  INF  Executed action HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking) in 35.911ms
+2023-01-13 15:42:24.943 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking)'
+2023-01-13 15:42:24.944 +05:30  ERR  An unhandled exception has occurred while executing the request.System.MissingMethodException: Attempted to access a missing method.
+   at HotelBooking.Data.ViewModels.HotelVM.set_location(Int32 value)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
+2023-01-13 15:42:24.976 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Hotel/CreateHotel application/json 61 - 500 - text/plain;+charset=utf-8 86.7146ms
+2023-01-13 15:42:52.592 +05:30  INF  Application is shutting down...
+2023-01-13 15:43:53.239 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-13 15:43:53.320 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-13 15:43:53.323 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-13 15:43:53.323 +05:30  INF  Hosting environment: Development
+2023-01-13 15:43:53.323 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-13 15:44:19.253 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-13 15:44:19.504 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 255.1848ms
+2023-01-13 15:44:19.829 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-13 15:44:20.027 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 197.6665ms
+2023-01-13 15:45:12.373 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Hotel/CreateHotel application/json 61
+2023-01-13 15:45:12.393 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking)'
+2023-01-13 15:45:12.443 +05:30  INF  Route matched with {action = "CreateHotel", controller = "Hotel"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateHotel(HotelBooking.Data.ViewModels.HotelVM) on controller HotelBooking.Controllers.HotelController (HotelBooking).
+2023-01-13 15:45:19.686 +05:30  INF  Executed DbCommand (328ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Hotel] ([LocationId], [hotelName], [noOfRooms])
+OUTPUT INSERTED.[hotelId]
+VALUES (@p0, @p1, @p2);
+2023-01-13 15:45:19.777 +05:30  INF  Hotel Added Successfully
+2023-01-13 15:45:19.785 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-13 15:45:19.792 +05:30  INF  Executed action HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking) in 7342.5228ms
+2023-01-13 15:45:19.793 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking)'
+2023-01-13 15:45:19.807 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Hotel/CreateHotel application/json 61 - 200 - text/plain;+charset=utf-8 7434.4003ms
+2023-01-13 15:45:27.636 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Hotel/ListOfAllHotels - -
+2023-01-13 15:45:27.639 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.HotelController.ListOfAllHotels (HotelBooking)'
+2023-01-13 15:45:27.644 +05:30  INF  Route matched with {action = "ListOfAllHotels", controller = "Hotel"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ListOfAllHotels() on controller HotelBooking.Controllers.HotelController (HotelBooking).
+2023-01-13 15:45:28.423 +05:30  INF  Executed DbCommand (334ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+2023-01-13 15:45:28.436 +05:30  INF  Retreived Hotel List
+2023-01-13 15:45:28.438 +05:30  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelBooking.Models.Hotel, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-01-13 15:45:28.445 +05:30  INF  Executed action HotelBooking.Controllers.HotelController.ListOfAllHotels (HotelBooking) in 800.7757ms
+2023-01-13 15:45:28.445 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.HotelController.ListOfAllHotels (HotelBooking)'
+2023-01-13 15:45:28.445 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Hotel/ListOfAllHotels - - - 200 - application/json;+charset=utf-8 808.9999ms
+2023-01-13 15:46:20.884 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Room/CreateRoom application/json 81
+2023-01-13 15:46:20.885 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking)'
+2023-01-13 15:46:20.889 +05:30  INF  Route matched with {action = "CreateRoom", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateRoom(HotelBooking.Data.ViewModels.RoomVM) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-13 15:46:21.317 +05:30  INF  Executed DbCommand (333ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Room] ([HotelId], [roomCapacity], [roomName], [roomRate])
+OUTPUT INSERTED.[roomId]
+VALUES (@p0, @p1, @p2, @p3);
+2023-01-13 15:46:21.322 +05:30  INF  Created Room Successfully
+2023-01-13 15:46:21.322 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-13 15:46:21.322 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking) in 432.7109ms
+2023-01-13 15:46:21.322 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking)'
+2023-01-13 15:46:21.322 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Room/CreateRoom application/json 81 - 200 - text/plain;+charset=utf-8 438.4822ms
+2023-01-13 15:46:45.982 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Room/CheckRoomAvailability application/json 135
+2023-01-13 15:46:45.985 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.CheckRoomAvailability (HotelBooking)'
+2023-01-13 15:46:45.986 +05:30  INF  Route matched with {action = "CheckRoomAvailability", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckRoomAvailability(HotelBooking.Data.ViewModels.CheckRoomAvailability) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-13 15:46:46.371 +05:30  INF  Executed DbCommand (235ms) [Parameters=[@__hotel_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelName] = @__hotel_0
+2023-01-13 15:46:46.607 +05:30  INF  Executed DbCommand (230ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[bookingId], [b].[RoomId], [b].[UserId], [b].[checkInTime], [b].[checkOutTime], [b].[noOfPersons], [b].[paid]
+FROM [Booking] AS [b]
+2023-01-13 15:46:46.633 +05:30  INF  Availability Checked Succesfully
+2023-01-13 15:46:46.633 +05:30  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelBooking.Models.Room, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-01-13 15:46:46.635 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.CheckRoomAvailability (HotelBooking) in 648.6367ms
+2023-01-13 15:46:46.635 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.CheckRoomAvailability (HotelBooking)'
+2023-01-13 15:46:46.635 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Room/CheckRoomAvailability application/json 135 - 200 - application/json;+charset=utf-8 652.8044ms
+2023-01-13 15:47:06.876 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Room/CheckRoomAvailability application/json 135
+2023-01-13 15:47:06.880 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.CheckRoomAvailability (HotelBooking)'
+2023-01-13 15:47:06.880 +05:30  INF  Route matched with {action = "CheckRoomAvailability", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckRoomAvailability(HotelBooking.Data.ViewModels.CheckRoomAvailability) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-13 15:47:07.130 +05:30  INF  Executed DbCommand (236ms) [Parameters=[@__hotel_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelName] = @__hotel_0
+2023-01-13 15:47:07.441 +05:30  INF  Executed DbCommand (310ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[bookingId], [b].[RoomId], [b].[UserId], [b].[checkInTime], [b].[checkOutTime], [b].[noOfPersons], [b].[paid]
+FROM [Booking] AS [b]
+2023-01-13 15:47:07.750 +05:30  INF  Executed DbCommand (302ms) [Parameters=[@__booking_RoomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_RoomId_0
+2023-01-13 15:47:07.765 +05:30  INF  Availability Checked Succesfully
+2023-01-13 15:47:07.765 +05:30  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelBooking.Models.Room, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-01-13 15:47:07.765 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.CheckRoomAvailability (HotelBooking) in 884.8559ms
+2023-01-13 15:47:07.765 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.CheckRoomAvailability (HotelBooking)'
+2023-01-13 15:47:07.765 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Room/CheckRoomAvailability application/json 135 - 200 - application/json;+charset=utf-8 888.9809ms
+2023-01-13 15:47:38.421 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Room/ViewRoomDetails?hotelName=GRT - -
+2023-01-13 15:47:38.422 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking)'
+2023-01-13 15:47:38.424 +05:30  INF  Route matched with {action = "ViewRoomDetails", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ViewRoomDetails(System.String) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-13 15:47:38.775 +05:30  INF  Executed DbCommand (334ms) [Parameters=[@__hotel_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelName] = @__hotel_0
+2023-01-13 15:47:38.778 +05:30  INF  Viewing Room Details
+2023-01-13 15:47:38.779 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Linq.IQueryable`1[[HotelBooking.Models.Room, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Linq.Expressions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+2023-01-13 15:47:39.101 +05:30  INF  Executed DbCommand (314ms) [Parameters=[@___hotel_hotelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[HotelId] = @___hotel_hotelId_0
+2023-01-13 15:47:39.110 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking) in 685.1649ms
+2023-01-13 15:47:39.110 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking)'
+2023-01-13 15:47:39.110 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Room/ViewRoomDetails?hotelName=GRT - - - 200 - application/json;+charset=utf-8 689.2022ms
+2023-01-13 15:54:16.286 +05:30  INF  Application is shutting down...
+2023-01-13 15:55:01.087 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-13 15:55:01.126 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-13 15:55:01.129 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-13 15:55:01.129 +05:30  INF  Hosting environment: Development
+2023-01-13 15:55:01.129 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-13 15:55:19.342 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-13 15:55:19.661 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 324.1765ms
+2023-01-13 15:55:19.941 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-13 15:55:20.176 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 235.1312ms
+2023-01-13 15:55:37.625 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Room/CheckRoomAvailability application/json 135
+2023-01-13 15:55:37.641 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.CheckRoomAvailability (HotelBooking)'
+2023-01-13 15:55:37.679 +05:30  INF  Route matched with {action = "CheckRoomAvailability", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckRoomAvailability(HotelBooking.Data.ViewModels.CheckRoomAvailability) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-13 15:55:45.164 +05:30  INF  Executed DbCommand (329ms) [Parameters=[@__hotel_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelName] = @__hotel_0
+2023-01-13 15:55:45.589 +05:30  INF  Executed DbCommand (266ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[bookingId], [b].[RoomId], [b].[UserId], [b].[checkInTime], [b].[checkOutTime], [b].[noOfPersons], [b].[paid]
+FROM [Booking] AS [b]
+2023-01-13 15:55:45.892 +05:30  INF  Executed DbCommand (264ms) [Parameters=[@__booking_RoomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_RoomId_0
+2023-01-13 15:55:45.933 +05:30  INF  Availability Checked Succesfully
+2023-01-13 15:55:45.941 +05:30  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelBooking.Models.Room, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-01-13 15:55:45.961 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.CheckRoomAvailability (HotelBooking) in 8274.9409ms
+2023-01-13 15:55:45.961 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.CheckRoomAvailability (HotelBooking)'
+2023-01-13 15:55:45.975 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Room/CheckRoomAvailability application/json 135 - 200 - application/json;+charset=utf-8 8349.8908ms
+2023-01-13 15:56:44.991 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Room/ViewRoomDetails?hotelName=GRT - -
+2023-01-13 15:56:44.994 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking)'
+2023-01-13 15:56:45.000 +05:30  INF  Route matched with {action = "ViewRoomDetails", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ViewRoomDetails(System.String) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-13 15:56:45.277 +05:30  INF  Executed DbCommand (230ms) [Parameters=[@__hotel_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelName] = @__hotel_0
+2023-01-13 15:56:45.279 +05:30  INF  Viewing Room Details
+2023-01-13 15:56:45.280 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Linq.IQueryable`1[[HotelBooking.Models.Room, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Linq.Expressions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+2023-01-13 15:56:45.517 +05:30  INF  Executed DbCommand (230ms) [Parameters=[@___hotel_hotelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[HotelId] = @___hotel_hotelId_0
+2023-01-13 15:56:45.528 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking) in 528.0743ms
+2023-01-13 15:56:45.528 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking)'
+2023-01-13 15:56:45.529 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Room/ViewRoomDetails?hotelName=GRT - - - 200 - application/json;+charset=utf-8 537.8277ms
+2023-01-13 15:57:10.958 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Booking/CreateBooking application/json 175
+2023-01-13 15:57:10.959 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-01-13 15:57:10.961 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-01-13 15:57:11.400 +05:30  INF  Executed DbCommand (275ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-01-13 15:57:11.895 +05:30  INF  Executed DbCommand (258ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-01-13 15:57:11.934 +05:30  INF  Created Booking Successfully
+2023-01-13 15:57:11.934 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-13 15:57:11.934 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 973.4405ms
+2023-01-13 15:57:11.934 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-01-13 15:57:11.934 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Booking/CreateBooking application/json 175 - 200 - text/plain;+charset=utf-8 976.3264ms
+2023-01-13 15:57:25.848 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Booking/BookingHistory?userEmail=vaishnavis%40presidio.com - -
+2023-01-13 15:57:25.850 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking)'
+2023-01-13 15:57:25.852 +05:30  INF  Route matched with {action = "BookingHistory", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult BookingHistory(System.String) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-01-13 15:57:26.161 +05:30  INF  Executed DbCommand (293ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-13 15:57:26.180 +05:30  INF  Retrieved Booking Information of vaishnavis@presidio.com
+2023-01-13 15:57:26.180 +05:30  INF  Executing OkObjectResult, writing value of type 'Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[[HotelBooking.Models.Booking, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-01-13 15:57:26.490 +05:30  INF  Executed DbCommand (269ms) [Parameters=[@___user_userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[bookingId], [b].[RoomId], [b].[UserId], [b].[checkInTime], [b].[checkOutTime], [b].[noOfPersons], [b].[paid]
+FROM [Booking] AS [b]
+WHERE [b].[UserId] = @___user_userId_0
+2023-01-13 15:57:26.527 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking) in 675.4449ms
+2023-01-13 15:57:26.529 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking)'
+2023-01-13 15:57:26.534 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Booking/BookingHistory?userEmail=vaishnavis%40presidio.com - - - 200 - application/json;+charset=utf-8 686.0363ms
+2023-01-13 16:00:24.000 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Room/CheckRoomAvailability application/json 135
+2023-01-13 16:00:24.013 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.CheckRoomAvailability (HotelBooking)'
+2023-01-13 16:00:24.019 +05:30  INF  Route matched with {action = "CheckRoomAvailability", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckRoomAvailability(HotelBooking.Data.ViewModels.CheckRoomAvailability) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-13 16:00:24.313 +05:30  INF  Executed DbCommand (237ms) [Parameters=[@__hotel_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelName] = @__hotel_0
+2023-01-13 16:00:24.555 +05:30  INF  Executed DbCommand (232ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[bookingId], [b].[RoomId], [b].[UserId], [b].[checkInTime], [b].[checkOutTime], [b].[noOfPersons], [b].[paid]
+FROM [Booking] AS [b]
+2023-01-13 16:00:24.793 +05:30  INF  Executed DbCommand (234ms) [Parameters=[@__booking_RoomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_RoomId_0
+2023-01-13 16:00:25.028 +05:30  INF  Executed DbCommand (232ms) [Parameters=[@__booking_RoomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_RoomId_0
+2023-01-13 16:00:25.030 +05:30  INF  Availability Checked Succesfully
+2023-01-13 16:00:25.030 +05:30  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelBooking.Models.Room, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-01-13 16:00:25.032 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.CheckRoomAvailability (HotelBooking) in 1011.8073ms
+2023-01-13 16:00:25.032 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.CheckRoomAvailability (HotelBooking)'
+2023-01-13 16:00:25.032 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Room/CheckRoomAvailability application/json 135 - 200 - application/json;+charset=utf-8 1034.4580ms
+2023-01-13 16:05:18.744 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Room/CheckRoomAvailability application/json 135
+2023-01-13 16:05:18.747 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.CheckRoomAvailability (HotelBooking)'
+2023-01-13 16:05:18.756 +05:30  INF  Route matched with {action = "CheckRoomAvailability", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckRoomAvailability(HotelBooking.Data.ViewModels.CheckRoomAvailability) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-13 16:05:22.650 +05:30  INF  Executed DbCommand (234ms) [Parameters=[@__hotel_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelName] = @__hotel_0
+2023-01-13 16:05:23.000 +05:30  INF  Executed DbCommand (348ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[bookingId], [b].[RoomId], [b].[UserId], [b].[checkInTime], [b].[checkOutTime], [b].[noOfPersons], [b].[paid]
+FROM [Booking] AS [b]
+2023-01-13 16:05:23.356 +05:30  INF  Executed DbCommand (353ms) [Parameters=[@__booking_RoomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_RoomId_0
+2023-01-13 16:05:23.615 +05:30  INF  Executed DbCommand (256ms) [Parameters=[@__booking_RoomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_RoomId_0
+2023-01-13 16:05:23.616 +05:30  INF  Availability Checked Succesfully
+2023-01-13 16:05:23.616 +05:30  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelBooking.Models.Room, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-01-13 16:05:23.629 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.CheckRoomAvailability (HotelBooking) in 4873.1632ms
+2023-01-13 16:05:23.630 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.CheckRoomAvailability (HotelBooking)'
+2023-01-13 16:05:23.630 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Room/CheckRoomAvailability application/json 135 - 200 - application/json;+charset=utf-8 4885.6403ms
+2023-01-13 16:09:45.733 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Room/CreateRoom application/json 81
+2023-01-13 16:09:45.742 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking)'
+2023-01-13 16:09:45.756 +05:30  INF  Route matched with {action = "CreateRoom", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateRoom(HotelBooking.Data.ViewModels.RoomVM) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-13 16:09:46.196 +05:30  INF  Executed DbCommand (256ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Room] ([HotelId], [roomCapacity], [roomName], [roomRate])
+OUTPUT INSERTED.[roomId]
+VALUES (@p0, @p1, @p2, @p3);
+2023-01-13 16:09:46.208 +05:30  INF  Created Room Successfully
+2023-01-13 16:09:46.208 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-13 16:09:46.209 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking) in 452.8621ms
+2023-01-13 16:09:46.209 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking)'
+2023-01-13 16:09:46.210 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Room/CreateRoom application/json 81 - 200 - text/plain;+charset=utf-8 478.2100ms
+2023-01-13 16:09:50.697 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Room/ViewRoomDetails?hotelName=GRT - -
+2023-01-13 16:09:50.702 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking)'
+2023-01-13 16:09:50.704 +05:30  INF  Route matched with {action = "ViewRoomDetails", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ViewRoomDetails(System.String) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-13 16:09:50.949 +05:30  INF  Executed DbCommand (235ms) [Parameters=[@__hotel_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelName] = @__hotel_0
+2023-01-13 16:09:50.951 +05:30  INF  Viewing Room Details
+2023-01-13 16:09:50.951 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Linq.IQueryable`1[[HotelBooking.Models.Room, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Linq.Expressions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+2023-01-13 16:09:51.189 +05:30  INF  Executed DbCommand (233ms) [Parameters=[@___hotel_hotelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[HotelId] = @___hotel_hotelId_0
+2023-01-13 16:09:51.197 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking) in 491.2923ms
+2023-01-13 16:09:51.197 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking)'
+2023-01-13 16:09:51.197 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Room/ViewRoomDetails?hotelName=GRT - - - 200 - application/json;+charset=utf-8 500.5306ms
+2023-01-13 16:09:55.424 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Room/CheckRoomAvailability application/json 135
+2023-01-13 16:09:55.425 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.CheckRoomAvailability (HotelBooking)'
+2023-01-13 16:09:55.430 +05:30  INF  Route matched with {action = "CheckRoomAvailability", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckRoomAvailability(HotelBooking.Data.ViewModels.CheckRoomAvailability) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-13 16:09:55.684 +05:30  INF  Executed DbCommand (238ms) [Parameters=[@__hotel_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelName] = @__hotel_0
+2023-01-13 16:09:55.919 +05:30  INF  Executed DbCommand (234ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[bookingId], [b].[RoomId], [b].[UserId], [b].[checkInTime], [b].[checkOutTime], [b].[noOfPersons], [b].[paid]
+FROM [Booking] AS [b]
+2023-01-13 16:09:56.154 +05:30  INF  Executed DbCommand (231ms) [Parameters=[@__booking_RoomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_RoomId_0
+2023-01-13 16:09:56.410 +05:30  INF  Executed DbCommand (232ms) [Parameters=[@__booking_RoomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_RoomId_0
+2023-01-13 16:09:56.645 +05:30  INF  Executed DbCommand (233ms) [Parameters=[@___hotel_hotelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[HotelId] = @___hotel_hotelId_0
+2023-01-13 16:09:56.651 +05:30  INF  Availability Checked Succesfully
+2023-01-13 16:09:56.651 +05:30  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelBooking.Models.Room, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-01-13 16:09:56.651 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.CheckRoomAvailability (HotelBooking) in 1221.335ms
+2023-01-13 16:09:56.651 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.CheckRoomAvailability (HotelBooking)'
+2023-01-13 16:09:56.651 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Room/CheckRoomAvailability application/json 135 - 200 - application/json;+charset=utf-8 1227.1546ms

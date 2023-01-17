@@ -1,9 +1,28 @@
-﻿using HotelBooking.Data;
+﻿using System.Reflection;
+using Azure.Identity;
+using FluentValidation.AspNetCore;
+using HotelBooking.Data;
 using HotelBooking.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Azure;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .Enrich.FromLogContext()
+    .CreateLogger();
+builder.Logging.ClearProviders();
+builder.Logging.AddSerilog(logger);
+
+builder.Services.AddControllers().AddFluentValidation(c => c.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly()));
+
+builder.Configuration.AddAzureKeyVault(
+    new Uri($"https://{builder.Configuration["KeyVaultName"]}.vault.azure.net/"),
+    new DefaultAzureCredential());
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -16,7 +35,6 @@ builder.Services.AddScoped<LocationService>();
 builder.Services.AddScoped<HotelService>();
 builder.Services.AddScoped<RoomService>();
 builder.Services.AddScoped<BookingService>();
-builder.Services.AddScoped<AvailabilityService>();
 
 var app = builder.Build();
 

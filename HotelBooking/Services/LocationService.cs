@@ -1,5 +1,7 @@
 ﻿using System;
+using AutoMapper;
 using HotelBooking.Data;
+using HotelBooking.Data.ViewModels;
 using HotelBooking.Models;
 
 namespace HotelBooking.Services
@@ -7,18 +9,22 @@ namespace HotelBooking.Services
 	public class LocationService
 	{
         private DbInitializer _dbContext;
-        public LocationService(DbInitializer dbContext)
+        public readonly IMapper _mapper;
+        public LocationService(DbInitializer dbContext, IMapper mapper)
 		{
             _dbContext = dbContext;
+            _mapper = mapper;
         }
 
-        public bool CreateLocation(Location location)
+        public bool CreateLocation(LocationVM location)
         {
             if (location == null) return false;
 
             try
             {
-                _dbContext.Location.Add(location);
+                var _mappedLocation = _mapper.Map<Location>(location);
+               
+                _dbContext.Location.Add(_mappedLocation);
                 _dbContext.SaveChanges();
                 return true;
             }

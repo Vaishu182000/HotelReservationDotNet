@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using AutoMapper;
 using HotelBooking.Data;
 using HotelBooking.Data.ViewModels;
 using HotelBooking.Models;
@@ -11,10 +12,12 @@ namespace HotelBooking.Services
 	{
         private DbInitializer _dbContext;
         private LocationService _locationService;
-        public HotelService(DbInitializer dbContext, LocationService locationService)
+        public readonly IMapper _mapper;
+        public HotelService(DbInitializer dbContext, LocationService locationService, IMapper mapper)
 		{
             _dbContext = dbContext;
             _locationService = locationService;
+            _mapper = mapper;
         }
 
         public bool AddHotel(HotelVM hotel)
@@ -23,21 +26,17 @@ namespace HotelBooking.Services
 
             try
             {
-                var _location = _locationService.GetLocationByLocationName(hotel.location);
-                
-                var _hotel = new Hotel()
-                {
-                    hotelName = hotel.hotelName,
-                    noOfRooms = hotel.noOfRooms,
-                    LocationId = _location.locationId
-                };
 
-                _dbContext.Hotel.Add(_hotel);
+                var _mappedHotel = _mapper.Map<Hotel>(hotel);
+                Console.WriteLine(_mappedHotel);
+
+                _dbContext.Hotel.Add(_mappedHotel);
                 _dbContext.SaveChanges();
                 return true;
             }
             catch(Exception exception)
             {
+                throw;
                 return false;
             }
         }

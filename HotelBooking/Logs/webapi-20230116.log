@@ -1,0 +1,97 @@
+2023-01-16 12:58:15.876 +05:30  INF  Application is shutting down...
+2023-01-16 13:04:22.231 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-16 13:04:22.323 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-16 13:04:22.325 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-16 13:04:22.326 +05:30  INF  Hosting environment: Development
+2023-01-16 13:04:22.326 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-16 13:04:26.459 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-16 13:04:26.736 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 280.5601ms
+2023-01-16 13:04:26.765 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui.css - -
+2023-01-16 13:04:26.772 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui-bundle.js - -
+2023-01-16 13:04:26.798 +05:30  INF  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-01-16 13:04:26.799 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui.css - - - 200 143943 text/css 33.6854ms
+2023-01-16 13:04:26.799 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui-standalone-preset.js - -
+2023-01-16 13:04:26.826 +05:30  INF  Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-01-16 13:04:26.828 +05:30  INF  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-01-16 13:04:26.831 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 31.6688ms
+2023-01-16 13:04:26.831 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 58.5285ms
+2023-01-16 13:04:27.071 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-16 13:04:27.172 +05:30  ERR  An unhandled exception has occurred while executing the request.Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - HotelBooking.Controllers.RoomController.UploadRoomImage (HotelBooking). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
+2023-01-16 13:04:27.179 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 107.3493ms
+2023-01-16 13:04:57.615 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-16 13:04:57.630 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 14.8362ms
+2023-01-16 13:04:57.741 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-16 13:04:57.844 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 103.6394ms
+2023-01-16 13:05:22.959 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Room/UploadRoomImage multipart/form-data;+boundary=----WebKitFormBoundaryH0t7AaVuylcg83yA 47009
+2023-01-16 13:05:22.966 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.UploadRoomImage (HotelBooking)'
+2023-01-16 13:05:22.991 +05:30  INF  Route matched with {action = "UploadRoomImage", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UploadRoomImage(Microsoft.AspNetCore.Http.IFormFile) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-16 13:05:24.913 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-16 13:05:24.922 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.UploadRoomImage (HotelBooking) in 1922.2285ms
+2023-01-16 13:05:24.924 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.UploadRoomImage (HotelBooking)'
+2023-01-16 13:05:24.928 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Room/UploadRoomImage multipart/form-data;+boundary=----WebKitFormBoundaryH0t7AaVuylcg83yA 47009 - 200 - text/plain;+charset=utf-8 1968.0880ms
+2023-01-16 13:08:52.248 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Room/UploadRoomImage multipart/form-data;+boundary=----WebKitFormBoundary1uaG0eTDjLA8S5I4 1384
+2023-01-16 13:08:52.255 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.UploadRoomImage (HotelBooking)'
+2023-01-16 13:08:52.257 +05:30  INF  Route matched with {action = "UploadRoomImage", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UploadRoomImage(Microsoft.AspNetCore.Http.IFormFile) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-16 13:08:52.303 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-16 13:08:52.304 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.UploadRoomImage (HotelBooking) in 46.5829ms
+2023-01-16 13:08:52.304 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.UploadRoomImage (HotelBooking)'
+2023-01-16 13:08:52.305 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Room/UploadRoomImage multipart/form-data;+boundary=----WebKitFormBoundary1uaG0eTDjLA8S5I4 1384 - 200 - text/plain;+charset=utf-8 57.3900ms
+2023-01-16 13:16:41.495 +05:30  INF  Application is shutting down...
+2023-01-16 13:18:10.712 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-16 13:18:10.747 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-16 13:18:10.750 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-16 13:18:10.750 +05:30  INF  Hosting environment: Development
+2023-01-16 13:18:10.750 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-16 13:18:13.683 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-16 13:18:13.932 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 253.3854ms
+2023-01-16 13:18:14.080 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-16 13:18:14.269 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 188.3236ms
+2023-01-16 13:18:25.982 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Room/DownloadImage?fileName=dotnet.png - -
+2023-01-16 13:18:25.995 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.DownloadImage (HotelBooking)'
+2023-01-16 13:18:26.024 +05:30  INF  Route matched with {action = "DownloadImage", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DownloadImage(System.String) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-16 13:18:26.852 +05:30  INF  Executing StatusCodeResult, setting HTTP status code 200
+2023-01-16 13:18:26.859 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.DownloadImage (HotelBooking) in 829.7898ms
+2023-01-16 13:18:26.859 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.DownloadImage (HotelBooking)'
+2023-01-16 13:18:26.861 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Room/DownloadImage?fileName=dotnet.png - - - 200 0 - 878.8207ms
+2023-01-16 17:46:43.792 +05:30  INF  Application is shutting down...
+2023-01-16 17:47:20.510 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-16 17:47:20.547 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-16 17:47:20.550 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-16 17:47:20.550 +05:30  INF  Hosting environment: Development
+2023-01-16 17:47:20.550 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-16 17:47:23.850 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-16 17:47:24.083 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 234.6799ms
+2023-01-16 17:47:24.147 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui-bundle.js - -
+2023-01-16 17:47:24.186 +05:30  INF  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-01-16 17:47:24.186 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 39.5092ms
+2023-01-16 17:47:24.382 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-16 17:47:24.591 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 209.2253ms
+2023-01-16 17:48:01.466 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Room/UploadRoomImage multipart/form-data;+boundary=----WebKitFormBoundaryNLmAMeFJQpkNqYnt 3319
+2023-01-16 17:48:01.472 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.UploadRoomImage (HotelBooking)'
+2023-01-16 17:48:01.494 +05:30  INF  Route matched with {action = "UploadRoomImage", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UploadRoomImage(Microsoft.AspNetCore.Http.IFormFile) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-16 17:48:02.107 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-16 17:48:02.113 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.UploadRoomImage (HotelBooking) in 614.0058ms
+2023-01-16 17:48:02.115 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.UploadRoomImage (HotelBooking)'
+2023-01-16 17:48:02.117 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Room/UploadRoomImage multipart/form-data;+boundary=----WebKitFormBoundaryNLmAMeFJQpkNqYnt 3319 - 200 - text/plain;+charset=utf-8 652.4227ms
+2023-01-16 17:52:30.535 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Room/UploadRoomImage multipart/form-data;+boundary=----WebKitFormBoundaryk2qNs83e4bnMqUaB 3319
+2023-01-16 17:52:30.546 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.UploadRoomImage (HotelBooking)'
+2023-01-16 17:52:30.549 +05:30  INF  Route matched with {action = "UploadRoomImage", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UploadRoomImage(Microsoft.AspNetCore.Http.IFormFile) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-16 17:52:30.609 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-16 17:52:30.611 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.UploadRoomImage (HotelBooking) in 60.8466ms
+2023-01-16 17:52:30.611 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.UploadRoomImage (HotelBooking)'
+2023-01-16 17:52:30.612 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Room/UploadRoomImage multipart/form-data;+boundary=----WebKitFormBoundaryk2qNs83e4bnMqUaB 3319 - 200 - text/plain;+charset=utf-8 77.8337ms
+2023-01-16 18:04:20.981 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Room/UploadRoomImage multipart/form-data;+boundary=----WebKitFormBoundary1DWTmXhnmesQ7ego 3319
+2023-01-16 18:04:20.992 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.UploadRoomImage (HotelBooking)'
+2023-01-16 18:04:20.997 +05:30  INF  Route matched with {action = "UploadRoomImage", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UploadRoomImage(Microsoft.AspNetCore.Http.IFormFile) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-16 18:04:21.048 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-16 18:04:21.051 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.UploadRoomImage (HotelBooking) in 51.9291ms
+2023-01-16 18:04:21.051 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.UploadRoomImage (HotelBooking)'
+2023-01-16 18:04:21.051 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Room/UploadRoomImage multipart/form-data;+boundary=----WebKitFormBoundary1DWTmXhnmesQ7ego 3319 - 200 - text/plain;+charset=utf-8 75.0158ms

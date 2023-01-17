@@ -8,7 +8,7 @@ namespace HotelBooking.Data.ViewModels
         public string hotelName { get; set; }
         public int noOfRooms { get; set; }
 
-        public string location { get; set; }
+        public int locationId { get; set; }
     }
 }
 

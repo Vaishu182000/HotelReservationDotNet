@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HotelBooking.Migrations
 {
     [DbContext(typeof(DbInitializer))]
-    [Migration("20230109102724_db_initilize")]
-    partial class dbinitilize
+    [Migration("20230117113223_db_update")]
+    partial class dbupdate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,31 +24,6 @@ namespace HotelBooking.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("HotelBooking.Models.Availability", b =>
-                {
-                    b.Property<int>("availabilityId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("availabilityId"));
-
-                    b.Property<int>("BookingId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("checkInTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("checkOutTime")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("availabilityId");
-
-                    b.HasIndex("BookingId")
-                        .IsUnique();
-
-                    b.ToTable("Availability");
-                });
 
             modelBuilder.Entity("HotelBooking.Models.Booking", b =>
                 {
@@ -63,6 +38,12 @@ namespace HotelBooking.Migrations
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("checkInTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("checkOutTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("noOfPersons")
                         .HasColumnType("int");
@@ -135,6 +116,10 @@ namespace HotelBooking.Migrations
                     b.Property<int>("roomCapacity")
                         .HasColumnType("int");
 
+                    b.Property<string>("roomImage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("roomName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -178,17 +163,6 @@ namespace HotelBooking.Migrations
                     b.ToTable("User");
                 });
 
-            modelBuilder.Entity("HotelBooking.Models.Availability", b =>
-                {
-                    b.HasOne("HotelBooking.Models.Booking", "booking")
-                        .WithOne("availability")
-                        .HasForeignKey("HotelBooking.Models.Availability", "BookingId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("booking");
-                });
-
             modelBuilder.Entity("HotelBooking.Models.Booking", b =>
                 {
                     b.HasOne("HotelBooking.Models.Room", "room")
@@ -228,12 +202,6 @@ namespace HotelBooking.Migrations
                         .IsRequired();
 
                     b.Navigation("hotel");
-                });
-
-            modelBuilder.Entity("HotelBooking.Models.Booking", b =>
-                {
-                    b.Navigation("availability")
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

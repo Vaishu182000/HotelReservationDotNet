@@ -9,7 +9,14 @@
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.2.2" />
+    <PackageReference Include="Azure.Identity" Version="1.9.0-beta.1" />
+    <PackageReference Include="Azure.Security.KeyVault.Secrets" Version="4.5.0-beta.1" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.14.1" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.1">
@@ -17,6 +24,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,8 +35,10 @@
     <None Remove="Data\" />
     <None Remove="Services\" />
     <None Remove="Data\ViewModels\" />
+    <None Remove="Serilog.AspNetCore" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Logs" />
     <Folder Include="Models\" />
     <Folder Include="Data\" />
     <Folder Include="Services\" />

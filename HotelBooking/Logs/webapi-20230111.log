@@ -1,0 +1,262 @@
+2023-01-11 11:22:16.073 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-11 11:22:16.165 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-11 11:22:16.174 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-11 11:22:16.176 +05:30  INF  Hosting environment: Development
+2023-01-11 11:22:16.176 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-11 11:22:21.541 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-11 11:22:21.889 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 349.6347ms
+2023-01-11 11:22:21.940 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui-bundle.js - -
+2023-01-11 11:22:21.940 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui.css - -
+2023-01-11 11:22:21.956 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui-standalone-preset.js - -
+2023-01-11 11:22:21.978 +05:30  INF  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-01-11 11:22:21.978 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui.css - - - 200 143943 text/css 37.9449ms
+2023-01-11 11:22:22.008 +05:30  INF  Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-01-11 11:22:22.020 +05:30  INF  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-01-11 11:22:22.025 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 84.8287ms
+2023-01-11 11:22:22.025 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 68.7171ms
+2023-01-11 11:22:22.277 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-11 11:22:22.520 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 242.6348ms
+2023-01-11 11:23:21.063 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 119
+2023-01-11 11:23:21.080 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-11 11:23:21.132 +05:30  INF  Route matched with {action = "UserSignUp", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserSignUp(HotelBooking.Models.User) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-11 11:23:26.622 +05:30  INF  Executed DbCommand (232ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [User] ([password], [phone], [userEmail], [userName])
+OUTPUT INSERTED.[userId]
+VALUES (@p0, @p1, @p2, @p3);
+2023-01-11 11:23:26.707 +05:30  INF  User Signed Up Successfully
+2023-01-11 11:23:26.712 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-11 11:23:26.721 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserSignUp (HotelBooking) in 5581.4801ms
+2023-01-11 11:23:26.721 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-11 11:23:26.737 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 119 - 200 - text/plain;+charset=utf-8 5674.6924ms
+2023-01-11 11:30:20.814 +05:30  INF  Application is shutting down...
+2023-01-11 12:30:23.651 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-11 12:30:23.747 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-11 12:30:23.750 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-11 12:30:23.750 +05:30  INF  Hosting environment: Development
+2023-01-11 12:30:23.750 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-11 12:30:25.698 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/ - -
+2023-01-11 12:30:25.841 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/ - - - 404 0 - 145.4929ms
+2023-01-11 12:30:26.739 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-11 12:30:26.900 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 160.8883ms
+2023-01-11 12:30:27.466 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-11 12:30:27.668 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 202.4320ms
+2023-01-11 12:34:56.293 +05:30  INF  Application is shutting down...
+2023-01-11 12:35:06.274 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-11 12:35:06.324 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-11 12:35:06.326 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-11 12:35:06.327 +05:30  INF  Hosting environment: Development
+2023-01-11 12:35:06.327 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-11 12:35:06.948 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/ - -
+2023-01-11 12:35:07.079 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/ - - - 404 0 - 139.1561ms
+2023-01-11 12:35:10.084 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-11 12:35:10.252 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 168.1022ms
+2023-01-11 12:35:10.443 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-11 12:35:10.658 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 214.3456ms
+2023-01-11 12:35:23.136 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 90
+2023-01-11 12:35:23.141 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-11 12:35:23.171 +05:30  INF  Route matched with {action = "UserSignUp", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserSignUp(HotelBooking.Data.ViewModels.UserVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-11 12:35:26.195 +05:30  INF  Executed DbCommand (89ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-11 12:35:26.259 +05:30  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-01-11 12:35:26.269 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserSignUp (HotelBooking) in 3091.8155ms
+2023-01-11 12:35:26.270 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-11 12:35:26.282 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 90 - 400 - application/problem+json;+charset=utf-8 3146.0218ms
+2023-01-11 12:37:08.997 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 123
+2023-01-11 12:37:09.003 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-11 12:37:09.004 +05:30  INF  Route matched with {action = "UserSignUp", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserSignUp(HotelBooking.Data.ViewModels.UserVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-11 12:37:09.091 +05:30  INF  Executed DbCommand (5ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-11 12:37:09.217 +05:30  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-01-11 12:37:09.218 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserSignUp (HotelBooking) in 213.1809ms
+2023-01-11 12:37:09.218 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-11 12:37:09.219 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 123 - 400 - application/problem+json;+charset=utf-8 221.2609ms
+2023-01-11 12:42:28.962 +05:30  INF  Application is shutting down...
+2023-01-11 12:42:39.574 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-11 12:42:39.614 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-11 12:42:39.617 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-11 12:42:39.617 +05:30  INF  Hosting environment: Development
+2023-01-11 12:42:39.617 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-11 12:42:39.932 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/ - -
+2023-01-11 12:42:40.060 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/ - - - 404 0 - 129.6936ms
+2023-01-11 12:42:42.225 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-11 12:42:42.394 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 168.9321ms
+2023-01-11 12:42:42.833 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-11 12:42:43.022 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 188.5972ms
+2023-01-11 12:42:51.139 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Location/AddLocation application/json 20
+2023-01-11 12:42:51.144 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.LocationController.AddLocation (HotelBooking)'
+2023-01-11 12:42:51.179 +05:30  INF  Route matched with {action = "AddLocation", controller = "Location"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddLocation(HotelBooking.Data.ViewModels.LocationVM) on controller HotelBooking.Controllers.LocationController (HotelBooking).
+2023-01-11 12:42:51.543 +05:30  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-01-11 12:42:51.555 +05:30  INF  Executed action HotelBooking.Controllers.LocationController.AddLocation (HotelBooking) in 367.2257ms
+2023-01-11 12:42:51.557 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.LocationController.AddLocation (HotelBooking)'
+2023-01-11 12:42:51.560 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Location/AddLocation application/json 20 - 400 - application/problem+json;+charset=utf-8 420.9363ms
+2023-01-11 12:48:45.469 +05:30  INF  Application is shutting down...
+2023-01-11 12:48:53.805 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-11 12:48:53.841 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-11 12:48:53.844 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-11 12:48:53.844 +05:30  INF  Hosting environment: Development
+2023-01-11 12:48:53.844 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-11 12:48:54.249 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/ - -
+2023-01-11 12:48:54.381 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/ - - - 404 0 - 134.5608ms
+2023-01-11 12:49:15.123 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-11 12:49:15.299 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 175.6682ms
+2023-01-11 12:49:15.795 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-11 12:49:16.069 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 273.9955ms
+2023-01-11 12:50:10.023 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Location/AddLocation application/json 20
+2023-01-11 12:50:10.029 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.LocationController.AddLocation (HotelBooking)'
+2023-01-11 12:50:10.061 +05:30  INF  Route matched with {action = "AddLocation", controller = "Location"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddLocation(HotelBooking.Data.ViewModels.LocationVM) on controller HotelBooking.Controllers.LocationController (HotelBooking).
+2023-01-11 12:50:10.381 +05:30  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-01-11 12:50:10.392 +05:30  INF  Executed action HotelBooking.Controllers.LocationController.AddLocation (HotelBooking) in 324.8784ms
+2023-01-11 12:50:10.394 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.LocationController.AddLocation (HotelBooking)'
+2023-01-11 12:50:10.397 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Location/AddLocation application/json 20 - 400 - application/problem+json;+charset=utf-8 373.8446ms
+2023-01-11 13:07:59.083 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 100
+2023-01-11 13:07:59.085 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-11 13:07:59.092 +05:30  INF  Route matched with {action = "UserSignUp", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserSignUp(HotelBooking.Data.ViewModels.UserVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-11 13:08:02.155 +05:30  INF  Executed DbCommand (82ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-11 13:08:02.210 +05:30  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-01-11 13:08:02.212 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserSignUp (HotelBooking) in 3119.6836ms
+2023-01-11 13:08:02.212 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-11 13:08:02.225 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 100 - 400 - application/problem+json;+charset=utf-8 3141.8341ms
+2023-01-11 13:10:19.509 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 100
+2023-01-11 13:10:19.510 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-11 13:10:19.513 +05:30  INF  Route matched with {action = "UserSignUp", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserSignUp(HotelBooking.Data.ViewModels.UserVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-11 13:10:19.591 +05:30  INF  Executed DbCommand (8ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-11 13:10:19.593 +05:30  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-01-11 13:10:19.593 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserSignUp (HotelBooking) in 79.8162ms
+2023-01-11 13:10:19.593 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-11 13:10:19.594 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 100 - 400 - application/problem+json;+charset=utf-8 85.4312ms
+2023-01-11 13:10:46.251 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 100
+2023-01-11 13:10:46.255 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-11 13:10:46.255 +05:30  INF  Route matched with {action = "UserSignUp", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserSignUp(HotelBooking.Data.ViewModels.UserVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-11 13:10:46.384 +05:30  INF  Executed DbCommand (5ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-11 13:10:46.385 +05:30  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-01-11 13:10:46.385 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserSignUp (HotelBooking) in 130.5315ms
+2023-01-11 13:10:46.385 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-11 13:10:46.386 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 100 - 400 - application/problem+json;+charset=utf-8 134.7499ms
+2023-01-11 13:16:25.533 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 100
+2023-01-11 13:16:25.536 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-11 13:16:25.542 +05:30  INF  Route matched with {action = "UserSignUp", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserSignUp(HotelBooking.Data.ViewModels.UserVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-11 13:16:25.612 +05:30  INF  Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-11 13:16:25.614 +05:30  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-01-11 13:16:25.615 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserSignUp (HotelBooking) in 72.7262ms
+2023-01-11 13:16:25.615 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-11 13:16:25.615 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 100 - 400 - application/problem+json;+charset=utf-8 82.3345ms
+2023-01-11 13:16:33.197 +05:30  INF  Application is shutting down...
+2023-01-11 13:16:53.769 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-11 13:16:53.810 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-11 13:16:53.812 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-11 13:16:53.813 +05:30  INF  Hosting environment: Development
+2023-01-11 13:16:53.813 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-11 13:16:54.440 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/ - -
+2023-01-11 13:16:54.578 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/ - - - 404 0 - 142.5787ms
+2023-01-11 13:16:56.638 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-11 13:16:56.790 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 152.3251ms
+2023-01-11 13:16:57.208 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-11 13:16:57.408 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 200.4283ms
+2023-01-11 13:17:07.515 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 100
+2023-01-11 13:17:07.527 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-11 13:17:07.560 +05:30  INF  Route matched with {action = "UserSignUp", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserSignUp(HotelBooking.Data.ViewModels.UserVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-11 13:17:10.751 +05:30  INF  Executed DbCommand (71ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-11 13:17:10.821 +05:30  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-01-11 13:17:10.831 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserSignUp (HotelBooking) in 3263.7234ms
+2023-01-11 13:17:10.845 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-11 13:17:10.860 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 100 - 400 - application/problem+json;+charset=utf-8 3345.0704ms
+2023-01-11 13:38:19.618 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Location/GetLocations - -
+2023-01-11 13:38:19.621 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.LocationController.GetLocations (HotelBooking)'
+2023-01-11 13:38:19.627 +05:30  INF  Route matched with {action = "GetLocations", controller = "Location"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetLocations() on controller HotelBooking.Controllers.LocationController (HotelBooking).
+2023-01-11 13:38:19.736 +05:30  INF  Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+2023-01-11 13:38:19.852 +05:30  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelBooking.Models.Location, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-01-11 13:38:19.856 +05:30  INF  Executed action HotelBooking.Controllers.LocationController.GetLocations (HotelBooking) in 229.0385ms
+2023-01-11 13:38:19.856 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.LocationController.GetLocations (HotelBooking)'
+2023-01-11 13:38:19.857 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Location/GetLocations - - - 200 - application/json;+charset=utf-8 238.6891ms
+2023-01-11 13:38:34.948 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Hotel/CreateHotel application/json 64
+2023-01-11 13:38:34.950 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking)'
+2023-01-11 13:38:34.958 +05:30  INF  Route matched with {action = "CreateHotel", controller = "Hotel"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateHotel(HotelBooking.Data.ViewModels.HotelVM) on controller HotelBooking.Controllers.HotelController (HotelBooking).
+2023-01-11 13:38:35.127 +05:30  INF  Executed DbCommand (12ms) [Parameters=[@__location_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+WHERE [l].[location] = @__location_0
+2023-01-11 13:38:35.142 +05:30  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-01-11 13:38:35.143 +05:30  INF  Executed action HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking) in 183.928ms
+2023-01-11 13:38:35.143 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.HotelController.CreateHotel (HotelBooking)'
+2023-01-11 13:38:35.143 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Hotel/CreateHotel application/json 64 - 400 - application/problem+json;+charset=utf-8 194.9930ms
+2023-01-11 13:57:52.234 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Booking/CreateBooking application/json 188
+2023-01-11 13:57:52.236 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-01-11 13:57:52.241 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-01-11 13:57:52.386 +05:30  INF  Executed DbCommand (51ms) [Parameters=[@__roomName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomName] = @__roomName_0
+2023-01-11 13:57:52.396 +05:30  INF  Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-11 13:57:52.400 +05:30  INF  Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2023-01-11 13:57:52.401 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 160.0221ms
+2023-01-11 13:57:52.401 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-01-11 13:57:52.401 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Booking/CreateBooking application/json 188 - 404 - application/problem+json;+charset=utf-8 168.1569ms
+2023-01-11 13:58:01.105 +05:30  INF  Application is shutting down...
+2023-01-11 13:58:20.230 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-11 13:58:20.279 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-11 13:58:20.285 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-11 13:58:20.285 +05:30  INF  Hosting environment: Development
+2023-01-11 13:58:20.286 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-11 13:58:20.580 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/ - -
+2023-01-11 13:58:20.710 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/ - - - 404 0 - 137.3348ms
+2023-01-11 13:58:31.085 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-11 13:58:31.222 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 137.5130ms
+2023-01-11 13:58:31.746 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-11 13:58:31.932 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 186.3349ms
+2023-01-11 13:58:41.146 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Booking/CreateBooking application/json 188
+2023-01-11 13:58:41.152 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-01-11 13:58:41.178 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-01-11 13:58:43.917 +05:30  INF  Executed DbCommand (71ms) [Parameters=[@__roomName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomName] = @__roomName_0
+2023-01-11 13:58:43.982 +05:30  INF  Executed DbCommand (5ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-11 13:58:43.996 +05:30  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-01-11 13:58:44.006 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 2821.8717ms
+2023-01-11 13:58:44.006 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-01-11 13:58:44.018 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Booking/CreateBooking application/json 188 - 400 - application/problem+json;+charset=utf-8 2871.5658ms
+2023-01-11 15:31:34.316 +05:30  INF  Application is shutting down...
+2023-01-11 15:31:45.824 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-11 15:31:45.862 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-11 15:31:45.864 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-11 15:31:45.865 +05:30  INF  Hosting environment: Development
+2023-01-11 15:31:45.865 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-11 15:31:46.524 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/ - -
+2023-01-11 15:31:46.640 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/ - - - 404 0 - 121.2093ms
+2023-01-11 15:32:29.598 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-11 15:32:29.752 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 153.3203ms
+2023-01-11 15:32:29.769 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui-bundle.js - -
+2023-01-11 15:32:29.823 +05:30  INF  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-01-11 15:32:29.827 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 57.8348ms
+2023-01-11 15:32:30.447 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-11 15:32:30.629 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 182.2973ms
+2023-01-11 15:36:53.164 +05:30  INF  Application is shutting down...
