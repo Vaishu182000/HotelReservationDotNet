@@ -13,7 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 var logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
     .Enrich.FromLogContext()
-    .WriteTo.ApplicationInsights(new TelemetryConfiguration{ InstrumentationKey="2ecf116b-f13e-445b-a091-a98534276ddc" },TelemetryConverter.Traces)
+    .WriteTo.ApplicationInsights(new TelemetryConfiguration{ InstrumentationKey=builder.Configuration.GetValue<string>("InstrumentationKey") },TelemetryConverter.Traces)
     .CreateLogger();
 builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(logger);
