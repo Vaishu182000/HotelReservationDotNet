@@ -13,7 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 var logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
     .Enrich.FromLogContext()
-    .WriteTo.ApplicationInsights(new TelemetryConfiguration{ InstrumentationKey=builder.Configuration.GetValue<string>("InstrumentationKey") },TelemetryConverter.Traces)
+    .WriteTo.ApplicationInsights(new TelemetryConfiguration{ InstrumentationKey=builder.Configuration["InstrumentationKey"] },TelemetryConverter.Traces)
     .CreateLogger();
 builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(logger);
@@ -41,11 +41,8 @@ builder.Services.AddScoped<BookingService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
