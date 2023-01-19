@@ -77,7 +77,8 @@ namespace HotelBooking.Services
 
             try
             {
-                BlobClient client = container.GetBlobClient(room.roomImage.FileName);
+                var fileName = room.roomName + Path.GetExtension(room.roomImage.FileName);
+                BlobClient client = container.GetBlobClient(fileName);
                 
                 using (Stream? data = room.roomImage.OpenReadStream())
                 {

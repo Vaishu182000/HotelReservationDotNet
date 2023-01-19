@@ -1,0 +1,634 @@
+2023-01-18 20:11:01.750 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-18 20:11:01.809 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-18 20:11:01.811 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-18 20:11:01.812 +05:30  INF  Hosting environment: Development
+2023-01-18 20:11:01.812 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-18 20:11:23.373 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-18 20:11:23.613 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 244.4445ms
+2023-01-18 20:11:23.779 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui.css - -
+2023-01-18 20:11:23.827 +05:30  INF  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-01-18 20:11:23.828 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/swagger-ui.css - - - 200 143943 text/css 48.4732ms
+2023-01-18 20:11:24.361 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-18 20:11:24.578 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 216.9082ms
+2023-01-18 20:11:30.660 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Location/GetLocations - -
+2023-01-18 20:11:30.668 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.LocationController.GetLocations (HotelBooking)'
+2023-01-18 20:11:30.689 +05:30  INF  Route matched with {action = "GetLocations", controller = "Location"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetLocations() on controller HotelBooking.Controllers.LocationController (HotelBooking).
+2023-01-18 20:11:38.723 +05:30  ERR  An error occurred using the connection to database 'hotelreservation' on server 'tcp:dotnet-training-server.database.windows.net,1433'.
+2023-01-18 20:11:38.735 +05:30  ERR  An exception occurred while iterating over the results of a query for context type 'HotelBooking.Data.DbInitializer'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:e213a8c8-cffa-4bfd-a8ed-ebe00f0f0392
+Error Number:40615,State:1,Class:14Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:e213a8c8-cffa-4bfd-a8ed-ebe00f0f0392
+Error Number:40615,State:1,Class:14
+
+2023-01-18 20:11:38.829 +05:30  ERR  Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+2023-01-18 20:11:38.837 +05:30  INF  Executed action HotelBooking.Controllers.LocationController.GetLocations (HotelBooking) in 8140.4919ms
+2023-01-18 20:11:38.840 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.LocationController.GetLocations (HotelBooking)'
+2023-01-18 20:11:38.843 +05:30  ERR  An unhandled exception has occurred while executing the request.Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at HotelBooking.Services.LocationService.GetLocations() in /Users/presidio/Projects/HotelBooking/HotelBooking/Services/LocationService.cs:line 39
+   at HotelBooking.Controllers.LocationController.GetLocations() in /Users/presidio/Projects/HotelBooking/HotelBooking/Controllers/LocationController.cs:line 50
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:e213a8c8-cffa-4bfd-a8ed-ebe00f0f0392
+Error Number:40615,State:1,Class:14
+
+2023-01-18 20:11:38.871 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Location/GetLocations - - - 500 - text/plain;+charset=utf-8 8210.5216ms
+2023-01-18 20:11:54.597 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Location/GetLocations - -
+2023-01-18 20:11:54.599 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.LocationController.GetLocations (HotelBooking)'
+2023-01-18 20:11:54.600 +05:30  INF  Route matched with {action = "GetLocations", controller = "Location"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetLocations() on controller HotelBooking.Controllers.LocationController (HotelBooking).
+2023-01-18 20:11:58.131 +05:30  ERR  An error occurred using the connection to database 'hotelreservation' on server 'tcp:dotnet-training-server.database.windows.net,1433'.
+2023-01-18 20:11:58.132 +05:30  ERR  An exception occurred while iterating over the results of a query for context type 'HotelBooking.Data.DbInitializer'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:7da0d8fc-18a6-45d6-b9ca-9942a525d9c9
+Error Number:40615,State:1,Class:14Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:7da0d8fc-18a6-45d6-b9ca-9942a525d9c9
+Error Number:40615,State:1,Class:14
+
+2023-01-18 20:11:58.134 +05:30  ERR  Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+2023-01-18 20:11:58.134 +05:30  INF  Executed action HotelBooking.Controllers.LocationController.GetLocations (HotelBooking) in 3533.8263ms
+2023-01-18 20:11:58.135 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.LocationController.GetLocations (HotelBooking)'
+2023-01-18 20:11:58.135 +05:30  ERR  An unhandled exception has occurred while executing the request.Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at HotelBooking.Services.LocationService.GetLocations() in /Users/presidio/Projects/HotelBooking/HotelBooking/Services/LocationService.cs:line 39
+   at HotelBooking.Controllers.LocationController.GetLocations() in /Users/presidio/Projects/HotelBooking/HotelBooking/Controllers/LocationController.cs:line 50
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:7da0d8fc-18a6-45d6-b9ca-9942a525d9c9
+Error Number:40615,State:1,Class:14
+
+2023-01-18 20:11:58.141 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Location/GetLocations - - - 500 - text/plain;+charset=utf-8 3543.8133ms
+2023-01-18 20:12:10.105 +05:30  INF  Application is shutting down...
+2023-01-18 20:12:36.819 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-18 20:12:36.857 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-18 20:12:36.860 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-18 20:12:36.860 +05:30  INF  Hosting environment: Development
+2023-01-18 20:12:36.860 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-18 20:12:38.141 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-18 20:12:38.380 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 241.3964ms
+2023-01-18 20:12:38.567 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-18 20:12:38.790 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 223.1347ms
+2023-01-18 20:12:46.016 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Location/GetLocations - -
+2023-01-18 20:12:46.045 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.LocationController.GetLocations (HotelBooking)'
+2023-01-18 20:12:46.074 +05:30  INF  Route matched with {action = "GetLocations", controller = "Location"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetLocations() on controller HotelBooking.Controllers.LocationController (HotelBooking).
+2023-01-18 20:12:52.807 +05:30  INF  Executed DbCommand (333ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+2023-01-18 20:12:52.960 +05:30  INF  Extracted Locations from DB
+2023-01-18 20:12:52.968 +05:30  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelBooking.Models.Location, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-01-18 20:12:52.982 +05:30  INF  Executed action HotelBooking.Controllers.LocationController.GetLocations (HotelBooking) in 6902.8291ms
+2023-01-18 20:12:52.983 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.LocationController.GetLocations (HotelBooking)'
+2023-01-18 20:12:53.004 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Location/GetLocations - - - 200 - application/json;+charset=utf-8 6989.3222ms
+2023-01-18 20:13:12.253 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Room/ViewRoomDetails?hotelName=GRT - -
+2023-01-18 20:13:12.254 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking)'
+2023-01-18 20:13:12.267 +05:30  INF  Route matched with {action = "ViewRoomDetails", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ViewRoomDetails(System.String) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-18 20:13:13.974 +05:30  INF  Executed DbCommand (1,227ms) [Parameters=[@__hotel_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelName] = @__hotel_0
+2023-01-18 20:13:13.996 +05:30  INF  Viewing Room Details
+2023-01-18 20:13:13.997 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Linq.IQueryable`1[[HotelBooking.Models.Room, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Linq.Expressions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+2023-01-18 20:13:14.270 +05:30  INF  Executed DbCommand (253ms) [Parameters=[@___hotel_hotelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[HotelId] = @___hotel_hotelId_0
+2023-01-18 20:13:14.317 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking) in 2050.0407ms
+2023-01-18 20:13:14.317 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking)'
+2023-01-18 20:13:14.318 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Room/ViewRoomDetails?hotelName=GRT - - - 200 - application/json;+charset=utf-8 2064.4661ms
+2023-01-18 20:14:11.546 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Room/CreateRoom multipart/form-data;+boundary=----WebKitFormBoundaryeP5mUB6Z02wzOMOm 5870
+2023-01-18 20:14:11.555 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking)'
+2023-01-18 20:14:11.578 +05:30  INF  Route matched with {action = "CreateRoom", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateRoom(HotelBooking.Data.ViewModels.RoomVM) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-18 20:14:16.800 +05:30  INF  Executed DbCommand (281ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Room] ([HotelId], [roomCapacity], [roomImage], [roomName], [roomRate])
+OUTPUT INSERTED.[roomId]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2023-01-18 20:14:16.835 +05:30  INF  Created Room Successfully
+2023-01-18 20:14:16.835 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-18 20:14:16.836 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking) in 5257.6123ms
+2023-01-18 20:14:16.836 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking)'
+2023-01-18 20:14:16.837 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Room/CreateRoom multipart/form-data;+boundary=----WebKitFormBoundaryeP5mUB6Z02wzOMOm 5870 - 200 - text/plain;+charset=utf-8 5291.9117ms
+2023-01-18 20:15:10.672 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Room/ViewRoomDetails?hotelName=GRT - -
+2023-01-18 20:15:10.693 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking)'
+2023-01-18 20:15:10.697 +05:30  INF  Route matched with {action = "ViewRoomDetails", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ViewRoomDetails(System.String) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-18 20:15:10.977 +05:30  INF  Executed DbCommand (231ms) [Parameters=[@__hotel_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelName] = @__hotel_0
+2023-01-18 20:15:10.981 +05:30  INF  Viewing Room Details
+2023-01-18 20:15:10.983 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Linq.IQueryable`1[[HotelBooking.Models.Room, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Linq.Expressions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+2023-01-18 20:15:11.219 +05:30  INF  Executed DbCommand (229ms) [Parameters=[@___hotel_hotelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[HotelId] = @___hotel_hotelId_0
+2023-01-18 20:15:11.224 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking) in 525.8646ms
+2023-01-18 20:15:11.224 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking)'
+2023-01-18 20:15:11.224 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Room/ViewRoomDetails?hotelName=GRT - - - 200 - application/json;+charset=utf-8 553.9590ms
+2023-01-18 20:20:22.928 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Room/CreateRoom multipart/form-data;+boundary=----WebKitFormBoundarycCDj0PFzmbXfjbPI 134533
+2023-01-18 20:20:22.937 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking)'
+2023-01-18 20:20:22.984 +05:30  INF  Route matched with {action = "CreateRoom", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateRoom(HotelBooking.Data.ViewModels.RoomVM) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-18 20:20:31.121 +05:30  ERR  An error occurred using the connection to database 'hotelreservation' on server 'tcp:dotnet-training-server.database.windows.net,1433'.
+2023-01-18 20:20:31.152 +05:30  ERR  An exception occurred in the database while saving changes for context type 'HotelBooking.Data.DbInitializer'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+ClientConnectionId:22ec548c-d9bd-46fb-8b0a-ce3e3b6c5e4f
+Error Number:40615,State:1,Class:14Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+ClientConnectionId:22ec548c-d9bd-46fb-8b0a-ce3e3b6c5e4f
+Error Number:40615,State:1,Class:14
+
+2023-01-18 20:20:31.177 +05:30  ERR  Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+2023-01-18 20:20:31.184 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking) in 8200.0314ms
+2023-01-18 20:20:31.186 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking)'
+2023-01-18 20:20:31.200 +05:30  ERR  An unhandled exception has occurred while executing the request.Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at HotelBooking.Services.RoomService.createRoom(RoomVM room)
+   at HotelBooking.Controllers.RoomController.CreateRoom(RoomVM room)
+   at lambda_method140(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:22ec548c-d9bd-46fb-8b0a-ce3e3b6c5e4f
+Error Number:40615,State:1,Class:14
+
+2023-01-18 20:20:31.216 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Room/CreateRoom multipart/form-data;+boundary=----WebKitFormBoundarycCDj0PFzmbXfjbPI 134533 - 500 - text/plain;+charset=utf-8 8290.6405ms
+2023-01-18 20:20:39.085 +05:30  INF  Application is shutting down...
+2023-01-18 20:21:25.007 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-18 20:21:25.047 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-18 20:21:25.049 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-18 20:21:25.050 +05:30  INF  Hosting environment: Development
+2023-01-18 20:21:25.050 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-18 20:21:25.508 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-18 20:21:25.755 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 249.5988ms
+2023-01-18 20:21:26.063 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-18 20:21:26.301 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 237.8845ms
+2023-01-18 20:21:45.180 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Room/CreateRoom multipart/form-data;+boundary=----WebKitFormBoundarySayjJKQqbTHmvFOG 408107
+2023-01-18 20:21:45.190 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking)'
+2023-01-18 20:21:45.252 +05:30  INF  Route matched with {action = "CreateRoom", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateRoom(HotelBooking.Data.ViewModels.RoomVM) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-18 20:21:51.334 +05:30  ERR  The specified blob already exists.
+RequestId:19d0f477-001e-0068-2a4c-2b2d97000000
+Time:2023-01-18T14:51:51.5033493Z
+Status: 409 (The specified blob already exists.)
+ErrorCode: BlobAlreadyExists
+
+Content:
+<?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:19d0f477-001e-0068-2a4c-2b2d97000000
+Time:2023-01-18T14:51:51.5033493Z</Message></Error>
+
+Headers:
+Server: Windows-Azure-Blob/1.0,Microsoft-HTTPAPI/2.0
+x-ms-request-id: 19d0f477-001e-0068-2a4c-2b2d97000000
+x-ms-client-request-id: 3937b121-2056-4717-b4f8-3fd3043d4deb
+x-ms-version: 2021-10-04
+x-ms-error-code: BlobAlreadyExists
+Date: Wed, 18 Jan 2023 14:51:51 GMT
+Content-Length: 220
+Content-Type: application/xml
+
+2023-01-18 20:21:51.346 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking) in 6085.5273ms
+2023-01-18 20:21:51.350 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking)'
+2023-01-18 20:21:51.364 +05:30  ERR  An unhandled exception has occurred while executing the request.Azure.RequestFailedException: The specified blob already exists.
+RequestId:19d0f477-001e-0068-2a4c-2b2d97000000
+Time:2023-01-18T14:51:51.5033493Z
+Status: 409 (The specified blob already exists.)
+ErrorCode: BlobAlreadyExists
+
+Content:
+<?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:19d0f477-001e-0068-2a4c-2b2d97000000
+Time:2023-01-18T14:51:51.5033493Z</Message></Error>
+
+Headers:
+Server: Windows-Azure-Blob/1.0,Microsoft-HTTPAPI/2.0
+x-ms-request-id: 19d0f477-001e-0068-2a4c-2b2d97000000
+x-ms-client-request-id: 3937b121-2056-4717-b4f8-3fd3043d4deb
+x-ms-version: 2021-10-04
+x-ms-error-code: BlobAlreadyExists
+Date: Wed, 18 Jan 2023 14:51:51 GMT
+Content-Length: 220
+Content-Type: application/xml
+
+   at Azure.Storage.Blobs.BlockBlobRestClient.Upload(Int64 contentLength, Stream body, Nullable`1 timeout, Byte[] transactionalContentMD5, String blobContentType, String blobContentEncoding, String blobContentLanguage, Byte[] blobContentMD5, String blobCacheControl, IDictionary`2 metadata, String leaseId, String blobContentDisposition, String encryptionKey, String encryptionKeySha256, Nullable`1 encryptionAlgorithm, String encryptionScope, Nullable`1 tier, Nullable`1 ifModifiedSince, Nullable`1 ifUnmodifiedSince, String ifMatch, String ifNoneMatch, String ifTags, String blobTagsString, Nullable`1 immutabilityPolicyExpiry, Nullable`1 immutabilityPolicyMode, Nullable`1 legalHold, Byte[] transactionalContentCrc64, CancellationToken cancellationToken)
+   at Azure.Storage.Blobs.Specialized.BlockBlobClient.UploadInternal(Stream content, BlobHttpHeaders blobHttpHeaders, IDictionary`2 metadata, IDictionary`2 tags, BlobRequestConditions conditions, Nullable`1 accessTier, BlobImmutabilityPolicy immutabilityPolicy, Nullable`1 legalHold, IProgress`1 progressHandler, UploadTransferValidationOptions transferValidationOverride, String operationName, Boolean async, CancellationToken cancellationToken)
+   at Azure.Storage.Blobs.Specialized.BlockBlobClient.<>c__DisplayClass64_0.<<GetPartitionedUploaderBehaviors>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Azure.Storage.PartitionedUploader`2.UploadInternal(Stream content, Nullable`1 expectedContentLength, TServiceSpecificData args, IProgress`1 progressHandler, Boolean async, CancellationToken cancellationToken)
+   at Azure.Storage.Blobs.BlobClient.StagedUploadInternal(Stream content, BlobUploadOptions options, Boolean async, CancellationToken cancellationToken)
+   at Azure.Core.Pipeline.TaskExtensions.EnsureCompleted[T](Task`1 task)
+   at Azure.Storage.Blobs.BlobClient.Upload(Stream content, BlobHttpHeaders httpHeaders, IDictionary`2 metadata, BlobRequestConditions conditions, IProgress`1 progressHandler, Nullable`1 accessTier, StorageTransferOptions transferOptions, CancellationToken cancellationToken)
+   at Azure.Storage.Blobs.BlobClient.Upload(Stream content, Boolean overwrite, CancellationToken cancellationToken)
+   at Azure.Storage.Blobs.BlobClient.Upload(Stream content, CancellationToken cancellationToken)
+   at Azure.Storage.Blobs.BlobClient.Upload(Stream content)
+   at HotelBooking.Services.RoomService.createRoom(RoomVM room) in /Users/presidio/Projects/HotelBooking/HotelBooking/Services/RoomService.cs:line 84
+   at HotelBooking.Controllers.RoomController.CreateRoom(RoomVM room) in /Users/presidio/Projects/HotelBooking/HotelBooking/Controllers/RoomController.cs:line 30
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
+2023-01-18 20:21:51.397 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Room/CreateRoom multipart/form-data;+boundary=----WebKitFormBoundarySayjJKQqbTHmvFOG 408107 - 500 - text/plain;+charset=utf-8 6221.9060ms
+2023-01-18 20:22:39.796 +05:30  INF  Application is shutting down...
+2023-01-18 20:23:26.057 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-18 20:23:26.243 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-18 20:23:26.246 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-18 20:23:26.247 +05:30  INF  Hosting environment: Development
+2023-01-18 20:23:26.247 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-18 20:23:34.680 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-18 20:23:34.952 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 276.9920ms
+2023-01-18 20:23:35.293 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-18 20:23:35.538 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 245.0846ms
+2023-01-18 20:23:54.170 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Room/CreateRoom multipart/form-data;+boundary=----WebKitFormBoundarySBrdZCRGX2B30j3K 5870
+2023-01-18 20:23:54.179 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking)'
+2023-01-18 20:23:54.217 +05:30  INF  Route matched with {action = "CreateRoom", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateRoom(HotelBooking.Data.ViewModels.RoomVM) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-18 20:23:59.045 +05:30  ERR  The specified blob already exists.
+RequestId:b7676312-401e-0056-694c-2bbae8000000
+Time:2023-01-18T14:53:59.4521795Z
+Status: 409 (The specified blob already exists.)
+ErrorCode: BlobAlreadyExists
+
+Content:
+<?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:b7676312-401e-0056-694c-2bbae8000000
+Time:2023-01-18T14:53:59.4521795Z</Message></Error>
+
+Headers:
+Server: Windows-Azure-Blob/1.0,Microsoft-HTTPAPI/2.0
+x-ms-request-id: b7676312-401e-0056-694c-2bbae8000000
+x-ms-client-request-id: 34a5c447-2dfc-4359-9f8e-a746ecf278ca
+x-ms-version: 2021-10-04
+x-ms-error-code: BlobAlreadyExists
+Date: Wed, 18 Jan 2023 14:53:59 GMT
+Content-Length: 220
+Content-Type: application/xml
+
+2023-01-18 20:23:59.052 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking) in 4828.9124ms
+2023-01-18 20:23:59.055 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking)'
+2023-01-18 20:23:59.059 +05:30  ERR  An unhandled exception has occurred while executing the request.Azure.RequestFailedException: The specified blob already exists.
+RequestId:b7676312-401e-0056-694c-2bbae8000000
+Time:2023-01-18T14:53:59.4521795Z
+Status: 409 (The specified blob already exists.)
+ErrorCode: BlobAlreadyExists
+
+Content:
+<?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:b7676312-401e-0056-694c-2bbae8000000
+Time:2023-01-18T14:53:59.4521795Z</Message></Error>
+
+Headers:
+Server: Windows-Azure-Blob/1.0,Microsoft-HTTPAPI/2.0
+x-ms-request-id: b7676312-401e-0056-694c-2bbae8000000
+x-ms-client-request-id: 34a5c447-2dfc-4359-9f8e-a746ecf278ca
+x-ms-version: 2021-10-04
+x-ms-error-code: BlobAlreadyExists
+Date: Wed, 18 Jan 2023 14:53:59 GMT
+Content-Length: 220
+Content-Type: application/xml
+
+   at Azure.Storage.Blobs.BlockBlobRestClient.Upload(Int64 contentLength, Stream body, Nullable`1 timeout, Byte[] transactionalContentMD5, String blobContentType, String blobContentEncoding, String blobContentLanguage, Byte[] blobContentMD5, String blobCacheControl, IDictionary`2 metadata, String leaseId, String blobContentDisposition, String encryptionKey, String encryptionKeySha256, Nullable`1 encryptionAlgorithm, String encryptionScope, Nullable`1 tier, Nullable`1 ifModifiedSince, Nullable`1 ifUnmodifiedSince, String ifMatch, String ifNoneMatch, String ifTags, String blobTagsString, Nullable`1 immutabilityPolicyExpiry, Nullable`1 immutabilityPolicyMode, Nullable`1 legalHold, Byte[] transactionalContentCrc64, CancellationToken cancellationToken)
+   at Azure.Storage.Blobs.Specialized.BlockBlobClient.UploadInternal(Stream content, BlobHttpHeaders blobHttpHeaders, IDictionary`2 metadata, IDictionary`2 tags, BlobRequestConditions conditions, Nullable`1 accessTier, BlobImmutabilityPolicy immutabilityPolicy, Nullable`1 legalHold, IProgress`1 progressHandler, UploadTransferValidationOptions transferValidationOverride, String operationName, Boolean async, CancellationToken cancellationToken)
+   at Azure.Storage.Blobs.Specialized.BlockBlobClient.<>c__DisplayClass64_0.<<GetPartitionedUploaderBehaviors>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Azure.Storage.PartitionedUploader`2.UploadInternal(Stream content, Nullable`1 expectedContentLength, TServiceSpecificData args, IProgress`1 progressHandler, Boolean async, CancellationToken cancellationToken)
+   at Azure.Storage.Blobs.BlobClient.StagedUploadInternal(Stream content, BlobUploadOptions options, Boolean async, CancellationToken cancellationToken)
+   at Azure.Core.Pipeline.TaskExtensions.EnsureCompleted[T](Task`1 task)
+   at Azure.Storage.Blobs.BlobClient.Upload(Stream content, BlobHttpHeaders httpHeaders, IDictionary`2 metadata, BlobRequestConditions conditions, IProgress`1 progressHandler, Nullable`1 accessTier, StorageTransferOptions transferOptions, CancellationToken cancellationToken)
+   at Azure.Storage.Blobs.BlobClient.Upload(Stream content, Boolean overwrite, CancellationToken cancellationToken)
+   at Azure.Storage.Blobs.BlobClient.Upload(Stream content, CancellationToken cancellationToken)
+   at Azure.Storage.Blobs.BlobClient.Upload(Stream content)
+   at HotelBooking.Services.RoomService.createRoom(RoomVM room) in /Users/presidio/Projects/HotelBooking/HotelBooking/Services/RoomService.cs:line 85
+   at HotelBooking.Controllers.RoomController.CreateRoom(RoomVM room) in /Users/presidio/Projects/HotelBooking/HotelBooking/Controllers/RoomController.cs:line 30
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
+2023-01-18 20:23:59.069 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Room/CreateRoom multipart/form-data;+boundary=----WebKitFormBoundarySBrdZCRGX2B30j3K 5870 - 500 - text/plain;+charset=utf-8 4899.9888ms
+2023-01-18 20:25:25.787 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Room/ViewRoomDetails?hotelName=GRT - -
+2023-01-18 20:25:25.813 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking)'
+2023-01-18 20:25:25.831 +05:30  INF  Route matched with {action = "ViewRoomDetails", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ViewRoomDetails(System.String) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-18 20:25:34.578 +05:30  INF  Executed DbCommand (453ms) [Parameters=[@__hotel_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelName] = @__hotel_0
+2023-01-18 20:25:34.732 +05:30  INF  Viewing Room Details
+2023-01-18 20:25:34.747 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Linq.IQueryable`1[[HotelBooking.Models.Room, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Linq.Expressions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+2023-01-18 20:25:35.224 +05:30  INF  Executed DbCommand (436ms) [Parameters=[@___hotel_hotelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[HotelId] = @___hotel_hotelId_0
+2023-01-18 20:25:35.284 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking) in 9435.8315ms
+2023-01-18 20:25:35.284 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking)'
+2023-01-18 20:25:35.298 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Room/ViewRoomDetails?hotelName=GRT - - - 200 - application/json;+charset=utf-8 9517.9727ms
+2023-01-18 20:25:58.545 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Room/CreateRoom multipart/form-data;+boundary=----WebKitFormBoundaryU3XCJQdK5Y9t2HD6 5870
+2023-01-18 20:25:58.546 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking)'
+2023-01-18 20:25:58.547 +05:30  INF  Route matched with {action = "CreateRoom", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateRoom(HotelBooking.Data.ViewModels.RoomVM) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-18 20:26:02.417 +05:30  INF  Executed DbCommand (259ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Room] ([HotelId], [roomCapacity], [roomImage], [roomName], [roomRate])
+OUTPUT INSERTED.[roomId]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2023-01-18 20:26:02.454 +05:30  INF  Created Room Successfully
+2023-01-18 20:26:02.455 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-18 20:26:02.455 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking) in 3908.694ms
+2023-01-18 20:26:02.455 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking)'
+2023-01-18 20:26:02.456 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Room/CreateRoom multipart/form-data;+boundary=----WebKitFormBoundaryU3XCJQdK5Y9t2HD6 5870 - 200 - text/plain;+charset=utf-8 3911.3482ms
+2023-01-18 20:26:05.227 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Room/ViewRoomDetails?hotelName=GRT - -
+2023-01-18 20:26:05.228 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking)'
+2023-01-18 20:26:05.228 +05:30  INF  Route matched with {action = "ViewRoomDetails", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ViewRoomDetails(System.String) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-18 20:26:05.555 +05:30  INF  Executed DbCommand (231ms) [Parameters=[@__hotel_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelName] = @__hotel_0
+2023-01-18 20:26:05.557 +05:30  INF  Viewing Room Details
+2023-01-18 20:26:05.558 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Linq.IQueryable`1[[HotelBooking.Models.Room, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Linq.Expressions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+2023-01-18 20:26:05.792 +05:30  INF  Executed DbCommand (231ms) [Parameters=[@___hotel_hotelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[HotelId] = @___hotel_hotelId_0
+2023-01-18 20:26:05.794 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking) in 565.5251ms
+2023-01-18 20:26:05.794 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.ViewRoomDetails (HotelBooking)'
+2023-01-18 20:26:05.794 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Room/ViewRoomDetails?hotelName=GRT - - - 200 - application/json;+charset=utf-8 567.2223ms
+2023-01-18 20:28:39.699 +05:30  INF  Application is shutting down...
+2023-01-18 20:29:13.228 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-18 20:29:13.301 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-18 20:29:13.303 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-18 20:29:13.303 +05:30  INF  Hosting environment: Development
+2023-01-18 20:29:13.303 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-18 20:29:16.384 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/index.html - -
+2023-01-18 20:29:16.623 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/index.html - - - 200 - text/html;charset=utf-8 241.6358ms
+2023-01-18 20:29:16.955 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-18 20:29:17.215 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 259.9485ms
+2023-01-18 20:29:43.889 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Room/CreateRoom multipart/form-data;+boundary=----WebKitFormBoundaryqUSGg1EMBl0g0MqG 151789
+2023-01-18 20:29:43.897 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking)'
+2023-01-18 20:29:43.928 +05:30  INF  Route matched with {action = "CreateRoom", controller = "Room"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateRoom(HotelBooking.Data.ViewModels.RoomVM) on controller HotelBooking.Controllers.RoomController (HotelBooking).
+2023-01-18 20:29:59.520 +05:30  INF  Executed DbCommand (332ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Room] ([HotelId], [roomCapacity], [roomImage], [roomName], [roomRate])
+OUTPUT INSERTED.[roomId]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2023-01-18 20:29:59.611 +05:30  INF  Created Room Successfully
+2023-01-18 20:29:59.619 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-18 20:29:59.627 +05:30  INF  Executed action HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking) in 15692.3282ms
+2023-01-18 20:29:59.629 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.RoomController.CreateRoom (HotelBooking)'
+2023-01-18 20:29:59.653 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Room/CreateRoom multipart/form-data;+boundary=----WebKitFormBoundaryqUSGg1EMBl0g0MqG 151789 - 200 - text/plain;+charset=utf-8 15764.5715ms
