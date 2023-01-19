@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using AutoMapper;
 using HotelBooking.Data;
+using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
 using HotelBooking.Models;
 
@@ -13,11 +14,13 @@ namespace HotelBooking.Services
         private DbInitializer _dbContext;
         private LocationService _locationService;
         public readonly IMapper _mapper;
-        public HotelService(DbInitializer dbContext, LocationService locationService, IMapper mapper)
+        private readonly ILogger<HotelService> _logger;
+        public HotelService(DbInitializer dbContext, LocationService locationService, IMapper mapper, ILogger<HotelService> logger)
 		{
             _dbContext = dbContext;
             _locationService = locationService;
             _mapper = mapper;
+            _logger = logger;
         }
 
         public bool AddHotel(HotelVM hotel)
@@ -32,11 +35,13 @@ namespace HotelBooking.Services
 
                 _dbContext.Hotel.Add(_mappedHotel);
                 _dbContext.SaveChanges();
+                
+                _logger.LogInformation(SuccessResponse.AddHotel);
                 return true;
             }
             catch(Exception exception)
             {
-                throw;
+                _logger.LogError(exception.Message);
                 return false;
             }
         }
@@ -50,10 +55,13 @@ namespace HotelBooking.Services
                 var hotels = new List<string>();
                 var _hotelListByLocation = _dbContext.Hotel.Where(l => l.LocationId == _location.locationId);
                 hotels = _hotelListByLocation.Select(l => l.hotelName).ToList();
+                
+                _logger.LogInformation(SuccessResponse.HotelListBasedOnLocation);
                 return hotels;
             }
-            catch
+            catch(Exception e)
             {
+                _logger.LogError(e.Message);
                 return null;
             }
         }
@@ -66,7 +74,15 @@ namespace HotelBooking.Services
 
         public List<Hotel> GetAllHotels()
         {
-            return _dbContext.Hotel.ToList();
+            try
+            {
+                return _dbContext.Hotel.ToList();
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.Message);
+                return null;
+            }
         }
     }
 }

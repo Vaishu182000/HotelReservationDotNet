@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HotelBooking.Data;
+using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
 using HotelBooking.Models;
 using HotelBooking.Services;
@@ -35,13 +36,11 @@ namespace HotelBooking.Controllers
 
             if (_result)
             {
-               _logger.LogInformation("User Signed Up Successfully");
-                return Ok("User Signed Up Successfully");
+                return Ok(SuccessResponse.UserSignUp);
             }
             else
             {
-                _logger.LogError("User Sign Up Failed");
-                return NotFound();
+                return NotFound(ErrorResponse.ErrorUserSignUp);
             }
         }
 
@@ -49,23 +48,17 @@ namespace HotelBooking.Controllers
         [HttpGet]
         public IActionResult UserLogin(string userEmail, string userPassword)
         {
-            try
-            {
-                bool _result = _userService.UserLogin(userEmail, userPassword);
+            bool _result = _userService.UserLogin(userEmail, userPassword);
 
-                if (_result)
-                {
-                    var _locations = _locationService.GetLocations();
-                    return Ok(_locations);
-                }
-                else return NotFound();
-            }
-            catch (Exception e)
+            if (_result)
             {
-                _logger.LogError(e.Message);
-                Console.WriteLine(e);
-                throw;
+                var _locations = _locationService.GetLocations();
+                return Ok(new
+                {
+                    SuccessResponse.UserLogin, _locations
+                });
             }
+            else return NotFound(ErrorResponse.ErrorUserLogin);
         }
     }
 }

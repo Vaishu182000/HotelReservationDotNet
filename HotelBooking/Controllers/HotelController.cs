@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
 using HotelBooking.Models;
 using HotelBooking.Services;
@@ -31,13 +32,11 @@ namespace HotelBooking.Controllers
 
             if (_result)
             {
-                _logger.LogInformation("Hotel Added Successfully");
-                return Ok("Hotel Added Successfully");
+                return Ok(SuccessResponse.AddHotel);
             }
             else
             {
-                _logger.LogError("Error in Added the Hotel to DB");
-                return NotFound();
+                return NotFound(ErrorResponse.ErrorAddHotel);
             }
         }
 
@@ -45,17 +44,18 @@ namespace HotelBooking.Controllers
         [HttpGet]
         public IActionResult HotelList(string location)
         {
-            try
+            List<string> hotel = _hotelService.HotelListByLocation(location);
+
+            if (hotel != null)
             {
-                List<string> hotel = _hotelService.HotelListByLocation(location);
-                _logger.LogInformation("Retreived Hotel List based on Location");
-                return Ok(hotel);
+                return Ok(new
+                {
+                    SuccessResponse.HotelListBasedOnLocation, hotel
+                });   
             }
-            catch (Exception e)
+            else
             {
-                _logger.LogError(e.Message);
-                Console.WriteLine(e);
-                throw;
+                return NotFound(ErrorResponse.ErrorInGetHotelBasedOnLocation);
             }
         }
 
@@ -63,18 +63,18 @@ namespace HotelBooking.Controllers
         [HttpGet]
         public IActionResult ListOfAllHotels()
         {
-            try
+            var _hotelList = _hotelService.GetAllHotels();
+
+            if (_hotelList != null)
             {
-                var _hotelList = _hotelService.GetAllHotels();
-                _logger.LogInformation("Retreived Hotel List");
-                return Ok(_hotelList);
+                return Ok(new
+                {
+                    SuccessResponse.GetHotel, _hotelList
+                });   
             }
-            catch (Exception e)
+            else
             {
-                Console.WriteLine(e);
-                _logger.LogError(e.Message);
-                return NotFound();
-                throw;
+                return NotFound(ErrorResponse.ErrorGetHotels);
             }
         }
     }

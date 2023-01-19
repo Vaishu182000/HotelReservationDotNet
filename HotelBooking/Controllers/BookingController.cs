@@ -1,3 +1,4 @@
+using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
 using HotelBooking.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -25,13 +26,11 @@ public class BookingController : ControllerBase
 
         if (_result)
         {
-            _logger.LogInformation("Created Booking Successfully");
-            return Ok("Created Booking Successfully");
+            return Ok(SuccessResponse.AddBooking);
         }
         else
         {
-            _logger.LogError("Error in Added Booking details to DB");
-            return NotFound();
+            return NotFound(ErrorResponse.ErrorAddBooking);
         }
     }
 
@@ -41,13 +40,15 @@ public class BookingController : ControllerBase
     {
         try
         {
-            return Ok(_bookingService.BookingHistory(userEmail));
+            var _history = _bookingService.BookingHistory(userEmail);
+            return Ok(new
+            {
+                SuccessResponse.BookingHistoryOfUser,_history
+            });
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
-            _logger.LogError(e.Message);
-            throw;
+            return NotFound(ErrorResponse.ErrorBookingHistoryOfUser);
         }
     }
 
@@ -55,17 +56,8 @@ public class BookingController : ControllerBase
     [HttpDelete]
     public IActionResult CancelBooking(int id)
     {
-        try
-        {
-            var _result = _bookingService.deleteBooking(id);
-            if (_result) return Ok("Cancellation Successful");
-            else return NotFound();
-        }
-        catch (Exception e)
-        {
-            _logger.LogError(e.Message);
-            Console.WriteLine(e);
-            throw;
-        }
+        var _result = _bookingService.deleteBooking(id);
+        if (_result) return Ok(SuccessResponse.CancelBooking);
+        else return NotFound(ErrorResponse.ErrorCancelBooking);
     }
 }

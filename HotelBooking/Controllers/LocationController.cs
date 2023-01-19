@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
 using HotelBooking.Models;
 using HotelBooking.Services;
@@ -31,13 +32,11 @@ namespace HotelBooking.Controllers
 
             if (_result)
             {
-                _logger.LogInformation("Location Added Successfully");
-                return Ok("Location Added Successfully");
+                return Ok(SuccessResponse.AddLocation);
             }
             else
             {
-                _logger.LogError("Error in Adding Location");
-                return NotFound();
+                return NotFound(ErrorResponse.ErrorAddLocation);
             }
         }
 
@@ -45,17 +44,18 @@ namespace HotelBooking.Controllers
         [HttpGet]
         public IActionResult GetLocations ()
         {
-            try
+            var _locations = _locationService.GetLocations();
+
+            if (_locations != null)
             {
-                var _locations = _locationService.GetLocations();
-                _logger.LogInformation("Extracted Locations from DB");
-                return Ok(_locations);
+                return Ok(new
+                {
+                    SuccessResponse.GetLocations, _locations
+                });   
             }
-            catch (Exception e)
+            else
             {
-                Console.WriteLine(e);
-                _logger.LogError(e.Message);
-                throw;
+                return NotFound(ErrorResponse.ErrorGetLocations);
             }
         }
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
 using HotelBooking.Models;
 using HotelBooking.Services;
@@ -31,29 +32,11 @@ namespace HotelBooking.Controllers
 
             if (_result)
             {
-                _logger.LogInformation("Created Room Successfully");
-                return Ok("Created Room Successfully");
+                return Ok(SuccessResponse.AddRoom);
             }
             else
             {
-                _logger.LogError("Error in Added Rooming to the DB");
-                return NotFound();
-            }
-        }
-
-        [Route("[Action]")]
-        [HttpPost]
-        public IActionResult UploadRoomImage(IFormFile blob)
-        {
-            try
-            {
-                return Ok(_roomService.UploadRoomImage(blob));
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                _logger.LogError(e.Message);
-                throw;
+                return NotFound(ErrorResponse.ErrorAddRoom);
             }
         }
 
@@ -61,29 +44,19 @@ namespace HotelBooking.Controllers
         [HttpGet]
         public IActionResult ViewRoomDetails(string hotelName)
         {
-            try
+            var _roomList = _roomService.GetRoomsByHotelName(hotelName);
+
+            if (_roomList != null)
             {
-                var _roomList = _roomService.GetRoomsByHotelName(hotelName);
                 var message = $"The Rooms Available Under {hotelName}";
-                _logger.LogInformation("Viewing Room Details");
                 return Ok(new {
                     message,_roomList
-                });
+                });   
             }
-            catch (Exception e)
+            else
             {
-                Console.WriteLine(e);
-                _logger.LogError(e.Message);
-                throw;
+                return NotFound(ErrorResponse.ErrorViewRoomDetails);
             }
-        }
-
-        [Route("[Action]")]
-        [HttpGet]
-        public IActionResult DownloadImage(string fileName)
-        {
-            _roomService.DownloadImage(fileName);
-            return Ok();
         }
 
         [Route("[Action]")]
@@ -93,14 +66,16 @@ namespace HotelBooking.Controllers
             try
             {
                 var _check = _roomService.CheckAvailability(availability);
-                _logger.LogInformation("Availability Checked Succesfully");
-                return Ok(_check);
+                _logger.LogInformation("Availability Checked Successfully");
+                return Ok(new
+                {
+                    SuccessResponse.CheckRoomAvailability,_check
+                });
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
                 _logger.LogError(e.Message);
-                throw;
+                return NotFound(ErrorResponse.ErrorAvailabilityCheck);
             }
         }
     }

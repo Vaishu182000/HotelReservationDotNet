@@ -1,5 +1,6 @@
 using AutoMapper;
 using HotelBooking.Data;
+using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
 using HotelBooking.Models;
 
@@ -34,10 +35,13 @@ public class BookingService
 
                 _dbContext.Booking.Add(_mappedBooking);
                 _dbContext.SaveChanges();
+                
+                _logger.LogInformation(SuccessResponse.AddBooking);
                 return true;   
             }
             else
             {
+                _logger.LogError(ErrorResponse.ErrorAddBooking);
                 return false;
             }
         }
@@ -59,9 +63,8 @@ public class BookingService
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
             _logger.LogError(e.Message);
-            throw;
+            return null;
         }
     }
 
@@ -80,8 +83,7 @@ public class BookingService
         catch (Exception e)
         {
             _logger.LogError(e.Message);
-            Console.WriteLine(e);
-            throw;
+            return false;
         }
     }
 }

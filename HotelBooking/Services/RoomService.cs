@@ -2,6 +2,7 @@
 using AutoMapper;
 using Azure.Storage.Blobs;
 using HotelBooking.Data;
+using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
 using HotelBooking.Models;
 
@@ -24,50 +25,6 @@ namespace HotelBooking.Services
             _storageConnectionString = configuration.GetValue<string>("BlobConnectionString");
             _storageContainerName = configuration.GetValue<string>("BlobContainerName");
         }
-
-        public string UploadRoomImage(IFormFile blob)
-        {
-            BlobContainerClient container = new BlobContainerClient(_storageConnectionString, _storageContainerName);
-
-            try
-            {
-                BlobClient client = container.GetBlobClient(blob.FileName);
-                
-                using (Stream? data = blob.OpenReadStream())
-                {
-                    client.Upload(data);
-                }
-
-                return client.Uri.AbsoluteUri;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                _logger.LogError(e.Message);
-                throw;
-            }
-        }
-
-        public void DownloadImage(string blobFilename)
-        {
-            BlobContainerClient client = new BlobContainerClient(_storageConnectionString, _storageContainerName);
-
-            try
-            {
-                BlobClient file = client.GetBlobClient(blobFilename);
-                    var data = file.OpenReadAsync();
-                    Task<Stream> blobContent = data;
-
-                    // Download the file details async
-                    var content = file.DownloadContentAsync();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                _logger.LogError(e.Message);
-                throw;
-            }
-        }
         
         public bool createRoom(RoomVM room)
         {
@@ -87,20 +44,26 @@ namespace HotelBooking.Services
 
                 if (client.Uri.AbsoluteUri != null)
                 {
+                    _logger.LogInformation(SuccessResponse.RoomBlob);
+                    
                     var _mappedroom = _mapper.Map<Room>(room);
                     _mappedroom.roomImage = client.Uri.AbsoluteUri;
                     _dbContext.Room.Add(_mappedroom);
                     _dbContext.SaveChanges();
+                    
+                    _logger.LogInformation(SuccessResponse.AddRoom);
                     return true;   
                 }
-
-                return false;
+                else
+                {
+                    _logger.LogError(ErrorResponse.ErrorAddRoom);
+                    return false;   
+                }
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
                 _logger.LogError(e.Message);
-                throw;
+                return false;
             }
         }
 
@@ -111,12 +74,13 @@ namespace HotelBooking.Services
                 var _hotel = _hotelService.GetHotelByHotelName(hotelName);
 
                 var _roomList = _dbContext.Room.Where(r => r.HotelId == _hotel.hotelId);
+                _logger.LogInformation(SuccessResponse.RoomListByHotel);
                 return _roomList;
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                _logger.LogError(e.Message);
+                return null;
             }
         }
 
