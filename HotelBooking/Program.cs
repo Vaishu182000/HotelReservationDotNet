@@ -3,6 +3,7 @@ using Azure.Identity;
 using FluentValidation.AspNetCore;
 using HotelBooking.Data;
 using HotelBooking.Services;
+using Microsoft.ApplicationInsights.Extensibility;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Azure;
 using Serilog;
@@ -12,6 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 var logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
     .Enrich.FromLogContext()
+    .WriteTo.ApplicationInsights(new TelemetryConfiguration{ InstrumentationKey="2ecf116b-f13e-445b-a091-a98534276ddc;IngestionEndpoint=https://eastus-8.in.applicationinsights.azure.com/;LiveEndpoint=https://eastus.livediagnostics.monitor.azure.com/" },TelemetryConverter.Traces)
     .CreateLogger();
 builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(logger);
