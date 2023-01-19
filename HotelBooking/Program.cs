@@ -10,19 +10,19 @@ using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Configuration.AddAzureKeyVault(
+    new Uri($"https://{builder.Configuration["KeyVaultName"]}.vault.azure.net/"),
+    new DefaultAzureCredential());
+
 var logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
     .Enrich.FromLogContext()
-    .WriteTo.ApplicationInsights(new TelemetryConfiguration{ InstrumentationKey=builder.Configuration["InstrumentationKey"] },TelemetryConverter.Traces)
+    .WriteTo.ApplicationInsights(new TelemetryConfiguration{ InstrumentationKey=builder.Configuration.GetValue<string>("InstrumentationKey") },TelemetryConverter.Traces)
     .CreateLogger();
 builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(logger);
 
 builder.Services.AddControllers().AddFluentValidation(c => c.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly()));
-
-builder.Configuration.AddAzureKeyVault(
-    new Uri($"https://{builder.Configuration["KeyVaultName"]}.vault.azure.net/"),
-    new DefaultAzureCredential());
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 // Add services to the container.
