@@ -9,6 +9,7 @@
       "HotelBooking/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
+          "Azure.Communication.Email": "1.0.0-beta.1",
           "Azure.Extensions.AspNetCore.Configuration.Secrets": "1.2.2",
           "Azure.Identity": "1.9.0-beta.1",
           "Azure.Security.KeyVault.Secrets": "4.5.0-beta.1",
@@ -48,6 +49,17 @@
           "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
             "assemblyVersion": "12.0.0.0",
             "fileVersion": "12.0.0.0"
+          }
+        }
+      },
+      "Azure.Communication.Email/1.0.0-beta.1": {
+        "dependencies": {
+          "Azure.Core": "1.26.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.Communication.Email.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.22.27404"
           }
         }
       },
@@ -1002,6 +1014,13 @@
       "sha512": "sha512-XCJ4E3oKrbRl1qY9Mr+7uyC0xZj1+bqQjmQRWTiTKiVuuXTny+7YFWHi20tPjwkMukLbicN6yGlDy5PZ4wyi1w==",
       "path": "automapper.extensions.microsoft.dependencyinjection/12.0.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512"
+    },
+    "Azure.Communication.Email/1.0.0-beta.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uBYsK5TqzuY5hJsv8bqRVEJbt+DEuSlcBvkBpIG8NoBXe1Ozx0ZQouNfNU1Rl02W/ZJnyEC8tJrwNlWJhltgsA==",
+      "path": "azure.communication.email/1.0.0-beta.1",
+      "hashPath": "azure.communication.email.1.0.0-beta.1.nupkg.sha512"
     },
     "Azure.Core/1.26.0": {
       "type": "package",

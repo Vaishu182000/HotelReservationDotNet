@@ -4,6 +4,7 @@ public static class ErrorResponse
 {
     public const string ErrorUserSignUp = "Error in Signing Up the User";
     public const string ErrorUserLogin = "Error in Login in User";
+    public const string ErrorUserForgotPassword = "Error in Changing your Password";
     
     public const string ErrorAddLocation = "Error in Adding Location";
     public const string ErrorGetLocations = "Error in retrieving the Location";

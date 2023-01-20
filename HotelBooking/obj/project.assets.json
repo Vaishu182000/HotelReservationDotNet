@@ -31,6 +31,22 @@
           "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "Azure.Communication.Email/1.0.0-beta.1": {
+        "type": "package",
+        "dependencies": {
+          "Azure.Core": "1.24.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Azure.Communication.Email.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.Communication.Email.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Azure.Core/1.26.0": {
         "type": "package",
         "dependencies": {
@@ -1763,6 +1779,22 @@
         "automapper.extensions.microsoft.dependencyinjection.nuspec",
         "icon.png",
         "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
+      ]
+    },
+    "Azure.Communication.Email/1.0.0-beta.1": {
+      "sha512": "uBYsK5TqzuY5hJsv8bqRVEJbt+DEuSlcBvkBpIG8NoBXe1Ozx0ZQouNfNU1Rl02W/ZJnyEC8tJrwNlWJhltgsA==",
+      "type": "package",
+      "path": "azure.communication.email/1.0.0-beta.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGELOG.md",
+        "README.md",
+        "azure.communication.email.1.0.0-beta.1.nupkg.sha512",
+        "azure.communication.email.nuspec",
+        "azureicon.png",
+        "lib/netstandard2.0/Azure.Communication.Email.dll",
+        "lib/netstandard2.0/Azure.Communication.Email.xml"
       ]
     },
     "Azure.Core/1.26.0": {
@@ -5005,6 +5037,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.0",
+      "Azure.Communication.Email >= 1.0.0-beta.1",
       "Azure.Extensions.AspNetCore.Configuration.Secrets >= 1.2.2",
       "Azure.Identity >= 1.9.0-beta.1",
       "Azure.Security.KeyVault.Secrets >= 4.5.0-beta.1",
@@ -5061,6 +5094,10 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[12.0.0, )"
+          },
+          "Azure.Communication.Email": {
+            "target": "Package",
+            "version": "[1.0.0-beta.1, )"
           },
           "Azure.Extensions.AspNetCore.Configuration.Secrets": {
             "target": "Package",

@@ -45,10 +45,10 @@ namespace HotelBooking.Controllers
         }
 
         [Route("[Action]")]
-        [HttpGet]
-        public IActionResult UserLogin(string userEmail, string userPassword)
+        [HttpPost]
+        public IActionResult UserLogin(UserLoginVM userLoginVm)
         {
-            string jwt = _userService.UserLogin(userEmail, userPassword);
+            string jwt = _userService.UserLogin(userLoginVm);
 
             if (jwt != null)
             {
@@ -61,6 +61,16 @@ namespace HotelBooking.Controllers
                 });
             }
             else return NotFound(ErrorResponse.ErrorUserLogin);
+        }
+
+        [Route("[Action]")]
+        [HttpPut]
+        public IActionResult ForgotPassword(UserPasswordVM userPasswordVm)
+        {
+            var _result = _userService.changePassword(userPasswordVm);
+
+            if (_result) return Ok(SuccessResponse.UserForgotPassword);
+            else return NotFound(ErrorResponse.ErrorUserForgotPassword);
         }
     }
 }

@@ -1,4 +1,6 @@
 using AutoMapper;
+using Azure.Communication.Email;
+using Azure.Communication.Email.Models;
 using HotelBooking.Data;
 using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
@@ -13,14 +15,16 @@ public class BookingService
     private UserService _userService;
     private readonly ILogger<BookingService> _logger;
     public readonly IMapper _mapper;
+    public IConfiguration _configuration;
 
-    public BookingService(DbInitializer dbContext, RoomService roomService, UserService userService, ILogger<BookingService> logger, IMapper mapper)
+    public BookingService(DbInitializer dbContext, RoomService roomService, UserService userService, ILogger<BookingService> logger, IMapper mapper, IConfiguration configuration)
     {
         _dbContext = dbContext;
         _roomService = roomService;
         _userService = userService;
         _logger = logger;
         _mapper = mapper;
+        _configuration = configuration;
     }
 
     public bool CreateBooking(BookingVM booking)
@@ -32,9 +36,21 @@ public class BookingService
             if (_room.HotelId == booking.hotelId)
             {
                 var _mappedBooking = _mapper.Map<Booking>(booking);
+                var user = _dbContext.User.Find(booking.userId);
+                var hotel = _dbContext.Hotel.Find(booking.hotelId);
 
                 _dbContext.Booking.Add(_mappedBooking);
                 _dbContext.SaveChanges();
+                
+                string connectionString = _configuration["communicationService"];
+                EmailClient emailClient = new EmailClient(connectionString);
+                        
+                EmailContent emailContent = new EmailContent("Booking Successful");
+                emailContent.PlainText = $"Your Booking is Confirmed! The Hotel Name is {hotel.hotelName} and Your Room No is {_room.roomName}. Your Check In Date is {booking.checkInTime} and Check Out Date is {booking.checkOutTime}";
+                List<EmailAddress> emailAddresses = new List<EmailAddress> { new EmailAddress(user.userEmail) { DisplayName = "Friendly Display Name" }};
+                EmailRecipients emailRecipients = new EmailRecipients(emailAddresses);
+                EmailMessage emailMessage = new EmailMessage(_configuration["communicationService:FromEmail"], emailContent, emailRecipients);
+                SendEmailResult emailResult = emailClient.Send(emailMessage,CancellationToken.None);
                 
                 _logger.LogInformation(SuccessResponse.AddBooking);
                 return true;   

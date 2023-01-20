@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "HNlKRzqx5SKXeA2WrHUGngYbICzP5pntBXMnT756CXbnrBS0POyR+FAwJ/NMb00BE0A7HtYX7qcKp9GW9V/rnQ==",
+  "dgSpecHash": "zEsnRmobO/Bakyc4F5l98+hStpfLRNQ96j36lLIya2v8cCv/RVKM+7KjXjlj0AN65HgaH4ct7e16Hh7LJVWsHA==",
   "success": true,
   "projectFilePath": "/Users/presidio/Projects/HotelBooking/HotelBooking/HotelBooking.csproj",
   "expectedPackageFiles": [
     "/Users/presidio/.nuget/packages/automapper/12.0.0/automapper.12.0.0.nupkg.sha512",
     "/Users/presidio/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.0/automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "/Users/presidio/.nuget/packages/azure.communication.email/1.0.0-beta.1/azure.communication.email.1.0.0-beta.1.nupkg.sha512",
     "/Users/presidio/.nuget/packages/azure.core/1.26.0/azure.core.1.26.0.nupkg.sha512",
     "/Users/presidio/.nuget/packages/azure.extensions.aspnetcore.configuration.secrets/1.2.2/azure.extensions.aspnetcore.configuration.secrets.1.2.2.nupkg.sha512",
     "/Users/presidio/.nuget/packages/azure.identity/1.9.0-beta.1/azure.identity.1.9.0-beta.1.nupkg.sha512",
