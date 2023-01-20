@@ -48,14 +48,16 @@ namespace HotelBooking.Controllers
         [HttpGet]
         public IActionResult UserLogin(string userEmail, string userPassword)
         {
-            bool _result = _userService.UserLogin(userEmail, userPassword);
+            string jwt = _userService.UserLogin(userEmail, userPassword);
 
-            if (_result)
+            if (jwt != null)
             {
+                _logger.LogInformation(jwt);
+                
                 var _locations = _locationService.GetLocations();
                 return Ok(new
                 {
-                    SuccessResponse.UserLogin, _locations
+                    SuccessResponse.UserLogin, _locations, jwt
                 });
             }
             else return NotFound(ErrorResponse.ErrorUserLogin);

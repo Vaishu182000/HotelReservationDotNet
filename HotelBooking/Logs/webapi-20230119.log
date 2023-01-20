@@ -795,3 +795,4 @@ Error Number:40615,State:1,Class:14
 2023-01-19 19:21:19.019 +05:30  INF  Executed action HotelBooking.Controllers.LocationController.GetLocations (HotelBooking) in 5756.9337ms
 2023-01-19 19:21:19.019 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.LocationController.GetLocations (HotelBooking)'
 2023-01-19 19:21:19.037 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Location/GetLocations - - - 404 - text/plain;+charset=utf-8 5964.0221ms
+2023-01-19 21:40:17.639 +05:30  INF  Application is shutting down...

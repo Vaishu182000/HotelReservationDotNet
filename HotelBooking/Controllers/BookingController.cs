@@ -1,10 +1,12 @@
 using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
 using HotelBooking.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HotelBooking.Controllers;
 
+[Authorize]
 [Route("[Controller]")]
 [ApiController]
 public class BookingController : ControllerBase

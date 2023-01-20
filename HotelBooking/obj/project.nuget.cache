@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "U1BDzCEgpnQg822aIz4EC5SyBSOvCUCkOm2Nn2NS7kIRj29nR8/9c4j4s5qLmHevquSjlvGgyJcGRZPVL3y/Kw==",
+  "dgSpecHash": "HNlKRzqx5SKXeA2WrHUGngYbICzP5pntBXMnT756CXbnrBS0POyR+FAwJ/NMb00BE0A7HtYX7qcKp9GW9V/rnQ==",
   "success": true,
   "projectFilePath": "/Users/presidio/Projects/HotelBooking/HotelBooking/HotelBooking.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,7 @@
     "/Users/presidio/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.2.1/fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "/Users/presidio/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/presidio/.nuget/packages/microsoft.applicationinsights/2.20.0/microsoft.applicationinsights.2.20.0.nupkg.sha512",
+    "/Users/presidio/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/7.0.2/microsoft.aspnetcore.authentication.jwtbearer.7.0.2.nupkg.sha512",
     "/Users/presidio/.nuget/packages/microsoft.aspnetcore.openapi/7.0.1/microsoft.aspnetcore.openapi.7.0.1.nupkg.sha512",
     "/Users/presidio/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/Users/presidio/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",

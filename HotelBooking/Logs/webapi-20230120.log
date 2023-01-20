@@ -1,0 +1,675 @@
+2023-01-20 11:25:02.171 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-20 11:25:02.257 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-20 11:25:02.259 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-20 11:25:02.260 +05:30  INF  Hosting environment: Development
+2023-01-20 11:25:02.260 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-20 11:25:06.594 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/ - -
+2023-01-20 11:25:06.766 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/ - - - 301 0 - 178.9524ms
+2023-01-20 11:25:06.771 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/index.html - -
+2023-01-20 11:25:07.085 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/index.html - - - 200 - text/html;charset=utf-8 314.5649ms
+2023-01-20 11:25:07.202 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger-ui.css - -
+2023-01-20 11:25:07.213 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger-ui-bundle.js - -
+2023-01-20 11:25:07.228 +05:30  INF  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-01-20 11:25:07.229 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger-ui.css - - - 200 143943 text/css 26.7967ms
+2023-01-20 11:25:07.232 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger-ui-standalone-preset.js - -
+2023-01-20 11:25:07.264 +05:30  INF  Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-01-20 11:25:07.265 +05:30  INF  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-01-20 11:25:07.270 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger-ui-bundle.js - - - 200 1096145 text/javascript 56.7872ms
+2023-01-20 11:25:07.270 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 37.2167ms
+2023-01-20 11:25:07.528 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-20 11:25:07.560 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/favicon-32x32.png - -
+2023-01-20 11:25:07.560 +05:30  INF  Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-01-20 11:25:07.560 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/favicon-32x32.png - - - 200 628 image/png 0.9000ms
+2023-01-20 11:25:07.807 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 279.3056ms
+2023-01-20 11:54:39.015 +05:30  INF  Application is shutting down...
+2023-01-20 11:55:58.956 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-01-20 11:55:59.110 +05:30  INF  Creating key {2f7451a5-b17a-4397-aeea-35dd49293f0e} with creation date 2023-01-20 06:25:59Z, activation date 2023-01-20 06:25:59Z, and expiration date 2023-04-20 06:25:59Z.
+2023-01-20 11:55:59.124 +05:30  WRN  No XML encryptor configured. Key {2f7451a5-b17a-4397-aeea-35dd49293f0e} may be persisted to storage in unencrypted form.
+2023-01-20 11:55:59.145 +05:30  INF  Writing data to file '/Users/presidio/.aspnet/DataProtection-Keys/key-2f7451a5-b17a-4397-aeea-35dd49293f0e.xml'.
+2023-01-20 11:56:00.577 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-20 11:56:00.578 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-20 11:56:00.579 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-20 11:56:00.579 +05:30  INF  Hosting environment: Development
+2023-01-20 11:56:00.580 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-20 11:56:16.074 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/index.html - -
+2023-01-20 11:56:16.728 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/index.html - - - 200 - text/html;charset=utf-8 656.6720ms
+2023-01-20 11:56:17.048 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-20 11:56:17.231 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 182.0324ms
+2023-01-20 11:57:02.229 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/User/UserLogin?userEmail=vaishnavis%40presidio.com&userPassword=Presidio%2A123 - -
+2023-01-20 11:57:02.248 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-01-20 11:57:02.282 +05:30  INF  Route matched with {action = "UserLogin", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserLogin(System.String, System.String) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-20 11:57:09.791 +05:30  INF  Executed DbCommand (419ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-20 11:57:09.928 +05:30  INF  User Login Successfull! You can find the Available Locations
+2023-01-20 11:57:10.564 +05:30  INF  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI2MWFlMDVmYS0xNjQxLTQ2NTEtOWM5Yi0zMGQ5MTI3YTY4YjUiLCJpYXQiOiIyMC8wMS8yMDIzIDY6Mjc6MDkgQU0iLCJVc2VySWQiOiIxIiwiVXNlck5hbWUiOiJWYWlzaG5hdmkgUyIsIlVzZXJFbWFpbCI6InZhaXNobmF2aXNAcHJlc2lkaW8uY29tIiwiUGFzc3dvcmQiOiJQcmVzaWRpbyoxMjMiLCJleHAiOjE2NzQxOTY2MjksImlzcyI6IkpXVEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSldUU2VydmljZVBvc3RtYW5DbGllbnQifQ.elknLJHwMoL3rp7kgJnD50YHzMnpV26AC-qZIS5kt8s
+2023-01-20 11:57:10.832 +05:30  INF  Executed DbCommand (256ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+2023-01-20 11:57:10.852 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType6`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[HotelBooking.Models.Location, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-01-20 11:57:10.867 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserLogin (HotelBooking) in 8578.0532ms
+2023-01-20 11:57:10.867 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-01-20 11:57:10.880 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/User/UserLogin?userEmail=vaishnavis%40presidio.com&userPassword=Presidio%2A123 - - - 200 - application/json;+charset=utf-8 8650.8327ms
+2023-01-20 11:59:06.109 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Booking/CreateBooking application/json 175
+2023-01-20 11:59:06.166 +05:30  INF  Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-20 11:59:06.177 +05:30  INF  AuthenticationScheme: Bearer was challenged.
+2023-01-20 11:59:06.179 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Booking/CreateBooking application/json 175 - 401 0 - 73.2256ms
+2023-01-20 12:00:38.671 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/index.html/Booking/CreateBooking application/json 175
+2023-01-20 12:00:38.680 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/index.html/Booking/CreateBooking application/json 175 - 404 0 - 9.5262ms
+2023-01-20 12:01:43.341 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/index.html/Booking/CreateBooking application/json 175
+2023-01-20 12:01:43.650 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/index.html/Booking/CreateBooking application/json 175 - 404 0 - 311.0211ms
+2023-01-20 12:02:18.172 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/User/UserLogin?userEmail=vaishnavis%40presidio.com&userPassword=Presidio%2A123 - -
+2023-01-20 12:02:18.242 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-01-20 12:02:18.264 +05:30  INF  Route matched with {action = "UserLogin", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserLogin(System.String, System.String) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-20 12:02:18.870 +05:30  INF  Executed DbCommand (267ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-20 12:02:18.885 +05:30  INF  User Login Successfull! You can find the Available Locations
+2023-01-20 12:02:18.905 +05:30  INF  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI3NTZiZDg5Yy0wZjRiLTQyNTYtOTg2OS1hNzU0NWM2ZDhhOWYiLCJpYXQiOiIyMC8wMS8yMDIzIDY6MzI6MTggQU0iLCJVc2VySWQiOiIxIiwiVXNlck5hbWUiOiJWYWlzaG5hdmkgUyIsIlVzZXJFbWFpbCI6InZhaXNobmF2aXNAcHJlc2lkaW8uY29tIiwiUGFzc3dvcmQiOiJQcmVzaWRpbyoxMjMiLCJleHAiOjE2NzQxOTY5MzgsImlzcyI6IkpXVEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSldUU2VydmljZVBvc3RtYW5DbGllbnQifQ.ElYjqB-NoeMQo7IRWdhuiwLEP33Bik-YKxjiKl10PHE
+2023-01-20 12:02:19.172 +05:30  INF  Executed DbCommand (255ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+2023-01-20 12:02:19.177 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType6`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[HotelBooking.Models.Location, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-01-20 12:02:19.189 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserLogin (HotelBooking) in 921.4249ms
+2023-01-20 12:02:19.190 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-01-20 12:02:19.192 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/User/UserLogin?userEmail=vaishnavis%40presidio.com&userPassword=Presidio%2A123 - - - 200 - application/json;+charset=utf-8 1020.7480ms
+2023-01-20 12:02:39.202 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/index.html/Booking/CreateBooking application/json 175
+2023-01-20 12:02:39.216 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/index.html/Booking/CreateBooking application/json 175 - 404 0 - 15.5384ms
+2023-01-20 12:03:17.681 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/index.html/Booking/CreateBooking application/json 175
+2023-01-20 12:03:17.707 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/index.html/Booking/CreateBooking application/json 175 - 404 0 - 26.9051ms
+2023-01-20 12:04:33.306 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/swagger/index.html/Booking/CreateBooking application/json 175
+2023-01-20 12:04:33.357 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/swagger/index.html/Booking/CreateBooking application/json 175 - 404 0 - 52.5389ms
+2023-01-20 12:04:44.182 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Booking/CreateBooking application/json 175
+2023-01-20 12:04:44.208 +05:30  INF  Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-20 12:04:44.213 +05:30  INF  AuthenticationScheme: Bearer was challenged.
+2023-01-20 12:04:44.214 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Booking/CreateBooking application/json 175 - 401 0 - 32.2064ms
+2023-01-20 12:06:55.236 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Booking/CreateBooking application/json 175
+2023-01-20 12:06:55.264 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-01-20 12:06:55.363 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-01-20 12:06:58.155 +05:30  INF  Executed DbCommand (266ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-01-20 12:06:58.834 +05:30  INF  Executed DbCommand (263ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-01-20 12:06:58.886 +05:30  INF  Created Booking Successfully
+2023-01-20 12:06:58.886 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-20 12:06:58.887 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 3524.2361ms
+2023-01-20 12:06:58.887 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-01-20 12:06:58.888 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Booking/CreateBooking application/json 175 - 200 - text/plain;+charset=utf-8 3655.5037ms
+2023-01-20 12:09:54.415 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/User/UserLogin?userEmail=vaishnavis%40presidio.com&userPassword=Presidio%2A123 - -
+2023-01-20 12:09:54.422 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-01-20 12:09:54.428 +05:30  INF  Route matched with {action = "UserLogin", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserLogin(System.String, System.String) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-20 12:09:54.704 +05:30  INF  Executed DbCommand (256ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-20 12:09:54.708 +05:30  INF  User Login Successfull! You can find the Available Locations
+2023-01-20 12:09:54.710 +05:30  INF  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI3YjUwNzE1MC01ZTQ2LTQ1MDYtYmY4Ny05ZmZiYWEyODcxNmEiLCJpYXQiOiIyMC8wMS8yMDIzIDY6Mzk6NTQgQU0iLCJVc2VySWQiOiIxIiwiVXNlck5hbWUiOiJWYWlzaG5hdmkgUyIsIlVzZXJFbWFpbCI6InZhaXNobmF2aXNAcHJlc2lkaW8uY29tIiwiUGFzc3dvcmQiOiJQcmVzaWRpbyoxMjMiLCJleHAiOjE2NzQxOTczOTQsImlzcyI6IkpXVEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSldUU2VydmljZVBvc3RtYW5DbGllbnQifQ.0gg7i9UmRmmPTYhWbcyws483zR4I2oPUyeuFcOJHCZQ
+2023-01-20 12:09:54.966 +05:30  INF  Executed DbCommand (255ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+2023-01-20 12:09:54.968 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType12`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[HotelBooking.Models.Location, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-01-20 12:09:54.976 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserLogin (HotelBooking) in 546.9673ms
+2023-01-20 12:09:54.976 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-01-20 12:09:54.976 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/User/UserLogin?userEmail=vaishnavis%40presidio.com&userPassword=Presidio%2A123 - - - 200 - application/json;+charset=utf-8 562.1378ms
+2023-01-20 12:12:48.453 +05:30  INF  Application is shutting down...
+2023-01-20 12:13:41.223 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-01-20 12:13:43.150 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-20 12:13:43.151 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-20 12:13:43.153 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-20 12:13:43.154 +05:30  INF  Hosting environment: Development
+2023-01-20 12:13:43.155 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-20 12:13:47.856 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/index.html - -
+2023-01-20 12:13:48.262 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/index.html - - - 200 - text/html;charset=utf-8 409.1151ms
+2023-01-20 12:13:48.494 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-20 12:13:48.783 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 288.9702ms
+2023-01-20 12:14:06.758 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/User/UserLogin?userEmail=vaishnavis%40presidio.com&userPassword=Presidio%2A123 - -
+2023-01-20 12:14:06.774 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-01-20 12:14:06.814 +05:30  INF  Route matched with {action = "UserLogin", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserLogin(System.String, System.String) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-20 12:14:11.812 +05:30  ERR  An error occurred using the connection to database 'hotelreservation' on server 'tcp:dotnet-training-server.database.windows.net,1433'.
+2023-01-20 12:14:11.825 +05:30  ERR  An exception occurred while iterating over the results of a query for context type 'HotelBooking.Data.DbInitializer'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:4444c8d3-dbcb-46ca-b1c6-e81a3c833462
+Error Number:40615,State:1,Class:14Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:4444c8d3-dbcb-46ca-b1c6-e81a3c833462
+Error Number:40615,State:1,Class:14
+
+2023-01-20 12:14:11.854 +05:30  ERR  Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+2023-01-20 12:14:11.860 +05:30  INF  Executing NotFoundObjectResult, writing value of type 'System.String'.
+2023-01-20 12:14:11.867 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserLogin (HotelBooking) in 5046.4239ms
+2023-01-20 12:14:11.868 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-01-20 12:14:11.887 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/User/UserLogin?userEmail=vaishnavis%40presidio.com&userPassword=Presidio%2A123 - - - 404 - text/plain;+charset=utf-8 5130.2873ms
+2023-01-20 12:14:26.817 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/User/UserLogin?userEmail=vaishnavis%40presidio.com&userPassword=Presidio%2A123 - -
+2023-01-20 12:14:26.820 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-01-20 12:14:26.823 +05:30  INF  Route matched with {action = "UserLogin", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserLogin(System.String, System.String) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-20 12:14:29.648 +05:30  INF  Executed DbCommand (1,024ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-20 12:14:29.815 +05:30  INF  User Login Successfull! You can find the Available Locations
+2023-01-20 12:14:30.278 +05:30  INF  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIzYjBlNTc0NS0zMmZhLTQ2ZjgtOTNhYi00YzI4ZWI3MDU4OGYiLCJpYXQiOiIyMC8wMS8yMDIzIDY6NDQ6MjkgQU0iLCJVc2VySWQiOiIxIiwiVXNlck5hbWUiOiJWYWlzaG5hdmkgUyIsIlVzZXJFbWFpbCI6InZhaXNobmF2aXNAcHJlc2lkaW8uY29tIiwiUGFzc3dvcmQiOiJQcmVzaWRpbyoxMjMiLCJleHAiOjE2NzQxOTc2NjksImlzcyI6IkpXVEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSldUU2VydmljZVBvc3RtYW5DbGllbnQifQ.HChbloxHs4g60VOaHLtslh4Hy5qFa-reEfSOtzUf2RY
+2023-01-20 12:14:30.540 +05:30  INF  Executed DbCommand (244ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+2023-01-20 12:14:30.568 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType6`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[HotelBooking.Models.Location, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-01-20 12:14:30.584 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserLogin (HotelBooking) in 3759.5086ms
+2023-01-20 12:14:30.584 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-01-20 12:14:30.585 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/User/UserLogin?userEmail=vaishnavis%40presidio.com&userPassword=Presidio%2A123 - - - 200 - application/json;+charset=utf-8 3768.4879ms
+2023-01-20 12:15:24.375 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/Booking/CreateBooking application/json 175
+2023-01-20 12:15:24.483 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-01-20 12:15:24.487 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-01-20 12:15:24.966 +05:30  INF  Executed DbCommand (245ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-01-20 12:15:25.904 +05:30  INF  Executed DbCommand (271ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-01-20 12:15:25.939 +05:30  INF  Created Booking Successfully
+2023-01-20 12:15:25.939 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-20 12:15:25.939 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 1452.0309ms
+2023-01-20 12:15:25.939 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-01-20 12:15:25.939 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/Booking/CreateBooking application/json 175 - 200 - text/plain;+charset=utf-8 1564.3650ms
+2023-01-20 12:15:52.763 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Booking/BookingHistory?userEmail=vaishnavis%40presidio.com - -
+2023-01-20 12:15:52.773 +05:30  INF  Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-20 12:15:52.782 +05:30  INF  AuthenticationScheme: Bearer was challenged.
+2023-01-20 12:15:52.782 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Booking/BookingHistory?userEmail=vaishnavis%40presidio.com - - - 401 0 - 18.9945ms
+2023-01-20 12:16:28.785 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Booking/BookingHistory?userEmail=vaishnavis%40presidio.com - -
+2023-01-20 12:16:28.830 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking)'
+2023-01-20 12:16:28.840 +05:30  INF  Route matched with {action = "BookingHistory", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult BookingHistory(System.String) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-01-20 12:16:29.121 +05:30  INF  Executed DbCommand (245ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-20 12:16:29.134 +05:30  INF  Retrieved Booking Information of vaishnavis@presidio.com
+2023-01-20 12:16:29.136 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Linq.IQueryable`1[[HotelBooking.Models.Booking, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Linq.Expressions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+2023-01-20 12:16:29.424 +05:30  INF  Executed DbCommand (260ms) [Parameters=[@___user_userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[bookingId], [b].[RoomId], [b].[UserId], [b].[checkInTime], [b].[checkOutTime], [b].[noOfPersons], [b].[paid]
+FROM [Booking] AS [b]
+WHERE [b].[UserId] = @___user_userId_0
+2023-01-20 12:16:29.445 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking) in 605.2375ms
+2023-01-20 12:16:29.446 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking)'
+2023-01-20 12:16:29.446 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Booking/BookingHistory?userEmail=vaishnavis%40presidio.com - - - 200 - application/json;+charset=utf-8 662.7791ms
+2023-01-20 12:18:08.247 +05:30  INF  Application is shutting down...
+2023-01-20 12:18:44.420 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-01-20 12:18:45.740 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-20 12:18:45.741 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-20 12:18:45.742 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-20 12:18:45.743 +05:30  INF  Hosting environment: Development
+2023-01-20 12:18:45.743 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-20 12:19:05.272 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/index.html - -
+2023-01-20 12:19:05.679 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/index.html - - - 200 - text/html;charset=utf-8 409.7144ms
+2023-01-20 12:19:05.885 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-20 12:19:06.134 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 248.5968ms
+2023-01-20 12:23:58.388 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/User/UserLogin?userEmail=vaishnavis%40presidio.com&userPassword=Presidio%2A123 - -
+2023-01-20 12:23:58.475 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-01-20 12:23:58.556 +05:30  INF  Route matched with {action = "UserLogin", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserLogin(System.String, System.String) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-20 12:24:04.434 +05:30  INF  Executed DbCommand (352ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-20 12:24:04.623 +05:30  INF  User Login Successfull! You can find the Available Locations
+2023-01-20 12:24:04.948 +05:30  INF  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI0ZTBlYzc3NC00NzVlLTRiYzQtYTVmYi00MjBhYzA5MDg5ZWIiLCJpYXQiOiIyMC8wMS8yMDIzIDY6NTQ6MDQgQU0iLCJVc2VySWQiOiIxIiwiVXNlck5hbWUiOiJWYWlzaG5hdmkgUyIsIlVzZXJFbWFpbCI6InZhaXNobmF2aXNAcHJlc2lkaW8uY29tIiwiUGFzc3dvcmQiOiJQcmVzaWRpbyoxMjMiLCJleHAiOjE2NzQxOTgyNDQsImlzcyI6IkpXVEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSldUU2VydmljZVBvc3RtYW5DbGllbnQifQ.Pok8FOmq2_0LEHqWBBvuMlj2BYKsL-TxrQShx5yJV4Y
+2023-01-20 12:24:05.208 +05:30  INF  Executed DbCommand (251ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+2023-01-20 12:24:05.228 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType6`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[HotelBooking.Models.Location, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-01-20 12:24:05.252 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserLogin (HotelBooking) in 6689.4628ms
+2023-01-20 12:24:05.252 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-01-20 12:24:05.267 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/User/UserLogin?userEmail=vaishnavis%40presidio.com&userPassword=Presidio%2A123 - - - 200 - application/json;+charset=utf-8 6883.1678ms
+2023-01-20 12:24:33.289 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Booking/BookingHistory?userEmail=vaishnavis%40presidio.com - -
+2023-01-20 12:24:33.313 +05:30  INF  Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-20 12:24:33.327 +05:30  INF  AuthenticationScheme: Bearer was challenged.
+2023-01-20 12:24:33.327 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Booking/BookingHistory?userEmail=vaishnavis%40presidio.com - - - 401 0 - 38.3040ms
+2023-01-20 12:24:47.182 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Booking/BookingHistory?userEmail=vaishnavis%40presidio.com - -
+2023-01-20 12:24:47.287 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking)'
+2023-01-20 12:24:47.290 +05:30  INF  Route matched with {action = "BookingHistory", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult BookingHistory(System.String) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-01-20 12:24:47.571 +05:30  INF  Executed DbCommand (242ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-20 12:24:47.575 +05:30  INF  Retrieved Booking Information of vaishnavis@presidio.com
+2023-01-20 12:24:47.576 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Linq.IQueryable`1[[HotelBooking.Models.Booking, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Linq.Expressions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+2023-01-20 12:24:47.850 +05:30  INF  Executed DbCommand (246ms) [Parameters=[@___user_userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[bookingId], [b].[RoomId], [b].[UserId], [b].[checkInTime], [b].[checkOutTime], [b].[noOfPersons], [b].[paid]
+FROM [Booking] AS [b]
+WHERE [b].[UserId] = @___user_userId_0
+2023-01-20 12:24:47.921 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking) in 630.9925ms
+2023-01-20 12:24:47.921 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking)'
+2023-01-20 12:24:47.922 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Booking/BookingHistory?userEmail=vaishnavis%40presidio.com - - - 200 - application/json;+charset=utf-8 740.2350ms
+2023-01-20 12:27:51.410 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/User/UserLogin?userEmail=vaishnavis%40presidio.com&userPassword=Presidio%2A123 - -
+2023-01-20 12:27:51.470 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-01-20 12:27:51.479 +05:30  INF  Route matched with {action = "UserLogin", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserLogin(System.String, System.String) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-20 12:27:51.859 +05:30  INF  Executed DbCommand (244ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-20 12:27:51.862 +05:30  INF  User Login Successfull! You can find the Available Locations
+2023-01-20 12:27:51.868 +05:30  ERR  Value cannot be null. (Parameter 's')
+2023-01-20 12:27:51.870 +05:30  INF  Executing NotFoundObjectResult, writing value of type 'System.String'.
+2023-01-20 12:27:51.878 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserLogin (HotelBooking) in 397.5693ms
+2023-01-20 12:27:51.879 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-01-20 12:27:51.880 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/User/UserLogin?userEmail=vaishnavis%40presidio.com&userPassword=Presidio%2A123 - - - 404 - text/plain;+charset=utf-8 472.4575ms
+2023-01-20 12:28:13.713 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/User/UserLogin?userEmail=vaishnavis%40presidio.com&userPassword=Presidio%2A123 - -
+2023-01-20 12:28:13.715 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-01-20 12:28:13.716 +05:30  INF  Route matched with {action = "UserLogin", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserLogin(System.String, System.String) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-20 12:28:13.973 +05:30  INF  Executed DbCommand (242ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-20 12:28:13.975 +05:30  INF  User Login Successfull! You can find the Available Locations
+2023-01-20 12:28:13.976 +05:30  ERR  Value cannot be null. (Parameter 's')
+2023-01-20 12:28:13.976 +05:30  INF  Executing NotFoundObjectResult, writing value of type 'System.String'.
+2023-01-20 12:28:13.976 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserLogin (HotelBooking) in 259.5856ms
+2023-01-20 12:28:13.977 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-01-20 12:28:13.977 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/User/UserLogin?userEmail=vaishnavis%40presidio.com&userPassword=Presidio%2A123 - - - 404 - text/plain;+charset=utf-8 263.4580ms
+2023-01-20 12:29:45.960 +05:30  INF  Application is shutting down...
+2023-01-20 12:30:20.087 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-01-20 12:30:21.952 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-20 12:30:21.952 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-20 12:30:21.954 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-20 12:30:21.954 +05:30  INF  Hosting environment: Development
+2023-01-20 12:30:21.954 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-20 12:30:27.484 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/index.html - -
+2023-01-20 12:30:28.116 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/index.html - - - 200 - text/html;charset=utf-8 644.4312ms
+2023-01-20 12:30:28.567 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-20 12:30:29.315 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 748.0149ms
+2023-01-20 12:30:47.334 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/User/UserLogin?userEmail=vaishnavis%40presidio.com&userPassword=Presidio%2A123 - -
+2023-01-20 12:30:47.365 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-01-20 12:30:47.410 +05:30  INF  Route matched with {action = "UserLogin", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserLogin(System.String, System.String) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-20 12:30:54.541 +05:30  INF  Executed DbCommand (364ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-20 12:30:54.763 +05:30  INF  User Login Successfull! You can find the Available Locations
+2023-01-20 12:30:54.999 +05:30  INF  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI2MTI0NTlkMy0zMmRkLTQwMmEtOTFjYi03Nzc0YTYyOWVmMzEiLCJpYXQiOiIyMC8wMS8yMDIzIDc6MDA6NTQgQU0iLCJVc2VySWQiOiIxIiwiVXNlck5hbWUiOiJWYWlzaG5hdmkgUyIsIlVzZXJFbWFpbCI6InZhaXNobmF2aXNAcHJlc2lkaW8uY29tIiwiUGFzc3dvcmQiOiJQcmVzaWRpbyoxMjMiLCJleHAiOjE2NzQxOTg2NTQsImlzcyI6IkpXVEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSldUU2VydmljZVBvc3RtYW5DbGllbnQifQ.FJAmObMW__ILamkBxNu-QTDOQeFLBbyHQr52s89sAD4
+2023-01-20 12:30:55.264 +05:30  INF  Executed DbCommand (252ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+2023-01-20 12:30:55.296 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType6`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[HotelBooking.Models.Location, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-01-20 12:30:55.320 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserLogin (HotelBooking) in 7903.2453ms
+2023-01-20 12:30:55.320 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-01-20 12:30:55.346 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/User/UserLogin?userEmail=vaishnavis%40presidio.com&userPassword=Presidio%2A123 - - - 200 - application/json;+charset=utf-8 8012.6522ms
+2023-01-20 12:31:19.087 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Booking/BookingHistory?userEmail=vaishnavis%40presidio.com - -
+2023-01-20 12:31:19.229 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking)'
+2023-01-20 12:31:19.234 +05:30  INF  Route matched with {action = "BookingHistory", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult BookingHistory(System.String) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-01-20 12:31:19.548 +05:30  INF  Executed DbCommand (250ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-20 12:31:19.552 +05:30  INF  Retrieved Booking Information of vaishnavis@presidio.com
+2023-01-20 12:31:19.553 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Linq.IQueryable`1[[HotelBooking.Models.Booking, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Linq.Expressions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+2023-01-20 12:31:19.845 +05:30  INF  Executed DbCommand (251ms) [Parameters=[@___user_userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[bookingId], [b].[RoomId], [b].[UserId], [b].[checkInTime], [b].[checkOutTime], [b].[noOfPersons], [b].[paid]
+FROM [Booking] AS [b]
+WHERE [b].[UserId] = @___user_userId_0
+2023-01-20 12:31:19.918 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking) in 683.4569ms
+2023-01-20 12:31:19.918 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking)'
+2023-01-20 12:31:19.919 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Booking/BookingHistory?userEmail=vaishnavis%40presidio.com - - - 200 - application/json;+charset=utf-8 831.9374ms
+2023-01-20 12:31:28.947 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Booking/BookingHistory?userEmail=vaishnavis%40presidio.com - -
+2023-01-20 12:31:28.954 +05:30  INF  Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-20 12:31:28.964 +05:30  INF  AuthenticationScheme: Bearer was challenged.
+2023-01-20 12:31:28.964 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Booking/BookingHistory?userEmail=vaishnavis%40presidio.com - - - 401 0 - 17.4499ms
+2023-01-20 12:41:48.733 +05:30  INF  Application is shutting down...
+2023-01-20 12:42:46.964 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-01-20 12:42:48.884 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-20 12:42:48.884 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-20 12:42:48.886 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-20 12:42:48.886 +05:30  INF  Hosting environment: Development
+2023-01-20 12:42:48.886 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-20 12:42:53.368 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/index.html - -
+2023-01-20 12:42:53.721 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/index.html - - - 200 - text/html;charset=utf-8 355.3040ms
+2023-01-20 12:42:53.985 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-20 12:42:54.124 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 138.2522ms
+2023-01-20 12:55:52.851 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 114
+2023-01-20 12:55:52.884 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-20 12:55:52.918 +05:30  INF  Route matched with {action = "UserSignUp", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserSignUp(HotelBooking.Data.ViewModels.UserVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-20 12:55:58.131 +05:30  ERR  An error occurred using the connection to database 'hotelreservation' on server 'tcp:dotnet-training-server.database.windows.net,1433'.
+2023-01-20 12:55:58.145 +05:30  ERR  An exception occurred in the database while saving changes for context type 'HotelBooking.Data.DbInitializer'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+ClientConnectionId:c8947808-1bc8-4445-9bae-f403787c9ed1
+Error Number:40615,State:1,Class:14Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+ClientConnectionId:c8947808-1bc8-4445-9bae-f403787c9ed1
+Error Number:40615,State:1,Class:14
+
+2023-01-20 12:55:58.170 +05:30  ERR  Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+2023-01-20 12:55:58.175 +05:30  INF  Executing NotFoundObjectResult, writing value of type 'System.String'.
+2023-01-20 12:55:58.183 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserSignUp (HotelBooking) in 5256.9582ms
+2023-01-20 12:55:58.183 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-20 12:55:58.204 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 114 - 404 - text/plain;+charset=utf-8 5353.6195ms
+2023-01-20 12:56:11.333 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 114
+2023-01-20 12:56:11.338 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-20 12:56:11.339 +05:30  INF  Route matched with {action = "UserSignUp", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserSignUp(HotelBooking.Data.ViewModels.UserVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-20 12:56:13.017 +05:30  ERR  An error occurred using the connection to database 'hotelreservation' on server 'tcp:dotnet-training-server.database.windows.net,1433'.
+2023-01-20 12:56:13.023 +05:30  ERR  An exception occurred in the database while saving changes for context type 'HotelBooking.Data.DbInitializer'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+ClientConnectionId:ed935e08-b673-4033-afa6-1864708b0356
+Error Number:40615,State:1,Class:14Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+ClientConnectionId:ed935e08-b673-4033-afa6-1864708b0356
+Error Number:40615,State:1,Class:14
+
+2023-01-20 12:56:13.027 +05:30  ERR  Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+2023-01-20 12:56:13.030 +05:30  INF  Executing NotFoundObjectResult, writing value of type 'System.String'.
+2023-01-20 12:56:13.030 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserSignUp (HotelBooking) in 1690.7964ms
+2023-01-20 12:56:13.031 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-20 12:56:13.032 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 114 - 404 - text/plain;+charset=utf-8 1699.7319ms
+2023-01-20 12:56:15.781 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 114
+2023-01-20 12:56:15.787 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-20 12:56:15.788 +05:30  INF  Route matched with {action = "UserSignUp", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserSignUp(HotelBooking.Data.ViewModels.UserVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-20 12:56:17.259 +05:30  ERR  An error occurred using the connection to database 'hotelreservation' on server 'tcp:dotnet-training-server.database.windows.net,1433'.
+2023-01-20 12:56:17.272 +05:30  ERR  An exception occurred in the database while saving changes for context type 'HotelBooking.Data.DbInitializer'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+ClientConnectionId:05b69745-bee7-4b22-ae3c-13e5ec197572
+Error Number:40615,State:1,Class:14Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+ClientConnectionId:05b69745-bee7-4b22-ae3c-13e5ec197572
+Error Number:40615,State:1,Class:14
+
+2023-01-20 12:56:17.279 +05:30  ERR  Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+2023-01-20 12:56:17.284 +05:30  INF  Executing NotFoundObjectResult, writing value of type 'System.String'.
+2023-01-20 12:56:17.290 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserSignUp (HotelBooking) in 1499.4794ms
+2023-01-20 12:56:17.292 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-20 12:56:17.295 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 114 - 404 - text/plain;+charset=utf-8 1514.4215ms
+2023-01-20 12:56:39.599 +05:30  INF  Application is shutting down...
+2023-01-20 12:57:44.221 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-01-20 12:57:47.336 +05:30  INF  Now listening on: https://localhost:42275
+2023-01-20 12:57:47.337 +05:30  INF  Now listening on: http://localhost:46435
+2023-01-20 12:57:47.342 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-01-20 12:57:47.342 +05:30  INF  Hosting environment: Development
+2023-01-20 12:57:47.343 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-01-20 13:01:10.671 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/index.html - -
+2023-01-20 13:01:12.984 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/index.html - - - 200 - text/html;charset=utf-8 2334.2600ms
+2023-01-20 13:01:13.601 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - -
+2023-01-20 13:01:13.971 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 370.7073ms
+2023-01-20 13:01:36.063 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 114
+2023-01-20 13:01:36.101 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-20 13:01:36.167 +05:30  INF  Route matched with {action = "UserSignUp", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserSignUp(HotelBooking.Data.ViewModels.UserVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-20 13:01:41.056 +05:30  ERR  An error occurred using the connection to database 'hotelreservation' on server 'tcp:dotnet-training-server.database.windows.net,1433'.
+2023-01-20 13:01:41.073 +05:30  ERR  An exception occurred in the database while saving changes for context type 'HotelBooking.Data.DbInitializer'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+ClientConnectionId:2bf18c2d-f502-48d3-85de-721eb402b000
+Error Number:40615,State:1,Class:14Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+ClientConnectionId:2bf18c2d-f502-48d3-85de-721eb402b000
+Error Number:40615,State:1,Class:14
+
+2023-01-20 13:01:41.100 +05:30  ERR  Cannot open server 'dotnet-training-server' requested by the login. Client with IP address '103.25.47.242' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+2023-01-20 13:01:41.106 +05:30  INF  Executing NotFoundObjectResult, writing value of type 'System.String'.
+2023-01-20 13:01:41.115 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserSignUp (HotelBooking) in 4939.2428ms
+2023-01-20 13:01:41.115 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-20 13:01:41.135 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 114 - 404 - text/plain;+charset=utf-8 5071.6375ms
+2023-01-20 13:02:25.318 +05:30  INF  Request starting HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 114
+2023-01-20 13:02:25.334 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-20 13:02:25.335 +05:30  INF  Route matched with {action = "UserSignUp", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserSignUp(HotelBooking.Data.ViewModels.UserVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-20 13:02:27.809 +05:30  INF  Executed DbCommand (438ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [User] ([password], [phone], [userEmail], [userName])
+OUTPUT INSERTED.[userId]
+VALUES (@p0, @p1, @p2, @p3);
+2023-01-20 13:02:27.959 +05:30  INF  User Signed Up Successfully
+2023-01-20 13:02:27.964 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-01-20 13:02:27.966 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserSignUp (HotelBooking) in 2629.0442ms
+2023-01-20 13:02:27.967 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-01-20 13:02:27.968 +05:30  INF  Request finished HTTP/1.1 POST https://localhost:42275/User/UserSignUp application/json 114 - 200 - text/plain;+charset=utf-8 2652.8077ms
+2023-01-20 13:06:23.931 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/User/UserLogin?userEmail=ajayr%40presidio.com&userPassword=Ajay%2A123 - -
+2023-01-20 13:06:23.950 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-01-20 13:06:23.979 +05:30  INF  Route matched with {action = "UserLogin", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserLogin(System.String, System.String) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-01-20 13:06:25.041 +05:30  INF  Executed DbCommand (268ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-20 13:06:25.070 +05:30  INF  QWpheSoxMjM=
+2023-01-20 13:06:25.071 +05:30  INF  QWpheSoxMjM=
+2023-01-20 13:06:25.071 +05:30  INF  User Login Successfull! You can find the Available Locations
+2023-01-20 13:06:25.314 +05:30  INF  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJjNWQ3ZTA0NS0zYmFkLTQ5YTgtOWJjNS1mZmEwNjM4OTBmY2EiLCJpYXQiOiIyMC8wMS8yMDIzIDc6MzY6MjUgQU0iLCJVc2VySWQiOiIyIiwiVXNlck5hbWUiOiJBamF5IFIiLCJVc2VyRW1haWwiOiJhamF5ckBwcmVzaWRpby5jb20iLCJQYXNzd29yZCI6IlFXcGhlU294TWpNPSIsImV4cCI6MTY3NDIwMDc4NSwiaXNzIjoiSldUQXV0aGVudGljYXRpb25TZXJ2ZXIiLCJhdWQiOiJKV1RTZXJ2aWNlUG9zdG1hbkNsaWVudCJ9.tZYMJFavLVF6tRcBXJrPb3BrUP7otxzTAjfDYdl0jXw
+2023-01-20 13:06:25.588 +05:30  INF  Executed DbCommand (263ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+2023-01-20 13:06:25.604 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType6`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[HotelBooking.Models.Location, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-01-20 13:06:25.624 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserLogin (HotelBooking) in 1644.7089ms
+2023-01-20 13:06:25.625 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-01-20 13:06:25.625 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/User/UserLogin?userEmail=ajayr%40presidio.com&userPassword=Ajay%2A123 - - - 200 - application/json;+charset=utf-8 1693.9436ms
+2023-01-20 13:09:21.682 +05:30  INF  Request starting HTTP/1.1 GET https://localhost:42275/Booking/BookingHistory?userEmail=ajayr%40presidio.com - -
+2023-01-20 13:09:21.957 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking)'
+2023-01-20 13:09:21.970 +05:30  INF  Route matched with {action = "BookingHistory", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult BookingHistory(System.String) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-01-20 13:09:22.281 +05:30  INF  Executed DbCommand (266ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-01-20 13:09:22.287 +05:30  INF  Retrieved Booking Information of ajayr@presidio.com
+2023-01-20 13:09:22.289 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Linq.IQueryable`1[[HotelBooking.Models.Booking, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Linq.Expressions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+2023-01-20 13:09:22.600 +05:30  INF  Executed DbCommand (267ms) [Parameters=[@___user_userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[bookingId], [b].[RoomId], [b].[UserId], [b].[checkInTime], [b].[checkOutTime], [b].[noOfPersons], [b].[paid]
+FROM [Booking] AS [b]
+WHERE [b].[UserId] = @___user_userId_0
+2023-01-20 13:09:22.601 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking) in 630.4153ms
+2023-01-20 13:09:22.601 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking)'
+2023-01-20 13:09:22.601 +05:30  INF  Request finished HTTP/1.1 GET https://localhost:42275/Booking/BookingHistory?userEmail=ajayr%40presidio.com - - - 200 - application/json;+charset=utf-8 923.4627ms
