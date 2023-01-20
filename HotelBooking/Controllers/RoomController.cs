@@ -48,6 +48,7 @@ namespace HotelBooking.Controllers
 
             if (_roomList != null)
             {
+                // _roomList = _roomService.getLocationInList(_roomList);
                 var message = $"The Rooms Available Under {hotelName}";
                 return Ok(new {
                     message,_roomList

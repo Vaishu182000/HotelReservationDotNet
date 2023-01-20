@@ -75,6 +75,7 @@ namespace HotelBooking.Services
 
                 var _roomList = _dbContext.Room.Where(r => r.HotelId == _hotel.hotelId);
                 _logger.LogInformation(SuccessResponse.RoomListByHotel);
+                
                 return _roomList;
             }
             catch (Exception e)
@@ -84,6 +85,15 @@ namespace HotelBooking.Services
             }
         }
 
+        public IQueryable<Room> getLocationInList(IQueryable<Room> room)
+        {
+            foreach (var _room in room)
+            {
+                _room.hotel.location = _dbContext.Location.Find(_room.hotel.LocationId);
+            }
+            return room;
+        }
+        
         public Room GetRoomByRoomName(string roomName)
         {
             var _room = _dbContext.Room.FirstOrDefault(r => r.roomName == roomName);

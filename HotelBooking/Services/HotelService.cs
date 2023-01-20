@@ -76,7 +76,12 @@ namespace HotelBooking.Services
         {
             try
             {
-                return _dbContext.Hotel.ToList();
+                var _hotels = _dbContext.Hotel.ToList();
+                foreach (var hotel in _hotels)
+                {
+                    hotel.location = _dbContext.Location.Find(hotel.LocationId);
+                }
+                return _hotels;
             }
             catch (Exception e)
             {
