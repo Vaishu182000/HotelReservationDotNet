@@ -7,13 +7,13 @@ using HotelBooking.Models;
 
 namespace HotelBooking.Services
 {
-	public class LocationService
-	{
+    public class LocationService
+    {
         private DbInitializer _dbContext;
         public readonly IMapper _mapper;
         private readonly ILogger<LocationService> _logger;
         public LocationService(DbInitializer dbContext, IMapper mapper, ILogger<LocationService> logger)
-		{
+        {
             _dbContext = dbContext;
             _mapper = mapper;
             _logger = logger;
@@ -26,10 +26,10 @@ namespace HotelBooking.Services
             try
             {
                 var _mappedLocation = _mapper.Map<Location>(location);
-               
+
                 _dbContext.Location.Add(_mappedLocation);
                 _dbContext.SaveChanges();
-                
+
                 _logger.LogInformation(SuccessResponse.AddLocation);
                 return true;
             }
@@ -58,6 +58,6 @@ namespace HotelBooking.Services
             var _location = _dbContext.Location.SingleOrDefault(loc => loc.location == location);
             return _location;
         }
-	}
+    }
 }
 

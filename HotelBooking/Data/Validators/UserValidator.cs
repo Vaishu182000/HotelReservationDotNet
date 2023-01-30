@@ -8,7 +8,7 @@ namespace HotelBooking.Data.Validators;
 public class UserValidator : AbstractValidator<UserVM>
 {
     private UserService _userService;
-    
+
     public UserValidator(UserService userService)
     {
         _userService = userService;

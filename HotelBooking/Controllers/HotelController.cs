@@ -50,8 +50,9 @@ namespace HotelBooking.Controllers
             {
                 return Ok(new
                 {
-                    SuccessResponse.HotelListBasedOnLocation, hotel
-                });   
+                    SuccessResponse.HotelListBasedOnLocation,
+                    hotel
+                });
             }
             else
             {
@@ -69,8 +70,9 @@ namespace HotelBooking.Controllers
             {
                 return Ok(new
                 {
-                    SuccessResponse.GetHotel, _hotelList
-                });   
+                    SuccessResponse.GetHotel,
+                    _hotelList
+                });
             }
             else
             {

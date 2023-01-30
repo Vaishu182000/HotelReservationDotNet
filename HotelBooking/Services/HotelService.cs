@@ -9,14 +9,14 @@ using HotelBooking.Models;
 
 namespace HotelBooking.Services
 {
-	public class HotelService
-	{
+    public class HotelService
+    {
         private DbInitializer _dbContext;
         private LocationService _locationService;
         public readonly IMapper _mapper;
         private readonly ILogger<HotelService> _logger;
         public HotelService(DbInitializer dbContext, LocationService locationService, IMapper mapper, ILogger<HotelService> logger)
-		{
+        {
             _dbContext = dbContext;
             _locationService = locationService;
             _mapper = mapper;
@@ -35,11 +35,11 @@ namespace HotelBooking.Services
 
                 _dbContext.Hotel.Add(_mappedHotel);
                 _dbContext.SaveChanges();
-                
+
                 _logger.LogInformation(SuccessResponse.AddHotel);
                 return true;
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 _logger.LogError(exception.Message);
                 return false;
@@ -55,11 +55,11 @@ namespace HotelBooking.Services
                 var hotels = new List<string>();
                 var _hotelListByLocation = _dbContext.Hotel.Where(l => l.LocationId == _location.locationId);
                 hotels = _hotelListByLocation.Select(l => l.hotelName).ToList();
-                
+
                 _logger.LogInformation(SuccessResponse.HotelListBasedOnLocation);
                 return hotels;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 _logger.LogError(e.Message);
                 return null;

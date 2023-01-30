@@ -26,7 +26,7 @@ namespace HotelBooking.Controllers
 
         [Route("[Action]")]
         [HttpPost]
-        public IActionResult CreateRoom([FromForm]RoomVM room)
+        public IActionResult CreateRoom([FromForm] RoomVM room)
         {
             var _result = _roomService.createRoom(room);
 
@@ -50,9 +50,11 @@ namespace HotelBooking.Controllers
             {
                 // _roomList = _roomService.getLocationInList(_roomList);
                 var message = $"The Rooms Available Under {hotelName}";
-                return Ok(new {
-                    message,_roomList
-                });   
+                return Ok(new
+                {
+                    message,
+                    _roomList
+                });
             }
             else
             {
@@ -70,7 +72,8 @@ namespace HotelBooking.Controllers
                 _logger.LogInformation("Availability Checked Successfully");
                 return Ok(new
                 {
-                    SuccessResponse.CheckRoomAvailability,_check
+                    SuccessResponse.CheckRoomAvailability,
+                    _check
                 });
             }
             catch (Exception e)

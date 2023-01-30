@@ -21,7 +21,7 @@ namespace HotelBooking.Controllers
         private UserService _userService;
         private LocationService _locationService;
         private readonly ILogger<UserController> _logger;
-        public UserController (UserService userService, LocationService locationService, ILogger<UserController> logger)
+        public UserController(UserService userService, LocationService locationService, ILogger<UserController> logger)
         {
             _userService = userService;
             _locationService = locationService;
@@ -53,11 +53,13 @@ namespace HotelBooking.Controllers
             if (jwt != null)
             {
                 _logger.LogInformation(jwt);
-                
+
                 var _locations = _locationService.GetLocations();
                 return Ok(new
                 {
-                    SuccessResponse.UserLogin, _locations, jwt
+                    SuccessResponse.UserLogin,
+                    _locations,
+                    jwt
                 });
             }
             else return NotFound(ErrorResponse.ErrorUserLogin);

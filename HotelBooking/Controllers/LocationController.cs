@@ -42,7 +42,7 @@ namespace HotelBooking.Controllers
 
         [Route("[Action]")]
         [HttpGet]
-        public IActionResult GetLocations ()
+        public IActionResult GetLocations()
         {
             var _locations = _locationService.GetLocations();
 
@@ -50,8 +50,9 @@ namespace HotelBooking.Controllers
             {
                 return Ok(new
                 {
-                    SuccessResponse.GetLocations, _locations
-                });   
+                    SuccessResponse.GetLocations,
+                    _locations
+                });
             }
             else
             {

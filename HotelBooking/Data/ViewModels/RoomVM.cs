@@ -6,7 +6,7 @@ public class RoomVM
     public float roomRate { get; set; }
     public int roomCapacity { get; set; }
     public IFormFile roomImage { get; set; }
-    
+
     public int hotelId { get; set; }
 
 }

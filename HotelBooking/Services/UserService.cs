@@ -14,15 +14,15 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace HotelBooking.Services
 {
-	public class UserService
-	{
+    public class UserService
+    {
         private DbInitializer _dbContext;
         public readonly IMapper _mapper;
         private readonly ILogger<UserService> _logger;
         public IConfiguration _configuration;
 
         public UserService(DbInitializer dbContext, IMapper mapper, ILogger<UserService> logger, IConfiguration config)
-		{
+        {
             _dbContext = dbContext;
             _mapper = mapper;
             _logger = logger;
@@ -44,21 +44,21 @@ namespace HotelBooking.Services
                         var _mappedUser = _mapper.Map<User>(user);
                         var encData_byte = System.Text.Encoding.UTF8.GetBytes(_mappedUser.password);
                         _mappedUser.password = Convert.ToBase64String(encData_byte);
-                    
+
                         _dbContext.User.Add(_mappedUser);
                         _dbContext.SaveChanges();
                         _logger.LogInformation(SuccessResponse.UserSignUp);
-                        
+
                         string connectionString = _configuration["communicationService"];
                         EmailClient emailClient = new EmailClient(connectionString);
-                        
+
                         EmailContent emailContent = new EmailContent("Hotel Reservation User Sign Up");
                         emailContent.PlainText = "User Sign Up Successful! You Can proceed to Login";
-                        List<EmailAddress> emailAddresses = new List<EmailAddress> { new EmailAddress(_mappedUser.userEmail) { DisplayName = "Friendly Display Name" }};
+                        List<EmailAddress> emailAddresses = new List<EmailAddress> { new EmailAddress(_mappedUser.userEmail) { DisplayName = "Friendly Display Name" } };
                         EmailRecipients emailRecipients = new EmailRecipients(emailAddresses);
                         EmailMessage emailMessage = new EmailMessage(_configuration["communicationService:FromEmail"], emailContent, emailRecipients);
-                        SendEmailResult emailResult = emailClient.Send(emailMessage,CancellationToken.None);
-                        
+                        SendEmailResult emailResult = emailClient.Send(emailMessage, CancellationToken.None);
+
                         return true;
                     }
                     else
@@ -111,14 +111,14 @@ namespace HotelBooking.Services
             try
             {
                 User user = GetUserByUserEmail(userLoginVm.userEmail);
-                
+
                 var encData_byte = System.Text.Encoding.UTF8.GetBytes(userLoginVm.password);
                 userLoginVm.password = Convert.ToBase64String(encData_byte);
-                
+
                 if (user.password == userLoginVm.password)
                 {
                     _logger.LogInformation(SuccessResponse.UserLogin);
-                    
+
                     var claims = new[] {
                         new Claim(JwtRegisteredClaimNames.Sub, _configuration["Jwt:Subject"]),
                         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
@@ -128,7 +128,7 @@ namespace HotelBooking.Services
                         new Claim("UserEmail", user.userEmail),
                         new Claim("Password", user.password)
                     };
-                    
+
                     var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
                     var signIn = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
                     var token = new JwtSecurityToken(
@@ -137,7 +137,7 @@ namespace HotelBooking.Services
                         claims,
                         expires: DateTime.UtcNow.AddMinutes(10),
                         signingCredentials: signIn);
-                    
+
                     return new JwtSecurityTokenHandler().WriteToken(token);
                 }
                 else
@@ -146,7 +146,7 @@ namespace HotelBooking.Services
                     return null;
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 _logger.LogError(e.Message);
                 return null;
@@ -158,6 +158,6 @@ namespace HotelBooking.Services
             var _user = _dbContext.User.SingleOrDefault(u => u.userEmail == email);
             return _user;
         }
-	}
+    }
 }
 

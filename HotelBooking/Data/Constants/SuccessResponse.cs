@@ -5,10 +5,10 @@ public static class SuccessResponse
     public const string UserSignUp = "User Signed Up Successfully";
     public const string UserLogin = "User Login Successfull! You can find the Available Locations";
     public const string UserForgotPassword = "User Password Updated Successfully";
-    
+
     public const string AddLocation = "Location Added Successfully";
     public const string GetLocations = "The Available Locations";
-    
+
     public const string AddHotel = "Hotel Added Successfully";
     public const string HotelListBasedOnLocation = "Retreived Hotel List based on Location";
     public const string GetHotel = "Retreived Hotel List Successfully";

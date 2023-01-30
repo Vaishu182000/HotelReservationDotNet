@@ -8,8 +8,8 @@ using HotelBooking.Models;
 
 namespace HotelBooking.Services
 {
-	public class RoomService
-	{
+    public class RoomService
+    {
         private DbInitializer _dbContext;
         private HotelService _hotelService;
         private readonly IMapper _mapper;
@@ -17,7 +17,7 @@ namespace HotelBooking.Services
         private readonly string _storageContainerName;
         private readonly ILogger<RoomService> _logger;
         public RoomService(DbInitializer dbContext, HotelService hotelService, IMapper mapper, IConfiguration configuration, ILogger<RoomService> logger)
-		{
+        {
             _dbContext = dbContext;
             _hotelService = hotelService;
             _mapper = mapper;
@@ -25,18 +25,18 @@ namespace HotelBooking.Services
             _storageConnectionString = configuration.GetValue<string>("BlobConnectionString");
             _storageContainerName = configuration.GetValue<string>("BlobContainerName");
         }
-        
+
         public bool createRoom(RoomVM room)
         {
             if (room == null) return false;
-            
+
             BlobContainerClient container = new BlobContainerClient(_storageConnectionString, _storageContainerName);
 
             try
             {
                 var fileName = room.roomName + Path.GetExtension(room.roomImage.FileName);
                 BlobClient client = container.GetBlobClient(fileName);
-                
+
                 using (Stream? data = room.roomImage.OpenReadStream())
                 {
                     client.Upload(data);
@@ -45,19 +45,19 @@ namespace HotelBooking.Services
                 if (client.Uri.AbsoluteUri != null)
                 {
                     _logger.LogInformation(SuccessResponse.RoomBlob);
-                    
+
                     var _mappedroom = _mapper.Map<Room>(room);
                     _mappedroom.roomImage = client.Uri.AbsoluteUri;
                     _dbContext.Room.Add(_mappedroom);
                     _dbContext.SaveChanges();
-                    
+
                     _logger.LogInformation(SuccessResponse.AddRoom);
-                    return true;   
+                    return true;
                 }
                 else
                 {
                     _logger.LogError(ErrorResponse.ErrorAddRoom);
-                    return false;   
+                    return false;
                 }
             }
             catch (Exception e)
@@ -75,7 +75,7 @@ namespace HotelBooking.Services
 
                 var _roomList = _dbContext.Room.Where(r => r.HotelId == _hotel.hotelId);
                 _logger.LogInformation(SuccessResponse.RoomListByHotel);
-                
+
                 return _roomList;
             }
             catch (Exception e)
@@ -93,7 +93,7 @@ namespace HotelBooking.Services
             }
             return room;
         }
-        
+
         public Room GetRoomByRoomName(string roomName)
         {
             var _room = _dbContext.Room.FirstOrDefault(r => r.roomName == roomName);
@@ -152,10 +152,10 @@ namespace HotelBooking.Services
 
             foreach (var rooms in _dbContext.Room.Where(r => r.HotelId == _hotel.hotelId))
             {
-                if (!roomIds.Contains(rooms.roomId)) roomList.Add(rooms);
+                if (!roomIds.Contains(rooms.roomId) && availability.noOfPersons <= rooms.roomCapacity) roomList.Add(rooms);
             }
             return (roomList);
         }
-	}
+    }
 }
 

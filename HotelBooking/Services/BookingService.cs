@@ -32,7 +32,7 @@ public class BookingService
         try
         {
             var _room = _dbContext.Room.FirstOrDefault(r => r.roomId == booking.roomId);
-            
+
             if (_room.HotelId == booking.hotelId)
             {
                 var _mappedBooking = _mapper.Map<Booking>(booking);
@@ -41,19 +41,19 @@ public class BookingService
 
                 _dbContext.Booking.Add(_mappedBooking);
                 _dbContext.SaveChanges();
-                
+
                 string connectionString = _configuration["communicationService"];
                 EmailClient emailClient = new EmailClient(connectionString);
-                        
+
                 EmailContent emailContent = new EmailContent("Booking Successful");
                 emailContent.PlainText = $"Your Booking is Confirmed! The Hotel Name is {hotel.hotelName} and Your Room No is {_room.roomName}. Your Check In Date is {booking.checkInTime} and Check Out Date is {booking.checkOutTime}";
-                List<EmailAddress> emailAddresses = new List<EmailAddress> { new EmailAddress(user.userEmail) { DisplayName = "Friendly Display Name" }};
+                List<EmailAddress> emailAddresses = new List<EmailAddress> { new EmailAddress(user.userEmail) { DisplayName = "Friendly Display Name" } };
                 EmailRecipients emailRecipients = new EmailRecipients(emailAddresses);
                 EmailMessage emailMessage = new EmailMessage(_configuration["communicationService:FromEmail"], emailContent, emailRecipients);
-                SendEmailResult emailResult = emailClient.Send(emailMessage,CancellationToken.None);
-                
+                SendEmailResult emailResult = emailClient.Send(emailMessage, CancellationToken.None);
+
                 _logger.LogInformation(SuccessResponse.AddBooking);
-                return true;   
+                return true;
             }
             else
             {
@@ -92,7 +92,7 @@ public class BookingService
 
             _dbContext.Booking.Remove(_booking);
             _dbContext.SaveChanges();
-            
+
             _logger.LogInformation($"Deleted Information of Booking with {id}");
             return true;
         }

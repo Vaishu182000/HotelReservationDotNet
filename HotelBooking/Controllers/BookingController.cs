@@ -45,7 +45,8 @@ public class BookingController : ControllerBase
             var _history = _bookingService.BookingHistory(userEmail);
             return Ok(new
             {
-                SuccessResponse.BookingHistoryOfUser,_history
+                SuccessResponse.BookingHistoryOfUser,
+                _history
             });
         }
         catch (Exception e)

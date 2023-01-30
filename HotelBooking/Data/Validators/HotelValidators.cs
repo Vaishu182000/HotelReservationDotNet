@@ -20,7 +20,7 @@ public class HotelValidators : AbstractValidator<HotelVM>
     private bool mustBeInLocationDB(string location)
     {
         var _location = _locationService.GetLocationByLocationName(location);
-        
+
         if (_location == null) return false;
         else return true;
     }
