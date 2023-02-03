@@ -4,20 +4,31 @@ using Azure.Communication.Email.Models;
 using HotelBooking.Data;
 using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
+using HotelBooking.Interfaces;
 using HotelBooking.Models;
 
 namespace HotelBooking.Services;
 
-public class BookingService
+public class BookingService : IBookingInterface
 {
     private DbInitializer _dbContext;
     private RoomService _roomService;
     private UserService _userService;
+    private EmailService _emailService;
     private readonly ILogger<BookingService> _logger;
     public readonly IMapper _mapper;
     public IConfiguration _configuration;
+    private ServiceBusService _serviceBusService;
 
-    public BookingService(DbInitializer dbContext, RoomService roomService, UserService userService, ILogger<BookingService> logger, IMapper mapper, IConfiguration configuration)
+    public BookingService(DbInitializer dbContext, 
+        RoomService roomService, 
+        UserService userService, 
+        ILogger<BookingService> logger, 
+        IMapper mapper, 
+        IConfiguration configuration, 
+        EmailService emailService,
+        ServiceBusService serviceBusService
+        )
     {
         _dbContext = dbContext;
         _roomService = roomService;
@@ -25,6 +36,8 @@ public class BookingService
         _logger = logger;
         _mapper = mapper;
         _configuration = configuration;
+        _emailService = emailService;
+        _serviceBusService = serviceBusService;
     }
 
     public bool CreateBooking(BookingVM booking)
@@ -42,18 +55,18 @@ public class BookingService
                 _dbContext.Booking.Add(_mappedBooking);
                 _dbContext.SaveChanges();
 
-                string connectionString = _configuration["communicationService"];
-                EmailClient emailClient = new EmailClient(connectionString);
-
-                EmailContent emailContent = new EmailContent("Booking Successful");
-                emailContent.PlainText = $"Your Booking is Confirmed! The Hotel Name is {hotel.hotelName} and Your Room No is {_room.roomName}. Your Check In Date is {booking.checkInTime} and Check Out Date is {booking.checkOutTime}";
-                List<EmailAddress> emailAddresses = new List<EmailAddress> { new EmailAddress(user.userEmail) { DisplayName = "Friendly Display Name" } };
-                EmailRecipients emailRecipients = new EmailRecipients(emailAddresses);
-                EmailMessage emailMessage = new EmailMessage(_configuration["communicationService:FromEmail"], emailContent, emailRecipients);
-                SendEmailResult emailResult = emailClient.Send(emailMessage, CancellationToken.None);
-
-                _logger.LogInformation(SuccessResponse.AddBooking);
+                _serviceBusService.SendMessageAsync(_mappedBooking);
                 return true;
+                // if (_emailService.bookingEmail(hotel, _room, booking, user))
+                // {
+                //     _logger.LogInformation(SuccessResponse.AddBooking);
+                //     return true;   
+                // }
+                // else
+                // {
+                //     _logger.LogError(ErrorResponse.ErrorAddBooking);
+                //     return false;
+                // }
             }
             else
             {

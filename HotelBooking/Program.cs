@@ -3,6 +3,7 @@ using System.Text;
 using Azure.Identity;
 using FluentValidation.AspNetCore;
 using HotelBooking.Data;
+using HotelBooking.Helpers;
 using HotelBooking.Services;
 using Microsoft.ApplicationInsights.Extensibility;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -80,6 +81,10 @@ builder.Services.AddScoped<LocationService>();
 builder.Services.AddScoped<HotelService>();
 builder.Services.AddScoped<RoomService>();
 builder.Services.AddScoped<BookingService>();
+builder.Services.AddScoped<EmailService>();
+builder.Services.AddScoped<EncryptHelper>();
+builder.Services.AddScoped<StringSplitHelper>();
+builder.Services.AddScoped<ServiceBusService>();
 
 var app = builder.Build();
 app.UseAuthentication();

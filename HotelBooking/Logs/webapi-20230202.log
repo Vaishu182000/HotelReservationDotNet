@@ -1,0 +1,75 @@
+2023-02-02 12:06:57.383 +05:30  INF  Application is shutting down...
+2023-02-02 12:08:17.489 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-02-02 12:08:17.800 +05:30  INF  Now listening on: http://localhost:5250
+2023-02-02 12:08:17.802 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-02-02 12:08:17.802 +05:30  INF  Hosting environment: Development
+2023-02-02 12:08:17.802 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-02-02 12:36:55.099 +05:30  INF  Application is shutting down...
+2023-02-02 12:37:29.021 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-02-02 12:37:29.179 +05:30  INF  Now listening on: http://localhost:5250
+2023-02-02 12:37:29.181 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-02-02 12:37:29.182 +05:30  INF  Hosting environment: Development
+2023-02-02 12:37:29.182 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-02-02 12:55:48.706 +05:30  INF  Application is shutting down...
+2023-02-02 12:56:18.134 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-02-02 12:56:18.247 +05:30  INF  Now listening on: http://localhost:5250
+2023-02-02 12:56:18.249 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-02-02 12:56:18.249 +05:30  INF  Hosting environment: Development
+2023-02-02 12:56:18.249 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-02-02 12:56:36.725 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/index.html - -
+2023-02-02 12:56:36.845 +05:30  WRN  Failed to determine the https port for redirect.
+2023-02-02 12:56:36.851 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/index.html - - - 404 0 - 128.8921ms
+2023-02-02 14:32:29.520 +05:30  INF  Application is shutting down...
+2023-02-02 14:33:15.480 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-02-02 14:33:15.782 +05:30  INF  Now listening on: http://localhost:5250
+2023-02-02 14:33:15.784 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-02-02 14:33:15.784 +05:30  INF  Hosting environment: Development
+2023-02-02 14:33:15.784 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-02-02 14:33:25.381 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/index.html - -
+2023-02-02 14:33:25.572 +05:30  WRN  Failed to determine the https port for redirect.
+2023-02-02 14:33:25.578 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/index.html - - - 404 0 - 199.0186ms
+2023-02-02 14:34:27.152 +05:30  INF  Application is shutting down...
+2023-02-02 14:34:58.951 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-02-02 14:34:59.096 +05:30  INF  Now listening on: http://localhost:5250
+2023-02-02 14:34:59.098 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-02-02 14:34:59.098 +05:30  INF  Hosting environment: Development
+2023-02-02 14:34:59.098 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-02-02 14:35:14.845 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/index.html - -
+2023-02-02 14:35:14.949 +05:30  WRN  Failed to determine the https port for redirect.
+2023-02-02 14:35:14.954 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/index.html - - - 404 0 - 111.1197ms
+2023-02-02 15:17:28.098 +05:30  INF  Application is shutting down...
+2023-02-02 15:18:43.712 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-02-02 15:18:43.872 +05:30  INF  Now listening on: http://localhost:5250
+2023-02-02 15:18:43.874 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-02-02 15:18:43.874 +05:30  INF  Hosting environment: Development
+2023-02-02 15:18:43.874 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-02-02 15:18:58.674 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/index.html - -
+2023-02-02 15:18:58.769 +05:30  WRN  Failed to determine the https port for redirect.
+2023-02-02 15:18:58.774 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/index.html - - - 404 0 - 102.0252ms
+2023-02-02 16:11:17.538 +05:30  INF  Application is shutting down...
+2023-02-02 16:11:52.207 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-02-02 16:11:52.384 +05:30  INF  Now listening on: http://localhost:5250
+2023-02-02 16:11:52.386 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-02-02 16:11:52.387 +05:30  INF  Hosting environment: Development
+2023-02-02 16:11:52.387 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-02-02 16:12:06.927 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/index.html - -
+2023-02-02 16:12:07.028 +05:30  WRN  Failed to determine the https port for redirect.
+2023-02-02 16:12:07.033 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/index.html - - - 404 0 - 108.1189ms
+2023-02-02 16:26:48.973 +05:30  INF  Application is shutting down...
+2023-02-02 16:27:23.090 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-02-02 16:27:23.239 +05:30  INF  Now listening on: http://localhost:5250
+2023-02-02 16:27:23.241 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-02-02 16:27:23.242 +05:30  INF  Hosting environment: Development
+2023-02-02 16:27:23.242 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-02-02 16:27:37.704 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/index.html - -
+2023-02-02 16:27:37.802 +05:30  WRN  Failed to determine the https port for redirect.
+2023-02-02 16:27:37.806 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/index.html - - - 404 0 - 105.2404ms
+2023-02-02 17:04:07.712 +05:30  INF  Application is shutting down...
+2023-02-02 17:04:38.731 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-02-02 17:04:38.882 +05:30  INF  Now listening on: http://localhost:5250
+2023-02-02 17:04:38.884 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-02-02 17:04:38.884 +05:30  INF  Hosting environment: Development
+2023-02-02 17:04:38.884 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-02-02 17:04:57.422 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/index.html - -
+2023-02-02 17:04:57.542 +05:30  WRN  Failed to determine the https port for redirect.
+2023-02-02 17:04:57.549 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/index.html - - - 404 0 - 129.5046ms

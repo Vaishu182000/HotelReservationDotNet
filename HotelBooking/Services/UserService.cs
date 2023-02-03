@@ -10,26 +10,31 @@ using System.Security.Claims;
 using System.Text;
 using Azure.Communication.Email;
 using Azure.Communication.Email.Models;
+using HotelBooking.Helpers;
+using HotelBooking.Interfaces;
 using Microsoft.IdentityModel.Tokens;
 
 namespace HotelBooking.Services
 {
-    public class UserService
+    public class UserService : IUserService
     {
         private DbInitializer _dbContext;
         public readonly IMapper _mapper;
         private readonly ILogger<UserService> _logger;
         public IConfiguration _configuration;
+        private EncryptHelper _encryptHelper;
 
-        public UserService(DbInitializer dbContext, IMapper mapper, ILogger<UserService> logger, IConfiguration config)
+        public UserService(DbInitializer dbContext, IMapper mapper, ILogger<UserService> logger, IConfiguration config, EncryptHelper encryptHelper)
         {
             _dbContext = dbContext;
             _mapper = mapper;
             _logger = logger;
             _configuration = config;
+            _encryptHelper = encryptHelper;
         }
+        public UserService() {}
 
-        public bool UserSignUp(UserVM user)
+        public virtual bool UserSignUp(UserVM user)
         {
             if (user == null)
             {
@@ -42,23 +47,12 @@ namespace HotelBooking.Services
                     if (GetUserByUserEmail(user.userEmail) == null)
                     {
                         var _mappedUser = _mapper.Map<User>(user);
-                        var encData_byte = System.Text.Encoding.UTF8.GetBytes(_mappedUser.password);
-                        _mappedUser.password = Convert.ToBase64String(encData_byte);
+                        _mappedUser.password = _encryptHelper.passwordEncryptor(_mappedUser.password);
 
                         _dbContext.User.Add(_mappedUser);
                         _dbContext.SaveChanges();
                         _logger.LogInformation(SuccessResponse.UserSignUp);
-
-                        string connectionString = _configuration["communicationService"];
-                        EmailClient emailClient = new EmailClient(connectionString);
-
-                        EmailContent emailContent = new EmailContent("Hotel Reservation User Sign Up");
-                        emailContent.PlainText = "User Sign Up Successful! You Can proceed to Login";
-                        List<EmailAddress> emailAddresses = new List<EmailAddress> { new EmailAddress(_mappedUser.userEmail) { DisplayName = "Friendly Display Name" } };
-                        EmailRecipients emailRecipients = new EmailRecipients(emailAddresses);
-                        EmailMessage emailMessage = new EmailMessage(_configuration["communicationService:FromEmail"], emailContent, emailRecipients);
-                        SendEmailResult emailResult = emailClient.Send(emailMessage, CancellationToken.None);
-
+                        
                         return true;
                     }
                     else
@@ -75,7 +69,7 @@ namespace HotelBooking.Services
             }
         }
 
-        public bool changePassword(UserPasswordVM userPasswordVm)
+        public virtual bool changePassword(UserPasswordVM userPasswordVm)
         {
             try
             {
@@ -83,8 +77,7 @@ namespace HotelBooking.Services
 
                 if (user != null)
                 {
-                    var encData_byte = System.Text.Encoding.UTF8.GetBytes(userPasswordVm.password);
-                    userPasswordVm.password = Convert.ToBase64String(encData_byte);
+                    userPasswordVm.password = _encryptHelper.passwordEncryptor(userPasswordVm.password);
                     user.password = userPasswordVm.password;
 
                     _dbContext.User.Update(user);
@@ -106,14 +99,13 @@ namespace HotelBooking.Services
             }
         }
 
-        public string UserLogin(UserLoginVM userLoginVm)
+        public virtual string UserLogin(UserLoginVM userLoginVm)
         {
             try
             {
                 User user = GetUserByUserEmail(userLoginVm.userEmail);
 
-                var encData_byte = System.Text.Encoding.UTF8.GetBytes(userLoginVm.password);
-                userLoginVm.password = Convert.ToBase64String(encData_byte);
+                userLoginVm.password = _encryptHelper.passwordEncryptor(userLoginVm.password);
 
                 if (user.password == userLoginVm.password)
                 {

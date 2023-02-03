@@ -28,14 +28,22 @@ namespace HotelBooking.Controllers
         [HttpPost]
         public IActionResult CreateRoom([FromForm] RoomVM room)
         {
-            var _result = _roomService.createRoom(room);
+            try
+            {
+                var _result = _roomService.createRoom(room);
 
-            if (_result)
-            {
-                return Ok(SuccessResponse.AddRoom);
+                if (_result)
+                {
+                    return Ok(SuccessResponse.AddRoom);
+                }
+                else
+                {
+                    return NotFound(ErrorResponse.ErrorAddRoom);
+                }
             }
-            else
+            catch (Exception e)
             {
+                _logger.LogError(e.Message);
                 return NotFound(ErrorResponse.ErrorAddRoom);
             }
         }
@@ -44,20 +52,28 @@ namespace HotelBooking.Controllers
         [HttpGet]
         public IActionResult ViewRoomDetails(string hotelName)
         {
-            var _roomList = _roomService.GetRoomsByHotelName(hotelName);
+            try
+            {
+                var _roomList = _roomService.GetRoomsByHotelName(hotelName);
 
-            if (_roomList != null)
-            {
-                // _roomList = _roomService.getLocationInList(_roomList);
-                var message = $"The Rooms Available Under {hotelName}";
-                return Ok(new
+                if (_roomList != null)
                 {
-                    message,
-                    _roomList
-                });
+                    // _roomList = _roomService.getLocationInList(_roomList);
+                    var message = $"The Rooms Available Under {hotelName}";
+                    return Ok(new
+                    {
+                        message,
+                        _roomList
+                    });
+                }
+                else
+                {
+                    return NotFound(ErrorResponse.ErrorViewRoomDetails);
+                }
             }
-            else
+            catch (Exception e)
             {
+                _logger.LogError(e.Message);
                 return NotFound(ErrorResponse.ErrorViewRoomDetails);
             }
         }

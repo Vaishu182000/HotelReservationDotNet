@@ -54,6 +54,10 @@
               "target": "Package",
               "version": "[1.9.0-beta.1, )"
             },
+            "Azure.Messaging.ServiceBus": {
+              "target": "Package",
+              "version": "[7.12.0, )"
+            },
             "Azure.Security.KeyVault.Secrets": {
               "target": "Package",
               "version": "[4.5.0-beta.1, )"
@@ -74,6 +78,10 @@
               "target": "Package",
               "version": "[7.0.1, )"
             },
+            "Microsoft.Azure.ServiceBus": {
+              "target": "Package",
+              "version": "[5.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.1, )"
@@ -87,6 +95,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",

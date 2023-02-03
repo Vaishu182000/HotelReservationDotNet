@@ -3,11 +3,12 @@ using AutoMapper;
 using HotelBooking.Data;
 using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
+using HotelBooking.Interfaces;
 using HotelBooking.Models;
 
 namespace HotelBooking.Services
 {
-    public class LocationService
+    public class LocationService : ILocationService
     {
         private DbInitializer _dbContext;
         public readonly IMapper _mapper;
@@ -18,8 +19,10 @@ namespace HotelBooking.Services
             _mapper = mapper;
             _logger = logger;
         }
+        
+        public LocationService(){}
 
-        public bool CreateLocation(LocationVM location)
+        public virtual bool CreateLocation(LocationVM location)
         {
             if (location == null) return false;
 
@@ -40,7 +43,7 @@ namespace HotelBooking.Services
             }
         }
 
-        public List<Location> GetLocations()
+        public virtual List<Location> GetLocations()
         {
             try
             {
@@ -53,7 +56,7 @@ namespace HotelBooking.Services
             }
         }
 
-        public Location GetLocationByLocationName(string location)
+        public virtual Location GetLocationByLocationName(string location)
         {
             var _location = _dbContext.Location.SingleOrDefault(loc => loc.location == location);
             return _location;

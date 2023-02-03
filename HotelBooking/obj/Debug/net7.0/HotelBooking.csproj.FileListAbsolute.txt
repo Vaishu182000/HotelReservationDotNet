@@ -97,3 +97,14 @@
 /Users/presidio/Projects/HotelBooking/HotelBooking/bin/Debug/net7.0/Serilog.Sinks.ApplicationInsights.dll
 /Users/presidio/Projects/HotelBooking/HotelBooking/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /Users/presidio/Projects/HotelBooking/HotelBooking/bin/Debug/net7.0/Azure.Communication.Email.dll
+/Users/presidio/Projects/HotelBooking/HotelBooking/bin/Debug/net7.0/Azure.Core.Amqp.dll
+/Users/presidio/Projects/HotelBooking/HotelBooking/bin/Debug/net7.0/Azure.Messaging.ServiceBus.dll
+/Users/presidio/Projects/HotelBooking/HotelBooking/bin/Debug/net7.0/Microsoft.Azure.Amqp.dll
+/Users/presidio/Projects/HotelBooking/HotelBooking/bin/Debug/net7.0/Microsoft.Azure.ServiceBus.dll
+/Users/presidio/Projects/HotelBooking/HotelBooking/bin/Debug/net7.0/Microsoft.Azure.Services.AppAuthentication.dll
+/Users/presidio/Projects/HotelBooking/HotelBooking/bin/Debug/net7.0/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll
+/Users/presidio/Projects/HotelBooking/HotelBooking/bin/Debug/net7.0/Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+/Users/presidio/Projects/HotelBooking/HotelBooking/bin/Debug/net7.0/Newtonsoft.Json.dll
+/Users/presidio/Projects/HotelBooking/HotelBooking/bin/Debug/net7.0/HotelBooking.dll.config
+/Users/presidio/Projects/HotelBooking/HotelBooking/obj/Debug/net7.0/HotelBooking.csproj.SuggestedBindingRedirects.cache
+/Users/presidio/Projects/HotelBooking/HotelBooking/obj/Debug/net7.0/HotelBooking.dll.config

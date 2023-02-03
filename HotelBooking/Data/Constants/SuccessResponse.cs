@@ -21,4 +21,8 @@ public static class SuccessResponse
     public const string AddBooking = "Created Booking Successfully! An Email has been sent with Detailed Information";
     public const string BookingHistoryOfUser = "Retreived Booking History of the User";
     public const string CancelBooking = "Cancellation Successfull";
+
+    public const string SuccessEmail = "Email Sent Successfully";
+    public const string BookingEmail = "Booking Successful";
+    public const string UserSignUpEmailBody = "User Sign Up Successful! You Can proceed to Login";
 }

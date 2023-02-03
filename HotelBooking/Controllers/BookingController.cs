@@ -24,14 +24,22 @@ public class BookingController : ControllerBase
     [HttpPost]
     public IActionResult CreateBooking(BookingVM booking)
     {
-        var _result = _bookingService.CreateBooking(booking);
+        try
+        {
+            var _result = _bookingService.CreateBooking(booking);
 
-        if (_result)
-        {
-            return Ok(SuccessResponse.AddBooking);
+            if (_result)
+            {
+                return Ok(SuccessResponse.AddBooking);
+            }
+            else
+            {
+                return NotFound(ErrorResponse.ErrorAddBooking);
+            }
         }
-        else
+        catch (Exception e)
         {
+            _logger.LogError(e.Message);
             return NotFound(ErrorResponse.ErrorAddBooking);
         }
     }
@@ -59,8 +67,16 @@ public class BookingController : ControllerBase
     [HttpDelete]
     public IActionResult CancelBooking(int id)
     {
-        var _result = _bookingService.deleteBooking(id);
-        if (_result) return Ok(SuccessResponse.CancelBooking);
-        else return NotFound(ErrorResponse.ErrorCancelBooking);
+        try
+        {
+            var _result = _bookingService.deleteBooking(id);
+            if (_result) return Ok(SuccessResponse.CancelBooking);
+            else return NotFound(ErrorResponse.ErrorCancelBooking);
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e.Message);
+            return NotFound(ErrorResponse.ErrorCancelBooking);
+        }
     }
 }

@@ -30,16 +30,24 @@ namespace HotelBooking.Controllers
 
         [Route("[Action]")]
         [HttpPost]
-        public IActionResult UserSignUp(UserVM user)
+        public ActionResult UserSignUp(UserVM user)
         {
-            bool _result = _userService.UserSignUp(user);
+            try
+            {
+                bool _result = _userService.UserSignUp(user);
 
-            if (_result)
-            {
-                return Ok(SuccessResponse.UserSignUp);
+                if (_result)
+                {
+                    return Ok(SuccessResponse.UserSignUp);
+                }
+                else
+                {
+                    return NotFound(ErrorResponse.ErrorUserSignUp);
+                }
             }
-            else
+            catch (Exception e)
             {
+                _logger.LogError(e.Message);
                 return NotFound(ErrorResponse.ErrorUserSignUp);
             }
         }
@@ -48,31 +56,47 @@ namespace HotelBooking.Controllers
         [HttpPost]
         public IActionResult UserLogin(UserLoginVM userLoginVm)
         {
-            string jwt = _userService.UserLogin(userLoginVm);
-
-            if (jwt != null)
+            try
             {
-                _logger.LogInformation(jwt);
+                string jwt = _userService.UserLogin(userLoginVm);
 
-                var _locations = _locationService.GetLocations();
-                return Ok(new
+                if (jwt != null)
                 {
-                    SuccessResponse.UserLogin,
-                    _locations,
-                    jwt
-                });
+                    _logger.LogInformation(jwt);
+
+                    var _locations = _locationService.GetLocations();
+                    return Ok(new
+                    {
+                        SuccessResponse.UserLogin,
+                        _locations,
+                        jwt
+                    });
+                }
+                else return NotFound(ErrorResponse.ErrorUserLogin);
             }
-            else return NotFound(ErrorResponse.ErrorUserLogin);
+            catch (Exception e)
+            {
+                _logger.LogError(e.Message);
+                return NotFound(ErrorResponse.ErrorUserLogin);
+            }
         }
 
         [Route("[Action]")]
         [HttpPut]
         public IActionResult ForgotPassword(UserPasswordVM userPasswordVm)
         {
-            var _result = _userService.changePassword(userPasswordVm);
+            try
+            {
+                var _result = _userService.changePassword(userPasswordVm);
 
-            if (_result) return Ok(SuccessResponse.UserForgotPassword);
-            else return NotFound(ErrorResponse.ErrorUserForgotPassword);
+                if (_result) return Ok(SuccessResponse.UserForgotPassword);
+                else return NotFound(ErrorResponse.ErrorUserForgotPassword);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.Message);
+                return NotFound(ErrorResponse.ErrorUserForgotPassword);
+            }
         }
     }
 }

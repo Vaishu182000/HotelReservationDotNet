@@ -1,0 +1,3 @@
+2023-02-03 13:00:18.499 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/index.html - -
+2023-02-03 13:00:19.164 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/index.html - - - 404 0 - 710.7251ms
+2023-02-03 13:01:28.433 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.

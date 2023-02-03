@@ -4,11 +4,13 @@ using Azure.Storage.Blobs;
 using HotelBooking.Data;
 using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
+using HotelBooking.Helpers;
+using HotelBooking.Interfaces;
 using HotelBooking.Models;
 
 namespace HotelBooking.Services
 {
-    public class RoomService
+    public class RoomService : IRoomService
     {
         private DbInitializer _dbContext;
         private HotelService _hotelService;
@@ -16,7 +18,14 @@ namespace HotelBooking.Services
         private readonly string _storageConnectionString;
         private readonly string _storageContainerName;
         private readonly ILogger<RoomService> _logger;
-        public RoomService(DbInitializer dbContext, HotelService hotelService, IMapper mapper, IConfiguration configuration, ILogger<RoomService> logger)
+        private StringSplitHelper _stringSplitHelper;
+        public RoomService(DbInitializer dbContext,
+            HotelService hotelService,
+            IMapper mapper,
+            IConfiguration configuration,
+            ILogger<RoomService> logger,
+            StringSplitHelper stringSplitHelper
+            )
         {
             _dbContext = dbContext;
             _hotelService = hotelService;
@@ -24,6 +33,7 @@ namespace HotelBooking.Services
             _logger = logger;
             _storageConnectionString = configuration.GetValue<string>("BlobConnectionString");
             _storageContainerName = configuration.GetValue<string>("BlobContainerName");
+            _stringSplitHelper = stringSplitHelper;
         }
 
         public bool createRoom(RoomVM room)
@@ -102,8 +112,8 @@ namespace HotelBooking.Services
 
         public List<Room> CheckAvailability(CheckRoomAvailability availability)
         {
-            var checkInTime = availability.checkInTime.ToString("dd/MM/yyyy").Split('/');
-            var checkOutTime = availability.checkOutTime.ToString("dd/MM/yyyy").Split('/');
+            var checkInTime = _stringSplitHelper.splitDate(availability.checkInTime);
+            var checkOutTime = _stringSplitHelper.splitDate(availability.checkOutTime);
             var noOfDays = Int16.Parse(checkOutTime[0]) - Int16.Parse(checkInTime[0]);
             var _hotel = _hotelService.GetHotelByHotelName(availability.hotelName);
             var roomIds = new List<int>();
@@ -123,7 +133,7 @@ namespace HotelBooking.Services
                 foreach (var booking in _booking)
                 {
                     var count = 0;
-                    var bookCheckIn = booking.checkInTime.ToString("dd/MM/yyyy").Split('/');
+                    var bookCheckIn = _stringSplitHelper.splitDate(booking.checkInTime);
 
                     if (Int16.Parse(checkInTime[2]) - Int16.Parse(bookCheckIn[2]) > 0) count++;
                     else if (Int16.Parse(checkInTime[1]) - Int16.Parse(bookCheckIn[1]) != 0) count++;

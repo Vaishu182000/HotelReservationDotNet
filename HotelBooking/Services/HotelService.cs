@@ -5,11 +5,12 @@ using AutoMapper;
 using HotelBooking.Data;
 using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
+using HotelBooking.Interfaces;
 using HotelBooking.Models;
 
 namespace HotelBooking.Services
 {
-    public class HotelService
+    public class HotelService : IHotelService
     {
         private DbInitializer _dbContext;
         private LocationService _locationService;
@@ -22,8 +23,9 @@ namespace HotelBooking.Services
             _mapper = mapper;
             _logger = logger;
         }
+        public HotelService(){}
 
-        public bool AddHotel(HotelVM hotel)
+        public virtual bool AddHotel(HotelVM hotel)
         {
             if (hotel == null) return false;
 
@@ -46,7 +48,7 @@ namespace HotelBooking.Services
             }
         }
 
-        public List<string> HotelListByLocation(string location)
+        public virtual List<string> HotelListByLocation(string location)
         {
             var _location = _locationService.GetLocationByLocationName(location);
 
@@ -66,13 +68,13 @@ namespace HotelBooking.Services
             }
         }
 
-        public Hotel GetHotelByHotelName(string hotel)
+        public virtual Hotel GetHotelByHotelName(string hotel)
         {
             var _hotel = _dbContext.Hotel.SingleOrDefault(h => h.hotelName == hotel);
             return _hotel;
         }
 
-        public List<Hotel> GetAllHotels()
+        public virtual List<Hotel> GetAllHotels()
         {
             try
             {

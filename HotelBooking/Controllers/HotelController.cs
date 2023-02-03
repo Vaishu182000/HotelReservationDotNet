@@ -28,14 +28,22 @@ namespace HotelBooking.Controllers
         [HttpPost]
         public IActionResult CreateHotel(HotelVM hotel)
         {
-            var _result = _hotelService.AddHotel(hotel);
+            try
+            {
+                var _result = _hotelService.AddHotel(hotel);
 
-            if (_result)
-            {
-                return Ok(SuccessResponse.AddHotel);
+                if (_result)
+                {
+                    return Ok(SuccessResponse.AddHotel);
+                }
+                else
+                {
+                    return NotFound(ErrorResponse.ErrorAddHotel);
+                }
             }
-            else
+            catch (Exception e)
             {
+                _logger.LogError(e.Message);
                 return NotFound(ErrorResponse.ErrorAddHotel);
             }
         }
@@ -44,18 +52,26 @@ namespace HotelBooking.Controllers
         [HttpGet]
         public IActionResult HotelList(string location)
         {
-            List<string> hotel = _hotelService.HotelListByLocation(location);
+            try
+            {
+                List<string> hotel = _hotelService.HotelListByLocation(location);
 
-            if (hotel != null)
-            {
-                return Ok(new
+                if (hotel != null)
                 {
-                    SuccessResponse.HotelListBasedOnLocation,
-                    hotel
-                });
+                    return Ok(new
+                    {
+                        SuccessResponse.HotelListBasedOnLocation,
+                        hotel
+                    });
+                }
+                else
+                {
+                    return NotFound(ErrorResponse.ErrorInGetHotelBasedOnLocation);
+                }
             }
-            else
+            catch (Exception e)
             {
+                _logger.LogError(e.Message);
                 return NotFound(ErrorResponse.ErrorInGetHotelBasedOnLocation);
             }
         }
@@ -64,18 +80,26 @@ namespace HotelBooking.Controllers
         [HttpGet]
         public IActionResult ListOfAllHotels()
         {
-            var _hotelList = _hotelService.GetAllHotels();
+            try
+            {
+                var _hotelList = _hotelService.GetAllHotels();
 
-            if (_hotelList != null)
-            {
-                return Ok(new
+                if (_hotelList != null)
                 {
-                    SuccessResponse.GetHotel,
-                    _hotelList
-                });
+                    return Ok(new
+                    {
+                        SuccessResponse.GetHotel,
+                        _hotelList
+                    });
+                }
+                else
+                {
+                    return NotFound(ErrorResponse.ErrorGetHotels);
+                }
             }
-            else
+            catch (Exception e)
             {
+                _logger.LogError(e.Message);
                 return NotFound(ErrorResponse.ErrorGetHotels);
             }
         }

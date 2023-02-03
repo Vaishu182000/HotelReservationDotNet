@@ -28,14 +28,22 @@ namespace HotelBooking.Controllers
         [HttpPost]
         public IActionResult AddLocation(LocationVM location)
         {
-            var _result = _locationService.CreateLocation(location);
+            try
+            {
+                var _result = _locationService.CreateLocation(location);
 
-            if (_result)
-            {
-                return Ok(SuccessResponse.AddLocation);
+                if (_result)
+                {
+                    return Ok(SuccessResponse.AddLocation);
+                }
+                else
+                {
+                    return NotFound(ErrorResponse.ErrorAddLocation);
+                }
             }
-            else
+            catch (Exception e)
             {
+                _logger.LogError(e.Message);
                 return NotFound(ErrorResponse.ErrorAddLocation);
             }
         }
@@ -44,18 +52,22 @@ namespace HotelBooking.Controllers
         [HttpGet]
         public IActionResult GetLocations()
         {
-            var _locations = _locationService.GetLocations();
+            try
+            {
+                var _locations = _locationService.GetLocations();
 
-            if (_locations != null)
-            {
-                return Ok(new
+                if (_locations != null)
                 {
-                    SuccessResponse.GetLocations,
-                    _locations
-                });
+                    return Ok(_locations);
+                }
+                else
+                {
+                    return NotFound(ErrorResponse.ErrorGetLocations);
+                }
             }
-            else
+            catch (Exception e)
             {
+                _logger.LogError(e.Message);
                 return NotFound(ErrorResponse.ErrorGetLocations);
             }
         }

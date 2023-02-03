@@ -1,41 +1,27 @@
 ﻿<Properties StartupConfiguration="{14CD16ED-23CD-4328-B47A-3B4CD2C66B62}|Default">
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="HotelBooking/Controllers/UserController.cs">
     <Files>
-      <File FileName="HotelBooking/Controllers/UserController.cs" Line="57" Column="38" />
-      <File FileName="HotelBooking/Services/LocationService.cs" />
-      <File FileName="HotelBooking/Models/Location.cs" />
-      <File FileName="HotelBooking/Models/Room.cs" />
-      <File FileName="HotelBooking/Models/Hotel.cs" />
-      <File FileName="HotelBooking/Models/Booking.cs" />
-      <File FileName="HotelBooking/Controllers/LocationController.cs" />
-      <File FileName="HotelBooking/Services/RoomService.cs" />
-      <File FileName="HotelBooking/Controllers/RoomController.cs" />
-      <File FileName="HotelBooking/Services/HotelService.cs" Line="21" Column="10" />
-      <File FileName="HotelBooking/Controllers/HotelController.cs" />
-      <File FileName="HotelBooking/Program.cs" />
-      <File FileName="HotelBooking/Data/DbInitializer.cs" />
-      <File FileName="HotelBooking/Data/ViewModels/HotelVM.cs" />
-      <File FileName="HotelBooking/Services/UserService.cs" />
+      <File FileName="HotelBooking/Controllers/BookingController.cs" Line="11" Column="16" />
+      <File FileName="HotelBooking/Controllers/HotelController.cs" Line="10" Column="1" />
+      <File FileName="HotelBooking/Controllers/LocationController.cs" Line="1" Column="1" />
+      <File FileName="HotelBooking/Controllers/RoomController.cs" Line="1" Column="1" />
+      <File FileName="HotelBooking/Controllers/UserController.cs" Line="22" Column="50" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="HotelBooking" expanded="True" selected="True">
+          <Node name="HotelBooking" expanded="True">
             <Node name="HotelBooking" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" />
-              </Node>
+              <Node name="Dependencies" expanded="True" />
               <Node name="Controllers" expanded="True" />
-              <Node name="Data" expanded="True">
-                <Node name="ViewModels" expanded="True" />
-              </Node>
+              <Node name="Data" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="Properties" expanded="True" />
               <Node name="Services" expanded="True" />
               <Node name="appsettings.json" expanded="True" />
             </Node>
@@ -44,6 +30,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.HotelBooking PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

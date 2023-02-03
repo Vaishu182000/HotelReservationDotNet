@@ -1,0 +1,806 @@
+2023-02-01 10:39:02.298 +05:30  INF  Application is shutting down...
+2023-02-01 11:28:45.066 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-02-01 11:28:45.184 +05:30  INF  Now listening on: http://localhost:5250
+2023-02-01 11:28:45.185 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-02-01 11:28:45.186 +05:30  INF  Hosting environment: Development
+2023-02-01 11:28:45.186 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-02-01 11:28:51.288 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/index.html - -
+2023-02-01 11:28:51.382 +05:30  WRN  Failed to determine the https port for redirect.
+2023-02-01 11:28:51.386 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/index.html - - - 404 0 - 100.1965ms
+2023-02-01 11:28:55.882 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/index.html - -
+2023-02-01 11:28:55.888 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/index.html - - - 404 0 - 5.6930ms
+2023-02-01 11:29:05.566 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/index.html - -
+2023-02-01 11:29:05.696 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/index.html - - - 200 - text/html;charset=utf-8 129.6949ms
+2023-02-01 11:29:05.762 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger-ui.css - -
+2023-02-01 11:29:05.763 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger-ui-bundle.js - -
+2023-02-01 11:29:05.775 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger-ui-standalone-preset.js - -
+2023-02-01 11:29:05.787 +05:30  INF  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-02-01 11:29:05.787 +05:30  INF  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-02-01 11:29:05.787 +05:30  INF  Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-02-01 11:29:05.790 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 15.2988ms
+2023-02-01 11:29:05.790 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger-ui.css - - - 200 143943 text/css 28.0227ms
+2023-02-01 11:29:05.790 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger-ui-bundle.js - - - 200 1096145 text/javascript 26.7771ms
+2023-02-01 11:29:06.260 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/v1/swagger.json - -
+2023-02-01 11:29:06.422 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/favicon-32x32.png - -
+2023-02-01 11:29:06.422 +05:30  INF  Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-02-01 11:29:06.422 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/favicon-32x32.png - - - 200 628 image/png 0.7842ms
+2023-02-01 11:29:06.471 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 210.9311ms
+2023-02-01 11:30:00.970 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/User/UserLogin application/json 71
+2023-02-01 11:30:00.981 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-02-01 11:30:01.034 +05:30  INF  Route matched with {action = "UserLogin", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserLogin(HotelBooking.Data.ViewModels.UserLoginVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-02-01 11:30:07.338 +05:30  INF  Executed DbCommand (416ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-02-01 11:30:07.458 +05:30  INF  User Login Successfull! You can find the Available Locations
+2023-02-01 11:30:07.588 +05:30  INF  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIwZWI0OWJmNi01Y2M4LTRhZGYtYjU2MC0wMDcxMzUzZjViODIiLCJpYXQiOiIwMS8wMi8yMDIzIDY6MDA6MDcgQU0iLCJVc2VySWQiOiIzIiwiVXNlck5hbWUiOiJWYWlzaG5hdmkgUyIsIlVzZXJFbWFpbCI6InZhaXNobmF2aXNAcHJlc2lkaW8uY29tIiwiUGFzc3dvcmQiOiJWbUZwYzJncU1USXoiLCJleHAiOjE2NzUyMzE4MDcsImlzcyI6IkpXVEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSldUU2VydmljZVBvc3RtYW5DbGllbnQifQ.mAqqUD10e35bjSlgw5DCgT8VfuIfE_AgHaDaiDnhM-Y
+2023-02-01 11:30:07.930 +05:30  INF  Executed DbCommand (333ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+2023-02-01 11:30:07.946 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType6`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[HotelBooking.Models.Location, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-02-01 11:30:07.958 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserLogin (HotelBooking) in 6918.3172ms
+2023-02-01 11:30:07.958 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-02-01 11:30:07.968 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/User/UserLogin application/json 71 - 200 - application/json;+charset=utf-8 6997.8023ms
+2023-02-01 11:30:35.235 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 11:30:35.337 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 11:30:35.340 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-02-01 11:30:35.761 +05:30  INF  Executed DbCommand (238ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-02-01 11:30:36.068 +05:30  INF  Executed DbCommand (234ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userId] = @__p_0
+2023-02-01 11:30:36.397 +05:30  INF  Executed DbCommand (319ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelId] = @__p_0
+2023-02-01 11:30:36.908 +05:30  INF  Executed DbCommand (290ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-02-01 11:30:40.977 +05:30  INF  Email Sent Successfully
+2023-02-01 11:30:40.977 +05:30  INF  Created Booking Successfully! An Email has been sent with Detailed Information
+2023-02-01 11:30:40.978 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-01 11:30:40.978 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 5637.8178ms
+2023-02-01 11:30:40.978 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 11:30:40.979 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 200 - text/plain;+charset=utf-8 5744.4431ms
+2023-02-01 12:01:15.979 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 12:01:16.114 +05:30  INF  Failed to validate the token.Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 6:10:07 AM', Current time: '01/02/2023 6:31:16 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+
+2023-02-01 12:01:16.197 +05:30  INF  Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 6:10:07 AM', Current time: '01/02/2023 6:31:16 AM'.
+2023-02-01 12:01:16.229 +05:30  INF  Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-02-01 12:01:16.260 +05:30  INF  AuthenticationScheme: Bearer was challenged.
+2023-02-01 12:01:16.262 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 401 0 - 291.7628ms
+2023-02-01 12:01:22.724 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/User/UserLogin application/json 71
+2023-02-01 12:01:22.732 +05:30  INF  Failed to validate the token.Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 6:10:07 AM', Current time: '01/02/2023 6:31:22 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+
+2023-02-01 12:01:22.733 +05:30  INF  Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 6:10:07 AM', Current time: '01/02/2023 6:31:22 AM'.
+2023-02-01 12:01:22.736 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-02-01 12:01:22.747 +05:30  INF  Route matched with {action = "UserLogin", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserLogin(HotelBooking.Data.ViewModels.UserLoginVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-02-01 12:01:24.813 +05:30  INF  Executed DbCommand (252ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-02-01 12:01:24.817 +05:30  INF  User Login Successfull! You can find the Available Locations
+2023-02-01 12:01:24.819 +05:30  INF  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI5MDIwNjkxMC05NDAyLTRjNzctYjdiMC01ZDY4Y2U1NWJhODQiLCJpYXQiOiIwMS8wMi8yMDIzIDY6MzE6MjQgQU0iLCJVc2VySWQiOiIzIiwiVXNlck5hbWUiOiJWYWlzaG5hdmkgUyIsIlVzZXJFbWFpbCI6InZhaXNobmF2aXNAcHJlc2lkaW8uY29tIiwiUGFzc3dvcmQiOiJWbUZwYzJncU1USXoiLCJleHAiOjE2NzUyMzM2ODQsImlzcyI6IkpXVEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSldUU2VydmljZVBvc3RtYW5DbGllbnQifQ.oJQFplId3LdL4ykRhxH_KirynUsKUlE9mS7j1X-IYHY
+2023-02-01 12:01:25.071 +05:30  INF  Executed DbCommand (250ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+2023-02-01 12:01:25.075 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType6`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[HotelBooking.Models.Location, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-02-01 12:01:25.079 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserLogin (HotelBooking) in 2330.7442ms
+2023-02-01 12:01:25.079 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-02-01 12:01:25.080 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/User/UserLogin application/json 71 - 200 - application/json;+charset=utf-8 2356.0775ms
+2023-02-01 12:01:39.793 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 12:01:39.798 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 12:01:39.798 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-02-01 12:01:40.066 +05:30  INF  Executed DbCommand (250ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-02-01 12:01:40.402 +05:30  INF  Executed DbCommand (322ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userId] = @__p_0
+2023-02-01 12:01:40.709 +05:30  INF  Executed DbCommand (306ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelId] = @__p_0
+2023-02-01 12:01:41.096 +05:30  INF  Executed DbCommand (365ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-02-01 12:01:42.695 +05:30  INF  Email Sent Successfully
+2023-02-01 12:01:42.695 +05:30  INF  Created Booking Successfully! An Email has been sent with Detailed Information
+2023-02-01 12:01:42.695 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-01 12:01:42.696 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 2897.1038ms
+2023-02-01 12:01:42.696 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 12:01:42.696 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 200 - text/plain;+charset=utf-8 2903.1948ms
+2023-02-01 12:02:38.964 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 12:02:38.966 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 12:02:38.972 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-02-01 12:02:39.384 +05:30  INF  Executed DbCommand (391ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-02-01 12:02:39.637 +05:30  INF  Executed DbCommand (252ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userId] = @__p_0
+2023-02-01 12:02:39.907 +05:30  INF  Executed DbCommand (266ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelId] = @__p_0
+2023-02-01 12:02:40.304 +05:30  INF  Executed DbCommand (396ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-02-01 12:02:40.769 +05:30  INF  Email Sent Successfully
+2023-02-01 12:02:40.769 +05:30  INF  Created Booking Successfully! An Email has been sent with Detailed Information
+2023-02-01 12:02:40.769 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-01 12:02:40.769 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 1796.9194ms
+2023-02-01 12:02:40.769 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 12:02:40.770 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 200 - text/plain;+charset=utf-8 1804.9857ms
+2023-02-01 12:05:16.918 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 12:05:16.937 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 12:05:16.940 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-02-01 12:05:17.225 +05:30  INF  Executed DbCommand (251ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-02-01 12:05:17.488 +05:30  INF  Executed DbCommand (250ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userId] = @__p_0
+2023-02-01 12:05:17.795 +05:30  INF  Executed DbCommand (303ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelId] = @__p_0
+2023-02-01 12:05:18.105 +05:30  INF  Executed DbCommand (307ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-02-01 12:05:19.561 +05:30  INF  Email Sent Successfully
+2023-02-01 12:05:19.561 +05:30  INF  Created Booking Successfully! An Email has been sent with Detailed Information
+2023-02-01 12:05:19.562 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-01 12:05:19.563 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 2622.1248ms
+2023-02-01 12:05:19.563 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 12:05:19.563 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 200 - text/plain;+charset=utf-8 2647.2989ms
+2023-02-01 12:07:56.867 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 12:07:56.872 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 12:07:56.880 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-02-01 12:07:57.153 +05:30  INF  Executed DbCommand (250ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-02-01 12:07:57.410 +05:30  INF  Executed DbCommand (250ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userId] = @__p_0
+2023-02-01 12:07:57.667 +05:30  INF  Executed DbCommand (253ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelId] = @__p_0
+2023-02-01 12:07:57.975 +05:30  INF  Executed DbCommand (294ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-02-01 12:07:59.262 +05:30  INF  Email Sent Successfully
+2023-02-01 12:07:59.262 +05:30  INF  Created Booking Successfully! An Email has been sent with Detailed Information
+2023-02-01 12:07:59.263 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-01 12:07:59.263 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 2381.2816ms
+2023-02-01 12:07:59.263 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 12:07:59.263 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 200 - text/plain;+charset=utf-8 2396.8229ms
+2023-02-01 12:10:31.345 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 12:10:31.357 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 12:10:31.363 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-02-01 12:10:31.751 +05:30  INF  Executed DbCommand (351ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-02-01 12:10:32.007 +05:30  INF  Executed DbCommand (249ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userId] = @__p_0
+2023-02-01 12:10:32.264 +05:30  INF  Executed DbCommand (249ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelId] = @__p_0
+2023-02-01 12:10:32.549 +05:30  INF  Executed DbCommand (275ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-02-01 12:10:33.859 +05:30  INF  Email Sent Successfully
+2023-02-01 12:10:33.859 +05:30  INF  Created Booking Successfully! An Email has been sent with Detailed Information
+2023-02-01 12:10:33.860 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-01 12:10:33.860 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 2497.0812ms
+2023-02-01 12:10:33.861 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 12:10:33.862 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 200 - text/plain;+charset=utf-8 2518.7133ms
+2023-02-01 12:26:27.044 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 12:26:27.102 +05:30  INF  Failed to validate the token.Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 6:41:24 AM', Current time: '01/02/2023 6:56:27 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+
+2023-02-01 12:26:27.126 +05:30  INF  Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 6:41:24 AM', Current time: '01/02/2023 6:56:27 AM'.
+2023-02-01 12:26:27.131 +05:30  INF  Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-02-01 12:26:27.139 +05:30  INF  AuthenticationScheme: Bearer was challenged.
+2023-02-01 12:26:27.139 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 401 0 - 97.9066ms
+2023-02-01 12:26:32.733 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/User/UserLogin application/json 71
+2023-02-01 12:26:32.739 +05:30  INF  Failed to validate the token.Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 6:41:24 AM', Current time: '01/02/2023 6:56:32 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+
+2023-02-01 12:26:32.739 +05:30  INF  Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 6:41:24 AM', Current time: '01/02/2023 6:56:32 AM'.
+2023-02-01 12:26:32.742 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-02-01 12:26:32.757 +05:30  INF  Route matched with {action = "UserLogin", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserLogin(HotelBooking.Data.ViewModels.UserLoginVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-02-01 12:26:35.268 +05:30  INF  Executed DbCommand (243ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-02-01 12:26:35.273 +05:30  INF  User Login Successfull! You can find the Available Locations
+2023-02-01 12:26:35.277 +05:30  INF  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIwYTJlNWI4Yy1mZWNkLTQwZDEtOGQzMS01MzEzMmQxYmQ4YjIiLCJpYXQiOiIwMS8wMi8yMDIzIDY6NTY6MzUgQU0iLCJVc2VySWQiOiIzIiwiVXNlck5hbWUiOiJWYWlzaG5hdmkgUyIsIlVzZXJFbWFpbCI6InZhaXNobmF2aXNAcHJlc2lkaW8uY29tIiwiUGFzc3dvcmQiOiJWbUZwYzJncU1USXoiLCJleHAiOjE2NzUyMzUxOTUsImlzcyI6IkpXVEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSldUU2VydmljZVBvc3RtYW5DbGllbnQifQ.WwxHD-R3X0BFZAWJySS8PoDnCY2Jx7oiaxVQQVJ8Z-0
+2023-02-01 12:26:35.534 +05:30  INF  Executed DbCommand (256ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+2023-02-01 12:26:35.538 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType6`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[HotelBooking.Models.Location, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-02-01 12:26:35.551 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserLogin (HotelBooking) in 2794.2685ms
+2023-02-01 12:26:35.551 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-02-01 12:26:35.552 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/User/UserLogin application/json 71 - 200 - application/json;+charset=utf-8 2818.2229ms
+2023-02-01 12:26:51.192 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 12:26:51.194 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 12:26:51.196 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-02-01 12:26:51.466 +05:30  INF  Executed DbCommand (242ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-02-01 12:26:51.711 +05:30  INF  Executed DbCommand (238ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userId] = @__p_0
+2023-02-01 12:26:52.017 +05:30  INF  Executed DbCommand (304ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelId] = @__p_0
+2023-02-01 12:26:52.324 +05:30  INF  Executed DbCommand (301ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-02-01 12:26:53.789 +05:30  INF  Email Sent Successfully
+2023-02-01 12:26:53.790 +05:30  INF  Created Booking Successfully! An Email has been sent with Detailed Information
+2023-02-01 12:26:53.790 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-01 12:26:53.790 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 2594.079ms
+2023-02-01 12:26:53.790 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 12:26:53.790 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 200 - text/plain;+charset=utf-8 2598.7154ms
+2023-02-01 12:29:21.677 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 12:29:21.680 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 12:29:21.684 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-02-01 12:29:21.985 +05:30  INF  Executed DbCommand (286ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-02-01 12:29:22.235 +05:30  INF  Executed DbCommand (247ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userId] = @__p_0
+2023-02-01 12:29:22.480 +05:30  INF  Executed DbCommand (242ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelId] = @__p_0
+2023-02-01 12:29:22.745 +05:30  INF  Executed DbCommand (263ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-02-01 12:29:23.958 +05:30  INF  Email Sent Successfully
+2023-02-01 12:29:23.958 +05:30  INF  Created Booking Successfully! An Email has been sent with Detailed Information
+2023-02-01 12:29:23.958 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-01 12:29:23.958 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 2272.8196ms
+2023-02-01 12:29:23.958 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 12:29:23.958 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 200 - text/plain;+charset=utf-8 2281.3437ms
+2023-02-01 12:32:58.966 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 12:32:58.970 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 12:32:58.973 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-02-01 12:33:01.018 +05:30  INF  Executed DbCommand (267ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-02-01 12:33:01.287 +05:30  INF  Executed DbCommand (267ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userId] = @__p_0
+2023-02-01 12:33:01.556 +05:30  INF  Executed DbCommand (267ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelId] = @__p_0
+2023-02-01 12:33:01.875 +05:30  INF  Executed DbCommand (316ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-02-01 12:33:03.615 +05:30  INF  Email Sent Successfully
+2023-02-01 12:33:03.616 +05:30  INF  Created Booking Successfully! An Email has been sent with Detailed Information
+2023-02-01 12:33:03.616 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-01 12:33:03.616 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 4643.2142ms
+2023-02-01 12:33:03.616 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 12:33:03.617 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 200 - text/plain;+charset=utf-8 4650.6145ms
+2023-02-01 12:36:32.069 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 12:36:32.079 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 12:36:32.084 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-02-01 12:36:32.358 +05:30  INF  Executed DbCommand (253ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-02-01 12:36:32.715 +05:30  INF  Executed DbCommand (355ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userId] = @__p_0
+2023-02-01 12:36:32.990 +05:30  INF  Executed DbCommand (270ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelId] = @__p_0
+2023-02-01 12:36:33.255 +05:30  INF  Executed DbCommand (258ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-02-01 12:36:34.668 +05:30  INF  Email Sent Successfully
+2023-02-01 12:36:34.668 +05:30  INF  Created Booking Successfully! An Email has been sent with Detailed Information
+2023-02-01 12:36:34.669 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-01 12:36:34.669 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 2584.5389ms
+2023-02-01 12:36:34.669 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 12:36:34.669 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 200 - text/plain;+charset=utf-8 2600.7192ms
+2023-02-01 12:43:51.265 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 12:43:51.275 +05:30  INF  Failed to validate the token.Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 7:06:35 AM', Current time: '01/02/2023 7:13:51 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+
+2023-02-01 12:43:51.282 +05:30  INF  Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 7:06:35 AM', Current time: '01/02/2023 7:13:51 AM'.
+2023-02-01 12:43:51.286 +05:30  INF  Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-02-01 12:43:51.286 +05:30  INF  AuthenticationScheme: Bearer was challenged.
+2023-02-01 12:43:51.287 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 401 0 - 23.1054ms
+2023-02-01 12:43:58.794 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/User/UserLogin application/json 71
+2023-02-01 12:43:58.818 +05:30  INF  Failed to validate the token.Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 7:06:35 AM', Current time: '01/02/2023 7:13:58 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+
+2023-02-01 12:43:58.820 +05:30  INF  Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 7:06:35 AM', Current time: '01/02/2023 7:13:58 AM'.
+2023-02-01 12:43:58.821 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-02-01 12:43:58.839 +05:30  INF  Route matched with {action = "UserLogin", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserLogin(HotelBooking.Data.ViewModels.UserLoginVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-02-01 12:44:01.166 +05:30  INF  Executed DbCommand (247ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-02-01 12:44:01.168 +05:30  INF  User Login Successfull! You can find the Available Locations
+2023-02-01 12:44:01.171 +05:30  INF  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI1ODZjM2E1NC1hYmQzLTQ3MmYtYjZlZi0xNzE2ZTg1MzgwZGYiLCJpYXQiOiIwMS8wMi8yMDIzIDc6MTQ6MDEgQU0iLCJVc2VySWQiOiIzIiwiVXNlck5hbWUiOiJWYWlzaG5hdmkgUyIsIlVzZXJFbWFpbCI6InZhaXNobmF2aXNAcHJlc2lkaW8uY29tIiwiUGFzc3dvcmQiOiJWbUZwYzJncU1USXoiLCJleHAiOjE2NzUyMzYyNDEsImlzcyI6IkpXVEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSldUU2VydmljZVBvc3RtYW5DbGllbnQifQ.5eRsnvBFNfg95MR14s-8yiC92hS8fc-d1l31B7prDZ8
+2023-02-01 12:44:01.531 +05:30  INF  Executed DbCommand (360ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+2023-02-01 12:44:01.533 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType6`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[HotelBooking.Models.Location, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-02-01 12:44:01.540 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserLogin (HotelBooking) in 2700.051ms
+2023-02-01 12:44:01.540 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-02-01 12:44:01.540 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/User/UserLogin application/json 71 - 200 - application/json;+charset=utf-8 2747.0451ms
+2023-02-01 12:44:21.459 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 12:44:21.467 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 12:44:21.473 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-02-01 12:44:21.805 +05:30  INF  Executed DbCommand (315ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-02-01 12:44:22.064 +05:30  INF  Executed DbCommand (254ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userId] = @__p_0
+2023-02-01 12:44:22.420 +05:30  INF  Executed DbCommand (354ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelId] = @__p_0
+2023-02-01 12:44:22.701 +05:30  INF  Executed DbCommand (270ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-02-01 12:44:24.788 +05:30  INF  Email Sent Successfully
+2023-02-01 12:44:24.788 +05:30  INF  Created Booking Successfully! An Email has been sent with Detailed Information
+2023-02-01 12:44:24.789 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-01 12:44:24.789 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 3316.0127ms
+2023-02-01 12:44:24.789 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 12:44:24.789 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 200 - text/plain;+charset=utf-8 3329.5845ms
+2023-02-01 12:51:04.294 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 12:51:04.304 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 12:51:04.305 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-02-01 12:51:06.262 +05:30  INF  Executed DbCommand (257ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-02-01 12:51:06.524 +05:30  INF  Executed DbCommand (258ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userId] = @__p_0
+2023-02-01 12:51:06.783 +05:30  INF  Executed DbCommand (256ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelId] = @__p_0
+2023-02-01 12:51:07.064 +05:30  INF  Executed DbCommand (275ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-02-01 12:51:08.391 +05:30  INF  Email Sent Successfully
+2023-02-01 12:51:08.391 +05:30  INF  Created Booking Successfully! An Email has been sent with Detailed Information
+2023-02-01 12:51:08.392 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-01 12:51:08.394 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 4088.2729ms
+2023-02-01 12:51:08.394 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 12:51:08.395 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 200 - text/plain;+charset=utf-8 4101.5999ms
+2023-02-01 13:36:19.841 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 13:36:19.860 +05:30  INF  Failed to validate the token.Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 7:24:01 AM', Current time: '01/02/2023 8:06:19 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+
+2023-02-01 13:36:19.868 +05:30  INF  Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 7:24:01 AM', Current time: '01/02/2023 8:06:19 AM'.
+2023-02-01 13:36:19.874 +05:30  INF  Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-02-01 13:36:19.876 +05:30  INF  AuthenticationScheme: Bearer was challenged.
+2023-02-01 13:36:19.878 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 401 0 - 37.8469ms
+2023-02-01 13:36:24.491 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/User/UserLogin application/json 71
+2023-02-01 13:36:24.501 +05:30  INF  Failed to validate the token.Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 7:24:01 AM', Current time: '01/02/2023 8:06:24 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+
+2023-02-01 13:36:24.506 +05:30  INF  Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 7:24:01 AM', Current time: '01/02/2023 8:06:24 AM'.
+2023-02-01 13:36:24.507 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-02-01 13:36:24.510 +05:30  INF  Route matched with {action = "UserLogin", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserLogin(HotelBooking.Data.ViewModels.UserLoginVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-02-01 13:36:26.942 +05:30  INF  Executed DbCommand (452ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-02-01 13:36:26.947 +05:30  INF  User Login Successfull! You can find the Available Locations
+2023-02-01 13:36:26.949 +05:30  INF  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJmZWEyZWQ5MS0xOWUxLTQwYTQtODc3My1mZjU3NGQyNmY5NWQiLCJpYXQiOiIwMS8wMi8yMDIzIDg6MDY6MjYgQU0iLCJVc2VySWQiOiIzIiwiVXNlck5hbWUiOiJWYWlzaG5hdmkgUyIsIlVzZXJFbWFpbCI6InZhaXNobmF2aXNAcHJlc2lkaW8uY29tIiwiUGFzc3dvcmQiOiJWbUZwYzJncU1USXoiLCJleHAiOjE2NzUyMzkzODYsImlzcyI6IkpXVEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSldUU2VydmljZVBvc3RtYW5DbGllbnQifQ.WUC6QVWeVboBiqJFtPgC_QXSjxjH3NHwYhz1IpV9CCs
+2023-02-01 13:36:27.205 +05:30  INF  Executed DbCommand (255ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+2023-02-01 13:36:27.211 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType6`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[HotelBooking.Models.Location, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-02-01 13:36:27.214 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserLogin (HotelBooking) in 2702.5219ms
+2023-02-01 13:36:27.214 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-02-01 13:36:27.214 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/User/UserLogin application/json 71 - 200 - application/json;+charset=utf-8 2723.5011ms
+2023-02-01 13:36:41.951 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 13:36:41.952 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 13:36:41.953 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-02-01 13:36:42.453 +05:30  INF  Executed DbCommand (496ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-02-01 13:36:42.924 +05:30  INF  Executed DbCommand (466ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userId] = @__p_0
+2023-02-01 13:36:43.195 +05:30  INF  Executed DbCommand (268ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelId] = @__p_0
+2023-02-01 13:36:43.462 +05:30  INF  Executed DbCommand (261ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-02-01 13:36:45.522 +05:30  INF  Email Sent Successfully
+2023-02-01 13:36:45.523 +05:30  INF  Created Booking Successfully! An Email has been sent with Detailed Information
+2023-02-01 13:36:45.523 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-01 13:36:45.523 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 3570.8761ms
+2023-02-01 13:36:45.524 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 13:36:45.524 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 200 - text/plain;+charset=utf-8 3572.9066ms
+2023-02-01 13:43:53.136 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 13:43:53.168 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 13:43:53.187 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-02-01 13:43:55.079 +05:30  INF  Executed DbCommand (231ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-02-01 13:43:55.554 +05:30  INF  Executed DbCommand (470ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userId] = @__p_0
+2023-02-01 13:43:55.824 +05:30  INF  Executed DbCommand (269ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelId] = @__p_0
+2023-02-01 13:43:56.074 +05:30  INF  Executed DbCommand (246ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-02-01 13:43:56.991 +05:30  INF  Email Sent Successfully
+2023-02-01 13:43:56.991 +05:30  INF  Created Booking Successfully! An Email has been sent with Detailed Information
+2023-02-01 13:43:56.992 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-01 13:43:56.993 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 3806.0992ms
+2023-02-01 13:43:56.994 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 13:43:56.995 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 200 - text/plain;+charset=utf-8 3864.0838ms
+2023-02-01 13:48:03.933 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 13:48:03.969 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 13:48:03.974 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-02-01 13:48:04.339 +05:30  INF  Executed DbCommand (325ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-02-01 13:48:04.642 +05:30  INF  Executed DbCommand (291ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userId] = @__p_0
+2023-02-01 13:48:05.163 +05:30  INF  Executed DbCommand (517ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelId] = @__p_0
+2023-02-01 13:48:05.602 +05:30  INF  Executed DbCommand (427ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-02-01 13:48:07.057 +05:30  INF  Email Sent Successfully
+2023-02-01 13:48:07.057 +05:30  INF  Created Booking Successfully! An Email has been sent with Detailed Information
+2023-02-01 13:48:07.058 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-01 13:48:07.062 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 3080.8974ms
+2023-02-01 13:48:07.063 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 13:48:07.064 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 200 - text/plain;+charset=utf-8 3134.8758ms
+2023-02-01 14:32:37.144 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 14:32:37.190 +05:30  INF  Failed to validate the token.Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 8:16:26 AM', Current time: '01/02/2023 9:02:37 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+
+2023-02-01 14:32:37.213 +05:30  INF  Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 8:16:26 AM', Current time: '01/02/2023 9:02:37 AM'.
+2023-02-01 14:32:37.217 +05:30  INF  Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-02-01 14:32:37.223 +05:30  INF  AuthenticationScheme: Bearer was challenged.
+2023-02-01 14:32:37.226 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 401 0 - 82.3167ms
+2023-02-01 14:32:40.795 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/User/UserLogin application/json 71
+2023-02-01 14:32:40.801 +05:30  INF  Failed to validate the token.Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 8:16:26 AM', Current time: '01/02/2023 9:02:40 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+
+2023-02-01 14:32:40.805 +05:30  INF  Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 8:16:26 AM', Current time: '01/02/2023 9:02:40 AM'.
+2023-02-01 14:32:40.807 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-02-01 14:32:40.837 +05:30  INF  Route matched with {action = "UserLogin", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserLogin(HotelBooking.Data.ViewModels.UserLoginVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-02-01 14:32:43.291 +05:30  INF  Executed DbCommand (250ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-02-01 14:32:43.296 +05:30  INF  User Login Successfull! You can find the Available Locations
+2023-02-01 14:32:43.301 +05:30  INF  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJhNjRlNmJjNy1kMTFlLTQ5OWUtYTQ3ZS1jMzk5MGVmZWJlZWMiLCJpYXQiOiIwMS8wMi8yMDIzIDk6MDI6NDMgQU0iLCJVc2VySWQiOiIzIiwiVXNlck5hbWUiOiJWYWlzaG5hdmkgUyIsIlVzZXJFbWFpbCI6InZhaXNobmF2aXNAcHJlc2lkaW8uY29tIiwiUGFzc3dvcmQiOiJWbUZwYzJncU1USXoiLCJleHAiOjE2NzUyNDI3NjMsImlzcyI6IkpXVEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSldUU2VydmljZVBvc3RtYW5DbGllbnQifQ.4GyyvlnBHcGtYvoZ2_jiHZqEc8xMRiM_WKYfV3OdfHQ
+2023-02-01 14:32:43.567 +05:30  INF  Executed DbCommand (264ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+2023-02-01 14:32:43.570 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType6`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[HotelBooking.Models.Location, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-02-01 14:32:43.585 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserLogin (HotelBooking) in 2747.7304ms
+2023-02-01 14:32:43.585 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-02-01 14:32:43.586 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/User/UserLogin application/json 71 - 200 - application/json;+charset=utf-8 2791.3597ms
+2023-02-01 14:33:00.444 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 14:33:00.449 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 14:33:00.452 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-02-01 14:33:01.068 +05:30  INF  Executed DbCommand (570ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-02-01 14:33:01.385 +05:30  INF  Executed DbCommand (310ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userId] = @__p_0
+2023-02-01 14:33:01.638 +05:30  INF  Executed DbCommand (249ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelId] = @__p_0
+2023-02-01 14:33:01.931 +05:30  INF  Executed DbCommand (276ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-02-01 14:33:01.965 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-01 14:33:01.965 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 1511.6453ms
+2023-02-01 14:33:01.965 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 14:33:01.966 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 200 - text/plain;+charset=utf-8 1521.0988ms
+2023-02-01 14:37:04.951 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 14:37:04.984 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 14:37:05.007 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-02-01 14:37:05.292 +05:30  INF  Executed DbCommand (246ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-02-01 14:37:05.700 +05:30  INF  Executed DbCommand (399ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userId] = @__p_0
+2023-02-01 14:37:05.955 +05:30  INF  Executed DbCommand (253ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelId] = @__p_0
+2023-02-01 14:37:06.249 +05:30  INF  Executed DbCommand (283ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-02-01 14:37:06.282 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-01 14:37:06.284 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 1276.5771ms
+2023-02-01 14:37:06.285 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 14:37:06.286 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 200 - text/plain;+charset=utf-8 1336.4498ms
+2023-02-01 14:41:20.098 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 14:41:20.147 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 14:41:20.151 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-02-01 14:41:20.501 +05:30  INF  Executed DbCommand (319ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-02-01 14:41:20.753 +05:30  INF  Executed DbCommand (245ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userId] = @__p_0
+2023-02-01 14:41:21.025 +05:30  INF  Executed DbCommand (271ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelId] = @__p_0
+2023-02-01 14:41:21.309 +05:30  INF  Executed DbCommand (272ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-02-01 14:41:21.317 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-01 14:41:21.319 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 1163.9162ms
+2023-02-01 14:41:21.319 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 14:41:21.319 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 200 - text/plain;+charset=utf-8 1226.2643ms
+2023-02-01 14:53:03.048 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 14:53:03.073 +05:30  INF  Failed to validate the token.Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 9:12:43 AM', Current time: '01/02/2023 9:23:03 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+
+2023-02-01 14:53:03.096 +05:30  INF  Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 9:12:43 AM', Current time: '01/02/2023 9:23:03 AM'.
+2023-02-01 14:53:03.105 +05:30  INF  Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-02-01 14:53:03.107 +05:30  INF  AuthenticationScheme: Bearer was challenged.
+2023-02-01 14:53:03.109 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 401 0 - 60.9490ms
+2023-02-01 14:53:15.583 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/User/UserLogin application/json 71
+2023-02-01 14:53:15.596 +05:30  INF  Failed to validate the token.Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 9:12:43 AM', Current time: '01/02/2023 9:23:15 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+
+2023-02-01 14:53:15.603 +05:30  INF  Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '01/02/2023 9:12:43 AM', Current time: '01/02/2023 9:23:15 AM'.
+2023-02-01 14:53:15.613 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-02-01 14:53:15.648 +05:30  INF  Route matched with {action = "UserLogin", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserLogin(HotelBooking.Data.ViewModels.UserLoginVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-02-01 14:53:18.184 +05:30  INF  Executed DbCommand (342ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-02-01 14:53:18.186 +05:30  INF  User Login Successfull! You can find the Available Locations
+2023-02-01 14:53:18.198 +05:30  INF  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI3NDdhMDA1NC05ZWJiLTRiYWItYTlmNy01ZDFlZTM5NGJlMjIiLCJpYXQiOiIwMS8wMi8yMDIzIDk6MjM6MTggQU0iLCJVc2VySWQiOiIzIiwiVXNlck5hbWUiOiJWYWlzaG5hdmkgUyIsIlVzZXJFbWFpbCI6InZhaXNobmF2aXNAcHJlc2lkaW8uY29tIiwiUGFzc3dvcmQiOiJWbUZwYzJncU1USXoiLCJleHAiOjE2NzUyNDM5OTgsImlzcyI6IkpXVEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSldUU2VydmljZVBvc3RtYW5DbGllbnQifQ.Fj_DZqpiq-dXPGF4DxlR4G4FQC6Qr5tCwa9bxXX98L0
+2023-02-01 14:53:18.503 +05:30  INF  Executed DbCommand (288ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+2023-02-01 14:53:18.504 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType6`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[HotelBooking.Models.Location, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-02-01 14:53:18.512 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserLogin (HotelBooking) in 2864.5619ms
+2023-02-01 14:53:18.513 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-02-01 14:53:18.514 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/User/UserLogin application/json 71 - 200 - application/json;+charset=utf-8 2930.7406ms
+2023-02-01 14:53:38.749 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176
+2023-02-01 14:53:38.756 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 14:53:38.759 +05:30  INF  Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBooking(HotelBooking.Data.ViewModels.BookingVM) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-02-01 14:53:39.152 +05:30  INF  Executed DbCommand (374ms) [Parameters=[@__booking_roomId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roomId], [r].[HotelId], [r].[roomCapacity], [r].[roomImage], [r].[roomName], [r].[roomRate]
+FROM [Room] AS [r]
+WHERE [r].[roomId] = @__booking_roomId_0
+2023-02-01 14:53:39.446 +05:30  INF  Executed DbCommand (290ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userId] = @__p_0
+2023-02-01 14:53:39.818 +05:30  INF  Executed DbCommand (369ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[hotelId], [h].[LocationId], [h].[hotelName], [h].[noOfRooms]
+FROM [Hotel] AS [h]
+WHERE [h].[hotelId] = @__p_0
+2023-02-01 14:53:40.222 +05:30  INF  Executed DbCommand (395ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Booking] ([RoomId], [UserId], [checkInTime], [checkOutTime], [noOfPersons], [paid])
+OUTPUT INSERTED.[bookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-02-01 14:53:40.246 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-01 14:53:40.246 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking) in 1486.2375ms
+2023-02-01 14:53:40.246 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.CreateBooking (HotelBooking)'
+2023-02-01 14:53:40.246 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Booking/CreateBooking application/json 176 - 200 - text/plain;+charset=utf-8 1497.1614ms

@@ -12,11 +12,11 @@ namespace HotelBooking.Data
         {
         }
 
-        public DbSet<User> User { get; set; }
-        public DbSet<Location> Location { get; set; }
-        public DbSet<Hotel> Hotel { get; set; }
-        public DbSet<Room> Room { get; set; }
-        public DbSet<Booking> Booking { get; set; }
+        public virtual DbSet<User> User { get; set; }
+        public virtual DbSet<Location> Location { get; set; }
+        public virtual DbSet<Hotel> Hotel { get; set; }
+        public virtual DbSet<Room> Room { get; set; }
+        public virtual DbSet<Booking> Booking { get; set; }
     }
 }
 
