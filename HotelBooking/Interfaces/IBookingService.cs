@@ -3,7 +3,7 @@ using HotelBooking.Models;
 
 namespace HotelBooking.Interfaces;
 
-public interface IBookingInterface
+public interface IBookingService
 {
     public bool CreateBooking(BookingVM booking);
     public IQueryable<Booking> BookingHistory(string userEmail);

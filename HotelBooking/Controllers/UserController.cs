@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using HotelBooking.Data;
 using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
+using HotelBooking.Interfaces;
 using HotelBooking.Models;
 using HotelBooking.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -18,10 +19,10 @@ namespace HotelBooking.Controllers
     [Route("[Controller]")]
     public class UserController : ControllerBase
     {
-        private UserService _userService;
-        private LocationService _locationService;
+        private IUserService _userService;
+        private ILocationService _locationService;
         private readonly ILogger<UserController> _logger;
-        public UserController(UserService userService, LocationService locationService, ILogger<UserController> logger)
+        public UserController(IUserService userService, ILocationService locationService, ILogger<UserController> logger)
         {
             _userService = userService;
             _locationService = locationService;

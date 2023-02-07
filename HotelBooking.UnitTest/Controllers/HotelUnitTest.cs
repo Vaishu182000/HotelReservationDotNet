@@ -1,5 +1,6 @@
 using HotelBooking.Controllers;
 using HotelBooking.Data.ViewModels;
+using HotelBooking.Interfaces;
 using HotelBooking.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -17,10 +18,12 @@ public class HotelListDTO
 public class HotelUnitTest
 {
     private readonly Mock<ILogger<HotelController>> logger;
+    private readonly Mock<IHotelService> hotelService;
 
     public HotelUnitTest()
     {
         logger = new Mock<ILogger<HotelController>>();
+        hotelService = new Mock<IHotelService>();
     }
 
     [Fact]
@@ -28,13 +31,10 @@ public class HotelUnitTest
     {
         //arrange
         var hotelList = AddHotelData();
-        
-        Mock<HotelService> hotelServiceSubject = new Mock<HotelService>();
-        hotelServiceSubject.CallBase = true;
 
-        hotelServiceSubject.Setup(x => x.AddHotel(hotelList[0]))
+        hotelService.Setup(x => x.AddHotel(hotelList[0]))
             .Returns(true);
-        var hotelController = new HotelController(hotelServiceSubject.Object, logger.Object);
+        var hotelController = new HotelController(hotelService.Object, logger.Object);
         
         //act
         var hotelResult = hotelController.CreateHotel(hotelList[0]);
@@ -59,13 +59,10 @@ public class HotelUnitTest
     //             hotels = hotels
     //         },
     //     };
-    //
-    //     Mock<HotelService> hotelServiceSubject = new Mock<HotelService>();
-    //     hotelServiceSubject.CallBase = true;
     //     
-    //     hotelServiceSubject.Setup(x => x.HotelListByLocation("Salem"))
+    //     hotelService.Setup(x => x.HotelListByLocation("Salem"))
     //         .Returns(hotels);
-    //     var hotelController = new HotelController(hotelServiceSubject.Object, logger.Object);
+    //     var hotelController = new HotelController(hotelService.Object, logger.Object);
     //     
     //     //act
     //     var hotelResult = hotelController.HotelList("Salem");
@@ -73,7 +70,7 @@ public class HotelUnitTest
     //     var result = OkHotelResult.Value as HotelListDTO;
     //
     //     //assert
-    //     Assert.Equal(hotelListDtos[0], OkHotelResult.Value);
+    //     Assert.Equal(hotelListDtos[0], result);
     // }
 
     private List<HotelVM> AddHotelData()

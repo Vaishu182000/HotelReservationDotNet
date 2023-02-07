@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
+using HotelBooking.Interfaces;
 using HotelBooking.Models;
 using HotelBooking.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -16,9 +17,9 @@ namespace HotelBooking.Controllers
     [Route("[Controller]")]
     public class HotelController : ControllerBase
     {
-        private HotelService _hotelService;
+        private IHotelService _hotelService;
         private readonly ILogger<HotelController> _logger;
-        public HotelController(HotelService hotelService, ILogger<HotelController> logger)
+        public HotelController(IHotelService hotelService, ILogger<HotelController> logger)
         {
             _hotelService = hotelService;
             _logger = logger;

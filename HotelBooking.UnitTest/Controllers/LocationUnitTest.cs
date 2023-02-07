@@ -13,10 +13,12 @@ namespace HotelBooking.UnitTest;
 public class LocationUnitTest
 {
     private readonly Mock<ILogger<LocationController>> logger;
+    private readonly Mock<ILocationService> locationService;
 
     public LocationUnitTest()
     {
         logger = new Mock<ILogger<LocationController>>();
+        locationService = new Mock<ILocationService>();
     }
 
     [Fact]
@@ -24,13 +26,10 @@ public class LocationUnitTest
     {
         //arrange
         var locationList = AddLocationData();
-        
-        Mock<LocationService> locationServiceSubject = new Mock<LocationService>();
-        locationServiceSubject.CallBase = true;
 
-        locationServiceSubject.Setup(x => x.CreateLocation(locationList[0]))
+        locationService.Setup(x => x.CreateLocation(locationList[0]))
             .Returns(true);
-        var locationController = new LocationController(locationServiceSubject.Object, logger.Object);
+        var locationController = new LocationController(locationService.Object, logger.Object);
         
         //act
         var locationResult = locationController.AddLocation(locationList[0]);
@@ -45,13 +44,10 @@ public class LocationUnitTest
     {
         //arrange
         var locationList = GetLocationsData();
-        
-        Mock<LocationService> locationServiceSubject = new Mock<LocationService>();
-        locationServiceSubject.CallBase = true;
 
-        locationServiceSubject.Setup(x => x.GetLocations())
+        locationService.Setup(x => x.GetLocations())
             .Returns(locationList);
-        var locationController = new LocationController(locationServiceSubject.Object, logger.Object);
+        var locationController = new LocationController(locationService.Object, logger.Object);
         
         //act
         var locationResult = locationController.GetLocations();

@@ -26,16 +26,10 @@ public class UserUnitTest
     {
         // arrange
         var userList = AddUsersData();
-        
-        Mock<UserService> userServiceSubject = new Mock<UserService>();
-        userServiceSubject.CallBase = true;
-        Mock<LocationService> locationServiceSubject = new Mock<LocationService>();
-        locationServiceSubject.CallBase = true;
 
-        userService.Setup(x => x.UserSignUp(userList[0])).Returns(true);
-        userServiceSubject.Setup(x => x.UserSignUp(userList[0]))
+        userService.Setup(x => x.UserSignUp(userList[0]))
             .Returns(true);
-        var userController = new UserController(userServiceSubject.Object, locationServiceSubject.Object, logger.Object);
+        var userController = new UserController(userService.Object, locationService.Object, logger.Object);
         
         //act
         var userResult = userController.UserSignUp(userList[0]);
@@ -50,15 +44,10 @@ public class UserUnitTest
     {
         //arrange
         var userList = UpdateUserData();
-        
-        Mock<UserService> userServiceSubject = new Mock<UserService>();
-        userServiceSubject.CallBase = true;
-        Mock<LocationService> locationServiceSubject = new Mock<LocationService>();
-        locationServiceSubject.CallBase = true;
 
-        userServiceSubject.Setup(x => x.changePassword(userList[0]))
+        userService.Setup(x => x.changePassword(userList[0]))
             .Returns(true);
-        var userController = new UserController(userServiceSubject.Object, locationServiceSubject.Object, logger.Object);
+        var userController = new UserController(userService.Object, locationService.Object, logger.Object);
 
         //act
         var userResult = userController.ForgotPassword(userList[0]);

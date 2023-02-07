@@ -1,5 +1,6 @@
 using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
+using HotelBooking.Interfaces;
 using HotelBooking.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -11,10 +12,10 @@ namespace HotelBooking.Controllers;
 [ApiController]
 public class BookingController : ControllerBase
 {
-    private BookingService _bookingService;
+    private IBookingService _bookingService;
     private readonly ILogger<BookingController> _logger;
 
-    public BookingController(BookingService bookingService, ILogger<BookingController> logger)
+    public BookingController(IBookingService bookingService, ILogger<BookingController> logger)
     {
         _bookingService = bookingService;
         _logger = logger;

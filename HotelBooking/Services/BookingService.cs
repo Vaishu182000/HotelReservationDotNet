@@ -9,12 +9,11 @@ using HotelBooking.Models;
 
 namespace HotelBooking.Services;
 
-public class BookingService : IBookingInterface
+public class BookingService : IBookingService
 {
     private DbInitializer _dbContext;
     private RoomService _roomService;
     private UserService _userService;
-    private EmailService _emailService;
     private readonly ILogger<BookingService> _logger;
     public readonly IMapper _mapper;
     public IConfiguration _configuration;
@@ -26,7 +25,6 @@ public class BookingService : IBookingInterface
         ILogger<BookingService> logger, 
         IMapper mapper, 
         IConfiguration configuration, 
-        EmailService emailService,
         ServiceBusService serviceBusService
         )
     {
@@ -36,7 +34,6 @@ public class BookingService : IBookingInterface
         _logger = logger;
         _mapper = mapper;
         _configuration = configuration;
-        _emailService = emailService;
         _serviceBusService = serviceBusService;
     }
 
@@ -57,16 +54,6 @@ public class BookingService : IBookingInterface
 
                 _serviceBusService.SendMessageAsync(_mappedBooking);
                 return true;
-                // if (_emailService.bookingEmail(hotel, _room, booking, user))
-                // {
-                //     _logger.LogInformation(SuccessResponse.AddBooking);
-                //     return true;   
-                // }
-                // else
-                // {
-                //     _logger.LogError(ErrorResponse.ErrorAddBooking);
-                //     return false;
-                // }
             }
             else
             {

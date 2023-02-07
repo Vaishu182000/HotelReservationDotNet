@@ -81,7 +81,6 @@ builder.Services.AddScoped<LocationService>();
 builder.Services.AddScoped<HotelService>();
 builder.Services.AddScoped<RoomService>();
 builder.Services.AddScoped<BookingService>();
-builder.Services.AddScoped<EmailService>();
 builder.Services.AddScoped<EncryptHelper>();
 builder.Services.AddScoped<StringSplitHelper>();
 builder.Services.AddScoped<ServiceBusService>();
