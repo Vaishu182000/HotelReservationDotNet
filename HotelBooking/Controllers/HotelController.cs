@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HotelBooking.Data;
 using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
 using HotelBooking.Interfaces;
@@ -59,11 +60,10 @@ namespace HotelBooking.Controllers
 
                 if (hotel != null)
                 {
-                    return Ok(new
-                    {
-                        SuccessResponse.HotelListBasedOnLocation,
-                        hotel
-                    });
+                    HotelResponseDTO responseDto = new HotelResponseDTO()
+                        { HotelListBasedOnLocation = SuccessResponse.HotelListBasedOnLocation, hotels = hotel };
+                    
+                    return Ok(responseDto);
                 }
                 else
                 {
@@ -85,13 +85,12 @@ namespace HotelBooking.Controllers
             {
                 var _hotelList = _hotelService.GetAllHotels();
 
+                GetAllHotelsResponseDTO responseDto = new GetAllHotelsResponseDTO()
+                    { GetHotel = SuccessResponse.GetHotel, hotelList = _hotelList };
+
                 if (_hotelList != null)
                 {
-                    return Ok(new
-                    {
-                        SuccessResponse.GetHotel,
-                        _hotelList
-                    });
+                    return Ok(responseDto);
                 }
                 else
                 {

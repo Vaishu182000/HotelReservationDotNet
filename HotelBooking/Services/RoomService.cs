@@ -1,4 +1,6 @@
 ﻿using System;
+using Amazon.S3;
+using Amazon.S3.Model;
 using AutoMapper;
 using Azure.Storage.Blobs;
 using HotelBooking.Data;
@@ -7,68 +9,56 @@ using HotelBooking.Data.ViewModels;
 using HotelBooking.Helpers;
 using HotelBooking.Interfaces;
 using HotelBooking.Models;
+using HotelBooking.S3;
 
 namespace HotelBooking.Services
 {
     public class RoomService : IRoomService
     {
         private DbInitializer _dbContext;
-        private HotelService _hotelService;
+        private IHotelService _hotelService;
         private readonly IMapper _mapper;
         private readonly string _storageConnectionString;
         private readonly string _storageContainerName;
         private readonly ILogger<RoomService> _logger;
         private StringSplitHelper _stringSplitHelper;
+        private IUploadToS3 _s3;
         public RoomService(DbInitializer dbContext,
-            HotelService hotelService,
+            IHotelService hotelService,
             IMapper mapper,
-            IConfiguration configuration,
             ILogger<RoomService> logger,
-            StringSplitHelper stringSplitHelper
+            StringSplitHelper stringSplitHelper,
+            IUploadToS3 s3
             )
         {
             _dbContext = dbContext;
             _hotelService = hotelService;
             _mapper = mapper;
             _logger = logger;
-            _storageConnectionString = configuration.GetValue<string>("BlobConnectionString");
-            _storageContainerName = configuration.GetValue<string>("BlobContainerName");
             _stringSplitHelper = stringSplitHelper;
+            _s3 = s3;
         }
 
-        public bool createRoom(RoomVM room)
+        public async Task<bool> createRoom(RoomVM room)
         {
             if (room == null) return false;
-
-            BlobContainerClient container = new BlobContainerClient(_storageConnectionString, _storageContainerName);
 
             try
             {
                 var fileName = room.roomName + Path.GetExtension(room.roomImage.FileName);
-                BlobClient client = container.GetBlobClient(fileName);
 
-                using (Stream? data = room.roomImage.OpenReadStream())
-                {
-                    client.Upload(data);
-                }
+                _logger.LogInformation(SuccessResponse.RoomBlob);
 
-                if (client.Uri.AbsoluteUri != null)
-                {
-                    _logger.LogInformation(SuccessResponse.RoomBlob);
+                var _mappedroom = _mapper.Map<Room>(room);
 
-                    var _mappedroom = _mapper.Map<Room>(room);
-                    _mappedroom.roomImage = client.Uri.AbsoluteUri;
-                    _dbContext.Room.Add(_mappedroom);
-                    _dbContext.SaveChanges();
-
-                    _logger.LogInformation(SuccessResponse.AddRoom);
-                    return true;
-                }
-                else
-                {
-                    _logger.LogError(ErrorResponse.ErrorAddRoom);
-                    return false;
-                }
+                var image = await _s3.Upload(room.roomImage, fileName);
+                
+                _mappedroom.roomImage = image;
+                _dbContext.Room.Add(_mappedroom);
+                _dbContext.SaveChanges();
+                
+                _logger.LogInformation(SuccessResponse.AddRoom);
+                return true;
             }
             catch (Exception e)
             {
@@ -110,61 +100,32 @@ namespace HotelBooking.Services
             return _room;
         }
 
-        public List<Room> CheckAvailability(CheckRoomAvailability availability)
+        public IQueryable<Room> CheckAvailability(CheckRoomAvailability availability)
         {
-            var checkInTime = _stringSplitHelper.splitDate(availability.checkInTime);
-            var checkOutTime = _stringSplitHelper.splitDate(availability.checkOutTime);
-            var noOfDays = Int16.Parse(checkOutTime[0]) - Int16.Parse(checkInTime[0]);
             var _hotel = _hotelService.GetHotelByHotelName(availability.hotelName);
-            var roomIds = new List<int>();
-
-            var _booking = _dbContext.Booking.ToList();
-            var roomList = new List<Room>();
-            if (_booking == null)
+            
+            var notAvailableRoomsList = from r in _dbContext.Room
+                where (r.HotelId == _hotel.hotelId)
+                from b in _dbContext.Booking
+                where (r.roomId == b.RoomId) &&
+                      (availability.checkInTime >= b.checkInTime && availability.checkInTime <= b.checkOutTime)
+                select r;
+            
+            if (notAvailableRoomsList.Count() != 0)
             {
-                var room = _dbContext.Room.Where(r => r.HotelId == _hotel.hotelId);
-                foreach (var iterate in room)
-                {
-                    roomList.Add(iterate);
-                }
+                var roomLeft = from rf in _dbContext.Room
+                    from r in notAvailableRoomsList
+                    where 0 != r.roomId.CompareTo(rf.roomId)
+                    select rf;
+                return roomLeft;
             }
             else
             {
-                foreach (var booking in _booking)
-                {
-                    var count = 0;
-                    var bookCheckIn = _stringSplitHelper.splitDate(booking.checkInTime);
-
-                    if (Int16.Parse(checkInTime[2]) - Int16.Parse(bookCheckIn[2]) > 0) count++;
-                    else if (Int16.Parse(checkInTime[1]) - Int16.Parse(bookCheckIn[1]) != 0) count++;
-                    else
-                    {
-                        var _diff = Int16.Parse(bookCheckIn[0]) - Int16.Parse(checkInTime[0]);
-                        if (_diff < 0) _diff *= -1;
-
-                        if (_diff > noOfDays)
-                        {
-                            count++;
-                        }
-                    }
-
-                    if (count > 0)
-                    {
-                        var room = _dbContext.Room.FirstOrDefault(r => r.roomId == booking.RoomId);
-                        if (room.HotelId == _hotel.hotelId && availability.noOfPersons <= room.roomCapacity)
-                        {
-                            roomIds.Add(room.roomId);
-                            roomList.Add(room);
-                        }
-                    }
-                }
+                var roomLeft = from rf in _dbContext.Room
+                    where rf.HotelId == _hotel.hotelId
+                    select rf;
+                return roomLeft;
             }
-
-            foreach (var rooms in _dbContext.Room.Where(r => r.HotelId == _hotel.hotelId))
-            {
-                if (!roomIds.Contains(rooms.roomId) && availability.noOfPersons <= rooms.roomCapacity) roomList.Add(rooms);
-            }
-            return (roomList);
         }
     }
 }

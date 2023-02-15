@@ -1,9 +1,0 @@
-{
-  "profiles": {
-    "HotelBooking.EmailService": {
-      "commandName": "Project",
-      "commandLineArgs": "--port 7229",
-      "launchBrowser": false
-    }
-  }
-}

@@ -10,12 +10,12 @@ using ILogger = Serilog.ILogger;
 
 namespace HotelBooking.UnitTest;
 
-public class LocationUnitTest
+public class LocationControllerIsExecuting
 {
     private readonly Mock<ILogger<LocationController>> logger;
     private readonly Mock<ILocationService> locationService;
 
-    public LocationUnitTest()
+    public LocationControllerIsExecuting()
     {
         logger = new Mock<ILogger<LocationController>>();
         locationService = new Mock<ILocationService>();

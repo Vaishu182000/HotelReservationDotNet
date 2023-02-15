@@ -1,3 +1,4 @@
+using HotelBooking.Data;
 using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
 using HotelBooking.Interfaces;
@@ -52,11 +53,8 @@ public class BookingController : ControllerBase
         try
         {
             var _history = _bookingService.BookingHistory(userEmail);
-            return Ok(new
-            {
-                SuccessResponse.BookingHistoryOfUser,
-                _history
-            });
+            BookingResponseDTO responseDto = new BookingResponseDTO(){message = SuccessResponse.BookingHistoryOfUser, bookingList = _history};
+            return Ok(responseDto);
         }
         catch (Exception e)
         {

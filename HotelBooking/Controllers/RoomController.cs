@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HotelBooking.Data;
 using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
 using HotelBooking.Interfaces;
@@ -33,7 +34,7 @@ namespace HotelBooking.Controllers
             {
                 var _result = _roomService.createRoom(room);
 
-                if (_result)
+                if (_result.Result)
                 {
                     return Ok(SuccessResponse.AddRoom);
                 }
@@ -59,13 +60,9 @@ namespace HotelBooking.Controllers
 
                 if (_roomList != null)
                 {
-                    // _roomList = _roomService.getLocationInList(_roomList);
-                    var message = $"The Rooms Available Under {hotelName}";
-                    return Ok(new
-                    {
-                        message,
-                        _roomList
-                    });
+                    RoomResponseDTO responseDto = new RoomResponseDTO()
+                        { message = $"The Rooms Available Under {hotelName}", roomList = _roomList };
+                    return Ok(responseDto);
                 }
                 else
                 {
@@ -81,17 +78,15 @@ namespace HotelBooking.Controllers
 
         [Route("[Action]")]
         [HttpPost]
-        public IActionResult CheckRoomAvailability(CheckRoomAvailability availability)
+        public ActionResult CheckRoomAvailability(CheckRoomAvailability availability)
         {
             try
             {
                 var _check = _roomService.CheckAvailability(availability);
                 _logger.LogInformation("Availability Checked Successfully");
-                return Ok(new
-                {
-                    SuccessResponse.CheckRoomAvailability,
-                    _check
-                });
+                RoomResponseDTO responseDto = new RoomResponseDTO()
+                    { message = SuccessResponse.CheckRoomAvailability, roomList = _check };
+                return Ok(responseDto);
             }
             catch (Exception e)
             {

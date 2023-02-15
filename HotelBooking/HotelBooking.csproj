@@ -11,6 +11,7 @@
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.103.7" />
     <PackageReference Include="Azure.Communication.Email" Version="1.0.0-beta.1" />
     <PackageReference Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.2.2" />
     <PackageReference Include="Azure.Identity" Version="1.9.0-beta.1" />
@@ -31,7 +32,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
-    <PackageReference Include="Serilog.AspNetCore" Version="6.1.1-dev-00293" />
+    <PackageReference Include="Serilog.AspNetCore" Version="6.1.1-dev-00295" />
   </ItemGroup>
 
   <ItemGroup>
@@ -50,5 +51,10 @@
     <Folder Include="Data\" />
     <Folder Include="Services\" />
     <Folder Include="Data\ViewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HotelBooking.Email\HotelBooking.Email.csproj" />
+    <ProjectReference Include="..\HotelBooking.S3\HotelBooking.S3.csproj" />
+    <ProjectReference Include="..\HotelBooking.SecretManager\HotelBooking.SecretManager.csproj" />
   </ItemGroup>
 </Project>

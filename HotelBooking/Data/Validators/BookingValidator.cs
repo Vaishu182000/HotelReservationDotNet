@@ -7,7 +7,7 @@ namespace HotelBooking.Data.Validators;
 public class BookingValidator : AbstractValidator<BookingVM>
 {
 
-    public BookingValidator(RoomService roomService, UserService userService)
+    public BookingValidator()
     {
         RuleFor(x => x.noOfPersons).NotEmpty().WithMessage("No of Persons Field Cannot be Empty");
         RuleFor(x => x.paid).NotEmpty().WithMessage("Paid Field Cannot be Empty");

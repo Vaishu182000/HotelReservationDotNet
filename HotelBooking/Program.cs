@@ -3,26 +3,24 @@ using System.Text;
 using Azure.Identity;
 using FluentValidation.AspNetCore;
 using HotelBooking.Data;
+using HotelBooking.Email;
 using HotelBooking.Helpers;
+using HotelBooking.Interfaces;
+using HotelBooking.S3;
+using HotelBooking.SecretManager.Interface;
+using HotelBooking.SecretManager.Services;
+using HotelBooking.SecretManager.Settings;
 using HotelBooking.Services;
-using Microsoft.ApplicationInsights.Extensibility;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Azure;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Configuration.AddAzureKeyVault(
-    new Uri($"https://{builder.Configuration["KeyVaultName"]}.vault.azure.net/"),
-    new DefaultAzureCredential());
-
 var logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
     .Enrich.FromLogContext()
-    .WriteTo.ApplicationInsights(new TelemetryConfiguration{ InstrumentationKey=builder.Configuration.GetValue<string>("InstrumentationKey") },TelemetryConverter.Traces)
     .CreateLogger();
 builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(logger);
@@ -75,26 +73,24 @@ builder.Services.AddSwaggerGen(c => {
     });
 });
 
-builder.Services.AddDbContext<DbInitializer>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("mssql")));
-builder.Services.AddScoped<UserService>();
-builder.Services.AddScoped<LocationService>();
-builder.Services.AddScoped<HotelService>();
-builder.Services.AddScoped<RoomService>();
-builder.Services.AddScoped<BookingService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ILocationService, LocationService>();
+builder.Services.AddScoped<IHotelService, HotelService>();
+builder.Services.AddScoped<IRoomService, RoomService>();
+builder.Services.AddScoped<IBookingService, BookingService>();
 builder.Services.AddScoped<EncryptHelper>();
 builder.Services.AddScoped<StringSplitHelper>();
-builder.Services.AddScoped<ServiceBusService>();
+builder.Services.AddScoped<IUploadToS3, UploadToS3>();
+builder.Services.AddScoped<ISendEmail, SendEmail>();
+builder.Services.AddScoped<IConfigSettings, ConfigSettings>();
+builder.Services.AddScoped<SecretManagerService>();
+builder.Services.AddDbContext<DbInitializer>();
 
 var app = builder.Build();
 app.UseAuthentication();
 // Configure the HTTP request pipeline.
 app.UseSwagger();
-app.UseSwaggerUI(
-    options =>
-    {
-        options.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
-        options.RoutePrefix = string.Empty;
-    });
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 

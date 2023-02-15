@@ -13,10 +13,10 @@ namespace HotelBooking.Services
     public class HotelService : IHotelService
     {
         private DbInitializer _dbContext;
-        private LocationService _locationService;
+        private ILocationService _locationService;
         public readonly IMapper _mapper;
         private readonly ILogger<HotelService> _logger;
-        public HotelService(DbInitializer dbContext, LocationService locationService, IMapper mapper, ILogger<HotelService> logger)
+        public HotelService(DbInitializer dbContext, ILocationService locationService, IMapper mapper, ILogger<HotelService> logger)
         {
             _dbContext = dbContext;
             _locationService = locationService;
@@ -79,10 +79,6 @@ namespace HotelBooking.Services
             try
             {
                 var _hotels = _dbContext.Hotel.ToList();
-                foreach (var hotel in _hotels)
-                {
-                    hotel.location = _dbContext.Location.Find(hotel.LocationId);
-                }
                 return _hotels;
             }
             catch (Exception e)

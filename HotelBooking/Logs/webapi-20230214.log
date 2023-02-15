@@ -1,0 +1,205 @@
+2023-02-14 12:05:15.793 +05:30  INF  Application is shutting down...
+2023-02-14 12:05:21.251 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-02-14 12:05:21.422 +05:30  INF  Now listening on: http://localhost:5250
+2023-02-14 12:05:21.424 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-02-14 12:05:21.424 +05:30  INF  Hosting environment: Development
+2023-02-14 12:05:21.424 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-02-14 12:05:22.048 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/index.html - -
+2023-02-14 12:05:22.956 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/index.html - - - 200 - text/html;charset=utf-8 909.9763ms
+2023-02-14 12:05:23.039 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/swagger-ui-bundle.js - -
+2023-02-14 12:05:23.082 +05:30  INF  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-02-14 12:05:23.087 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 47.3589ms
+2023-02-14 12:05:23.252 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/v1/swagger.json - -
+2023-02-14 12:05:23.431 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 178.7964ms
+2023-02-14 12:16:54.623 +05:30  INF  Application is shutting down...
+2023-02-14 12:17:07.209 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-02-14 12:17:07.656 +05:30  INF  Now listening on: http://localhost:5250
+2023-02-14 12:17:07.672 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-02-14 12:17:07.674 +05:30  INF  Hosting environment: Development
+2023-02-14 12:17:07.674 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-02-14 12:17:08.925 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/index.html - -
+2023-02-14 12:17:09.359 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/index.html - - - 200 - text/html;charset=utf-8 443.1048ms
+2023-02-14 12:17:09.656 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/v1/swagger.json - -
+2023-02-14 12:17:10.010 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 354.3216ms
+2023-02-14 12:51:07.129 +05:30  INF  Application is shutting down...
+2023-02-14 12:51:13.520 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-02-14 12:51:13.692 +05:30  INF  Now listening on: http://localhost:5250
+2023-02-14 12:51:13.694 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-02-14 12:51:13.694 +05:30  INF  Hosting environment: Development
+2023-02-14 12:51:13.694 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-02-14 12:51:14.042 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/index.html - -
+2023-02-14 12:51:14.264 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/index.html - - - 200 - text/html;charset=utf-8 228.5556ms
+2023-02-14 12:51:14.421 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/v1/swagger.json - -
+2023-02-14 12:51:14.608 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 186.9169ms
+2023-02-14 12:53:20.485 +05:30  INF  Application is shutting down...
+2023-02-14 12:53:23.039 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-02-14 12:53:23.187 +05:30  INF  Now listening on: http://localhost:5250
+2023-02-14 12:53:23.189 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-02-14 12:53:23.189 +05:30  INF  Hosting environment: Development
+2023-02-14 12:53:23.189 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-02-14 12:53:23.395 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/index.html - -
+2023-02-14 12:53:23.659 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/index.html - - - 200 - text/html;charset=utf-8 267.1083ms
+2023-02-14 12:53:23.816 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/v1/swagger.json - -
+2023-02-14 12:53:24.003 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 187.6260ms
+2023-02-14 12:54:09.949 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/Location/GetLocations - -
+2023-02-14 12:54:09.969 +05:30  WRN  Failed to determine the https port for redirect.
+2023-02-14 12:54:09.981 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.LocationController.GetLocations (HotelBooking)'
+2023-02-14 12:54:10.003 +05:30  INF  Route matched with {action = "GetLocations", controller = "Location"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetLocations() on controller HotelBooking.Controllers.LocationController (HotelBooking).
+2023-02-14 12:54:13.188 +05:30  INF  Executed action HotelBooking.Controllers.LocationController.GetLocations (HotelBooking) in 3177.5668ms
+2023-02-14 12:54:13.189 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.LocationController.GetLocations (HotelBooking)'
+2023-02-14 12:54:13.190 +05:30  ERR  An unhandled exception has occurred while executing the request.System.AggregateException: One or more errors occurred. (The security token included in the request is expired)
+ ---> Amazon.SecretsManager.AmazonSecretsManagerException: The security token included in the request is expired
+ ---> Amazon.Runtime.Internal.HttpErrorResponseException: Exception of type 'Amazon.Runtime.Internal.HttpErrorResponseException' was thrown.
+   at Amazon.Runtime.HttpWebRequestMessage.GetResponseAsync(CancellationToken cancellationToken)
+   at Amazon.Runtime.Internal.HttpHandler`1.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Unmarshaller.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleExceptionStream(IRequestContext requestContext, IWebResponseData httpErrorResponse, HttpErrorResponseException exception, Stream responseStream)
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleExceptionAsync(IExecutionContext executionContext, HttpErrorResponseException exception)
+   at Amazon.Runtime.Internal.ExceptionHandler`1.HandleAsync(IExecutionContext executionContext, Exception exception)
+   at Amazon.Runtime.Internal.ErrorHandler.ProcessExceptionAsync(IExecutionContext executionContext, Exception exception)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Signer.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.EndpointDiscoveryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.EndpointDiscoveryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at HotelBooking.SecretManager.Services.SecretManagerService.GetSecret() in /Users/presidio/Projects/HotelBooking/HotelBooking.SecretManager/Services/SecretManagerService.cs:line 28
+   at HotelBooking.SecretManager.Settings.ConfigSettings.Init() in /Users/presidio/Projects/HotelBooking/HotelBooking.SecretManager/Settings/ConfigSettings.cs:line 19
+   at HotelBooking.SecretManager.Settings.ConfigSettings..ctor() in /Users/presidio/Projects/HotelBooking/HotelBooking.SecretManager/Settings/ConfigSettings.cs:line 15
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.ConstructorInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method3(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
+2023-02-14 12:54:13.255 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/Location/GetLocations - - - 500 - text/plain;+charset=utf-8 3307.3696ms
+2023-02-14 12:55:04.434 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/Hotel/HotelList?location=1 - -
+2023-02-14 12:55:04.437 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.HotelController.HotelList (HotelBooking)'
+2023-02-14 12:55:04.466 +05:30  INF  Route matched with {action = "HotelList", controller = "Hotel"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult HotelList(Int32) on controller HotelBooking.Controllers.HotelController (HotelBooking).
+2023-02-14 12:55:05.630 +05:30  INF  Executed action HotelBooking.Controllers.HotelController.HotelList (HotelBooking) in 1163.7075ms
+2023-02-14 12:55:05.631 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.HotelController.HotelList (HotelBooking)'
+2023-02-14 12:55:05.631 +05:30  ERR  An unhandled exception has occurred while executing the request.System.AggregateException: One or more errors occurred. (The security token included in the request is expired)
+ ---> Amazon.SecretsManager.AmazonSecretsManagerException: The security token included in the request is expired
+ ---> Amazon.Runtime.Internal.HttpErrorResponseException: Exception of type 'Amazon.Runtime.Internal.HttpErrorResponseException' was thrown.
+   at Amazon.Runtime.HttpWebRequestMessage.GetResponseAsync(CancellationToken cancellationToken)
+   at Amazon.Runtime.Internal.HttpHandler`1.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Unmarshaller.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleExceptionStream(IRequestContext requestContext, IWebResponseData httpErrorResponse, HttpErrorResponseException exception, Stream responseStream)
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleExceptionAsync(IExecutionContext executionContext, HttpErrorResponseException exception)
+   at Amazon.Runtime.Internal.ExceptionHandler`1.HandleAsync(IExecutionContext executionContext, Exception exception)
+   at Amazon.Runtime.Internal.ErrorHandler.ProcessExceptionAsync(IExecutionContext executionContext, Exception exception)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Signer.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.EndpointDiscoveryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.EndpointDiscoveryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at HotelBooking.SecretManager.Services.SecretManagerService.GetSecret() in /Users/presidio/Projects/HotelBooking/HotelBooking.SecretManager/Services/SecretManagerService.cs:line 28
+   at HotelBooking.SecretManager.Settings.ConfigSettings.Init() in /Users/presidio/Projects/HotelBooking/HotelBooking.SecretManager/Settings/ConfigSettings.cs:line 19
+   at HotelBooking.SecretManager.Settings.ConfigSettings..ctor() in /Users/presidio/Projects/HotelBooking/HotelBooking.SecretManager/Settings/ConfigSettings.cs:line 15
+   at InvokeStub_ConfigSettings..ctor(Object, Object, IntPtr*)
+   at System.Reflection.ConstructorInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method5(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
+2023-02-14 12:55:05.635 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/Hotel/HotelList?location=1 - - - 500 - text/plain;+charset=utf-8 1201.1466ms
+2023-02-14 14:09:01.535 +05:30  INF  Application is shutting down...
+2023-02-14 14:09:08.998 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-02-14 14:09:09.186 +05:30  INF  Now listening on: http://localhost:5250
+2023-02-14 14:09:09.188 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-02-14 14:09:09.188 +05:30  INF  Hosting environment: Development
+2023-02-14 14:09:09.188 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-02-14 14:09:10.272 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/index.html - -
+2023-02-14 14:09:10.782 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/index.html - - - 200 - text/html;charset=utf-8 520.2948ms
+2023-02-14 14:09:11.606 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/v1/swagger.json - -
+2023-02-14 14:09:11.807 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 200.7408ms
+2023-02-14 14:44:33.101 +05:30  INF  Application is shutting down...
+2023-02-14 14:44:41.193 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-02-14 14:44:41.379 +05:30  INF  Now listening on: http://localhost:5250
+2023-02-14 14:44:41.381 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-02-14 14:44:41.382 +05:30  INF  Hosting environment: Development
+2023-02-14 14:44:41.382 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-02-14 14:44:42.192 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/index.html - -
+2023-02-14 14:44:42.477 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/index.html - - - 200 - text/html;charset=utf-8 290.5517ms
+2023-02-14 14:44:42.901 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/v1/swagger.json - -
+2023-02-14 14:44:43.048 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 147.0657ms
+2023-02-14 14:46:38.025 +05:30  INF  Application is shutting down...

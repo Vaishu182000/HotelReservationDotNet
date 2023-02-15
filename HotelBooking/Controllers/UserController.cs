@@ -66,12 +66,10 @@ namespace HotelBooking.Controllers
                     _logger.LogInformation(jwt);
 
                     var _locations = _locationService.GetLocations();
-                    return Ok(new
-                    {
-                        SuccessResponse.UserLogin,
-                        _locations,
-                        jwt
-                    });
+                    UserResponseDTO responseDto = new UserResponseDTO()
+                        { UserLogin = SuccessResponse.UserLogin, jwt = jwt, Locations = _locations };
+
+                    return Ok(responseDto);
                 }
                 else return NotFound(ErrorResponse.ErrorUserLogin);
             }

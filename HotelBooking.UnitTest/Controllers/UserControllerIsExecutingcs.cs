@@ -1,6 +1,9 @@
 using HotelBooking.Controllers;
+using HotelBooking.Data;
+using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
 using HotelBooking.Interfaces;
+using HotelBooking.Models;
 using HotelBooking.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -8,13 +11,13 @@ using Moq;
 
 namespace HotelBooking.UnitTest;
 
-public class UserUnitTest
+public class UserControllerIsExecuting
 {
     private readonly Mock<IUserService> userService;
     private readonly Mock<ILocationService> locationService;
     private readonly Mock<ILogger<UserController>> logger;
 
-    public UserUnitTest()
+    public UserControllerIsExecuting()
     {
         userService = new Mock<IUserService>();
         locationService = new Mock<ILocationService>();
@@ -55,6 +58,32 @@ public class UserUnitTest
         
         //assert
         Assert.Equal("User Password Updated Successfully", OkUserResult.Value);
+    }
+
+    [Fact]
+    public void UserLogin()
+    {
+        //arrange
+        var userList = GetUserData();
+        var locationList = GetLocations();
+
+        userService.Setup(x => x.UserLogin(userList[0])).Returns("abcd");
+        locationService.Setup(x => x.GetLocations()).Returns(locationList);
+
+        UserResponseDTO responseDto = new UserResponseDTO();
+        responseDto.UserLogin = SuccessResponse.UserLogin;
+        responseDto.jwt = "abcd";
+        responseDto.Locations = locationList;
+        
+        var userController = new UserController(userService.Object, locationService.Object, logger.Object);
+        
+        //act
+        var userResult = userController.UserLogin(userList[0]);
+        var okUserResult = userResult as OkObjectResult;
+        var result = okUserResult.Value as UserResponseDTO;
+        
+        //assert
+        Assert.Equal(responseDto, result);
     }
     
     private List<UserVM> AddUsersData()
@@ -97,5 +126,22 @@ public class UserUnitTest
             },
         };
         return userData;
+    }
+
+    private List<Location> GetLocations()
+    {
+        return new List<Location>
+        {
+            new Location()
+            {
+                location = "Salem",
+                locationId = 1
+            },
+            new Location()
+            {
+                location = "Coimbatore",
+                locationId = 2
+            },
+        };
     }
 }

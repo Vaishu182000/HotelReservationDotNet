@@ -12,29 +12,20 @@ namespace HotelBooking.Services;
 public class BookingService : IBookingService
 {
     private DbInitializer _dbContext;
-    private RoomService _roomService;
-    private UserService _userService;
+    private IUserService _userService;
     private readonly ILogger<BookingService> _logger;
     public readonly IMapper _mapper;
-    public IConfiguration _configuration;
-    private ServiceBusService _serviceBusService;
 
     public BookingService(DbInitializer dbContext, 
-        RoomService roomService, 
-        UserService userService, 
+        IUserService userService, 
         ILogger<BookingService> logger, 
-        IMapper mapper, 
-        IConfiguration configuration, 
-        ServiceBusService serviceBusService
+        IMapper mapper
         )
     {
         _dbContext = dbContext;
-        _roomService = roomService;
         _userService = userService;
         _logger = logger;
         _mapper = mapper;
-        _configuration = configuration;
-        _serviceBusService = serviceBusService;
     }
 
     public bool CreateBooking(BookingVM booking)
@@ -46,13 +37,10 @@ public class BookingService : IBookingService
             if (_room.HotelId == booking.hotelId)
             {
                 var _mappedBooking = _mapper.Map<Booking>(booking);
-                var user = _dbContext.User.Find(booking.userId);
-                var hotel = _dbContext.Hotel.Find(booking.hotelId);
 
                 _dbContext.Booking.Add(_mappedBooking);
                 _dbContext.SaveChanges();
-
-                _serviceBusService.SendMessageAsync(_mappedBooking);
+                
                 return true;
             }
             else

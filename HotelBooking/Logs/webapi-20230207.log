@@ -1,0 +1,191 @@
+2023-02-07 14:08:52.272 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-02-07 14:08:52.418 +05:30  INF  Now listening on: http://localhost:5250
+2023-02-07 14:08:52.420 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-02-07 14:08:52.420 +05:30  INF  Hosting environment: Development
+2023-02-07 14:08:52.420 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-02-07 14:08:52.918 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/index.html - -
+2023-02-07 14:08:53.436 +05:30  WRN  Failed to determine the https port for redirect.
+2023-02-07 14:08:53.531 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/index.html - - - 404 0 - 617.4914ms
+2023-02-07 14:08:59.582 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/index.html - -
+2023-02-07 14:08:59.715 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/index.html - - - 200 - text/html;charset=utf-8 133.4163ms
+2023-02-07 14:08:59.748 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger-ui.css - -
+2023-02-07 14:08:59.755 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger-ui-bundle.js - -
+2023-02-07 14:08:59.776 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger-ui-standalone-preset.js - -
+2023-02-07 14:08:59.792 +05:30  INF  Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-02-07 14:08:59.792 +05:30  INF  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-02-07 14:08:59.792 +05:30  INF  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-02-07 14:08:59.798 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger-ui.css - - - 200 144929 text/css 49.7117ms
+2023-02-07 14:08:59.798 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger-ui-bundle.js - - - 200 1061536 text/javascript 42.7644ms
+2023-02-07 14:08:59.798 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 21.9470ms
+2023-02-07 14:08:59.983 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/v1/swagger.json - -
+2023-02-07 14:09:00.166 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 183.0986ms
+2023-02-07 14:21:40.268 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/User/UserSignUp application/json 125
+2023-02-07 14:21:40.344 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-02-07 14:21:40.440 +05:30  INF  Route matched with {action = "UserSignUp", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult UserSignUp(HotelBooking.Data.ViewModels.UserVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-02-07 14:21:40.457 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserSignUp (HotelBooking) in 5.9811ms
+2023-02-07 14:21:40.461 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-02-07 14:21:40.466 +05:30  ERR  An unhandled exception has occurred while executing the request.System.InvalidOperationException: Unable to resolve service for type 'HotelBooking.Interfaces.IUserService' while attempting to activate 'HotelBooking.Controllers.UserController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method3(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
+2023-02-07 14:21:40.582 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/User/UserSignUp application/json 125 - 500 - text/plain;+charset=utf-8 322.0449ms
+2023-02-07 14:22:29.622 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Location/AddLocation application/json 30
+2023-02-07 14:22:29.625 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.LocationController.AddLocation (HotelBooking)'
+2023-02-07 14:22:29.634 +05:30  INF  Route matched with {action = "AddLocation", controller = "Location"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddLocation(HotelBooking.Data.ViewModels.LocationVM) on controller HotelBooking.Controllers.LocationController (HotelBooking).
+2023-02-07 14:22:29.635 +05:30  INF  Executed action HotelBooking.Controllers.LocationController.AddLocation (HotelBooking) in 0.324ms
+2023-02-07 14:22:29.636 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.LocationController.AddLocation (HotelBooking)'
+2023-02-07 14:22:29.637 +05:30  ERR  An unhandled exception has occurred while executing the request.System.InvalidOperationException: Unable to resolve service for type 'HotelBooking.Interfaces.ILocationService' while attempting to activate 'HotelBooking.Controllers.LocationController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method5(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
+2023-02-07 14:22:29.641 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Location/AddLocation application/json 30 - 500 - text/plain;+charset=utf-8 19.9710ms
+2023-02-07 14:24:35.198 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Location/AddLocation application/json 30
+2023-02-07 14:24:35.204 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.LocationController.AddLocation (HotelBooking)'
+2023-02-07 14:24:35.210 +05:30  INF  Route matched with {action = "AddLocation", controller = "Location"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddLocation(HotelBooking.Data.ViewModels.LocationVM) on controller HotelBooking.Controllers.LocationController (HotelBooking).
+2023-02-07 14:24:35.211 +05:30  INF  Executed action HotelBooking.Controllers.LocationController.AddLocation (HotelBooking) in 0.6961ms
+2023-02-07 14:24:35.212 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.LocationController.AddLocation (HotelBooking)'
+2023-02-07 14:24:35.213 +05:30  ERR  An unhandled exception has occurred while executing the request.System.InvalidOperationException: Unable to resolve service for type 'HotelBooking.Interfaces.ILocationService' while attempting to activate 'HotelBooking.Controllers.LocationController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method7(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
+2023-02-07 14:24:35.219 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Location/AddLocation application/json 30 - 500 - text/plain;+charset=utf-8 22.3393ms
+2023-02-07 14:24:42.982 +05:30  INF  Application is shutting down...
+2023-02-07 15:02:17.218 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-02-07 15:02:17.459 +05:30  INF  Now listening on: http://localhost:5250
+2023-02-07 15:02:17.462 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-02-07 15:02:17.463 +05:30  INF  Hosting environment: Development
+2023-02-07 15:02:17.463 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-02-07 15:02:19.260 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/index.html - -
+2023-02-07 15:02:19.410 +05:30  WRN  Failed to determine the https port for redirect.
+2023-02-07 15:02:19.415 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/index.html - - - 404 0 - 160.8583ms
+2023-02-07 15:04:21.242 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/index.html - -
+2023-02-07 15:04:21.277 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/index.html - - - 404 0 - 38.5899ms
+2023-02-07 15:04:25.819 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/index.html - -
+2023-02-07 15:04:25.826 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/index.html - - - 404 0 - 6.2871ms
+2023-02-07 15:04:29.288 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/index.html - -
+2023-02-07 15:04:29.289 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/index.html - - - 404 0 - 1.2041ms
+2023-02-07 15:05:06.145 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/index.html - -
+2023-02-07 15:05:06.145 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/index.html - - - 404 0 - 0.7714ms
+2023-02-07 15:05:10.374 +05:30  INF  Application is shutting down...
+2023-02-07 15:05:22.540 +05:30  INF  User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-02-07 15:05:22.763 +05:30  INF  Now listening on: http://localhost:5250
+2023-02-07 15:05:22.766 +05:30  INF  Application started. Press Ctrl+C to shut down.
+2023-02-07 15:05:22.766 +05:30  INF  Hosting environment: Development
+2023-02-07 15:05:22.766 +05:30  INF  Content root path: /Users/presidio/Projects/HotelBooking/HotelBooking
+2023-02-07 15:05:23.232 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/index.html - -
+2023-02-07 15:05:23.561 +05:30  WRN  Failed to determine the https port for redirect.
+2023-02-07 15:05:23.573 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/index.html - - - 404 0 - 347.3419ms
+2023-02-07 15:05:30.063 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/index.html - -
+2023-02-07 15:05:30.296 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/index.html - - - 200 - text/html;charset=utf-8 233.2522ms
+2023-02-07 15:05:30.650 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/swagger/v1/swagger.json - -
+2023-02-07 15:05:30.891 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 240.2726ms
+2023-02-07 15:06:04.042 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/Location/AddLocation application/json 30
+2023-02-07 15:06:04.067 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.LocationController.AddLocation (HotelBooking)'
+2023-02-07 15:06:04.138 +05:30  INF  Route matched with {action = "AddLocation", controller = "Location"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddLocation(HotelBooking.Data.ViewModels.LocationVM) on controller HotelBooking.Controllers.LocationController (HotelBooking).
+2023-02-07 15:06:07.630 +05:30  INF  Executed DbCommand (177ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Location] ([location])
+OUTPUT INSERTED.[locationId]
+VALUES (@p0);
+2023-02-07 15:06:07.711 +05:30  INF  Location Added Successfully
+2023-02-07 15:06:07.720 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-07 15:06:07.729 +05:30  INF  Executed action HotelBooking.Controllers.LocationController.AddLocation (HotelBooking) in 3583.3441ms
+2023-02-07 15:06:07.729 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.LocationController.AddLocation (HotelBooking)'
+2023-02-07 15:06:07.744 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/Location/AddLocation application/json 30 - 200 - text/plain;+charset=utf-8 3702.7341ms
+2023-02-07 15:06:55.029 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/User/UserSignUp application/json 124
+2023-02-07 15:06:55.045 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-02-07 15:06:55.067 +05:30  INF  Route matched with {action = "UserSignUp", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult UserSignUp(HotelBooking.Data.ViewModels.UserVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-02-07 15:06:55.146 +05:30  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-02-07 15:06:55.159 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserSignUp (HotelBooking) in 91.0598ms
+2023-02-07 15:06:55.159 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-02-07 15:06:55.159 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/User/UserSignUp application/json 124 - 400 - application/problem+json;+charset=utf-8 131.4756ms
+2023-02-07 15:07:05.147 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/User/UserSignUp application/json 125
+2023-02-07 15:07:05.149 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-02-07 15:07:05.149 +05:30  INF  Route matched with {action = "UserSignUp", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult UserSignUp(HotelBooking.Data.ViewModels.UserVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-02-07 15:07:06.121 +05:30  INF  Executed DbCommand (41ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-02-07 15:07:06.191 +05:30  INF  Executed DbCommand (18ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [User] ([password], [phone], [userEmail], [userName])
+OUTPUT INSERTED.[userId]
+VALUES (@p0, @p1, @p2, @p3);
+2023-02-07 15:07:06.196 +05:30  INF  User Signed Up Successfully
+2023-02-07 15:07:06.196 +05:30  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-07 15:07:06.197 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserSignUp (HotelBooking) in 1047.1163ms
+2023-02-07 15:07:06.197 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserSignUp (HotelBooking)'
+2023-02-07 15:07:06.197 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/User/UserSignUp application/json 125 - 200 - text/plain;+charset=utf-8 1050.6654ms
+2023-02-07 15:07:46.470 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5250/User/UserLogin application/json 71
+2023-02-07 15:07:46.472 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-02-07 15:07:46.476 +05:30  INF  Route matched with {action = "UserLogin", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UserLogin(HotelBooking.Data.ViewModels.UserLoginVM) on controller HotelBooking.Controllers.UserController (HotelBooking).
+2023-02-07 15:07:46.553 +05:30  INF  Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-02-07 15:07:46.568 +05:30  INF  User Login Successfull! You can find the Available Locations
+2023-02-07 15:07:46.845 +05:30  INF  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI0YmVjZjdlOC05YTBiLTQ3ZTUtOGU5NC05OTM5ZTViNjcwZTciLCJpYXQiOiIwNy8wMi8yMDIzIDk6Mzc6NDYgQU0iLCJVc2VySWQiOiIxIiwiVXNlck5hbWUiOiJWYWlzaG5hdmkgUyIsIlVzZXJFbWFpbCI6InZhaXNobmF2aXNAcHJlc2lkaW8uY29tIiwiUGFzc3dvcmQiOiJWbUZwYzJncU1USXoiLCJleHAiOjE2NzU3NjMyNjYsImlzcyI6IkpXVEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSldUU2VydmljZVBvc3RtYW5DbGllbnQifQ.8-mSkwf-eiEiiwUD0mf5lmTXyZsrnZt3lrCSjnwFdiQ
+2023-02-07 15:07:46.867 +05:30  INF  Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[locationId], [l].[location]
+FROM [Location] AS [l]
+2023-02-07 15:07:46.873 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType5`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[HotelBooking.Models.Location, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-02-07 15:07:46.896 +05:30  INF  Executed action HotelBooking.Controllers.UserController.UserLogin (HotelBooking) in 419.2382ms
+2023-02-07 15:07:46.896 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.UserController.UserLogin (HotelBooking)'
+2023-02-07 15:07:46.896 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5250/User/UserLogin application/json 71 - 200 - application/json;+charset=utf-8 425.7542ms
+2023-02-07 15:08:15.114 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5250/Booking/BookingHistory?userEmail=vaishnavis%40presidio.com - -
+2023-02-07 15:08:15.219 +05:30  INF  Executing endpoint 'HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking)'
+2023-02-07 15:08:15.223 +05:30  INF  Route matched with {action = "BookingHistory", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult BookingHistory(System.String) on controller HotelBooking.Controllers.BookingController (HotelBooking).
+2023-02-07 15:08:15.257 +05:30  INF  Executed DbCommand (5ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[userId], [u].[password], [u].[phone], [u].[userEmail], [u].[userName]
+FROM [User] AS [u]
+WHERE [u].[userEmail] = @__email_0
+2023-02-07 15:08:15.260 +05:30  INF  Retrieved Booking Information of vaishnavis@presidio.com
+2023-02-07 15:08:15.261 +05:30  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Linq.IQueryable`1[[HotelBooking.Models.Booking, HotelBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Linq.Expressions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
+2023-02-07 15:08:15.319 +05:30  INF  Executed DbCommand (34ms) [Parameters=[@___user_userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[bookingId], [b].[RoomId], [b].[UserId], [b].[checkInTime], [b].[checkOutTime], [b].[noOfPersons], [b].[paid]
+FROM [Booking] AS [b]
+WHERE [b].[UserId] = @___user_userId_0
+2023-02-07 15:08:15.319 +05:30  INF  Executed action HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking) in 96.6979ms
+2023-02-07 15:08:15.319 +05:30  INF  Executed endpoint 'HotelBooking.Controllers.BookingController.BookingHistory (HotelBooking)'
+2023-02-07 15:08:15.320 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5250/Booking/BookingHistory?userEmail=vaishnavis%40presidio.com - - - 200 - application/json;+charset=utf-8 205.9535ms

@@ -7,11 +7,8 @@ namespace HotelBooking.Data.Validators;
 
 public class UserValidator : AbstractValidator<UserVM>
 {
-    private UserService _userService;
-
-    public UserValidator(UserService userService)
+    public UserValidator()
     {
-        _userService = userService;
         RuleFor(x => x.userName).NotEmpty().WithMessage("Should Not be empty");
         RuleFor(x => x.userEmail).EmailAddress().WithMessage("Must be Email");
         RuleFor(x => x.phone).Length(10).WithMessage("Phone Number must be 10 digits");
@@ -21,12 +18,5 @@ public class UserValidator : AbstractValidator<UserVM>
             .Matches(@"[a-z]+").WithMessage("Your password must contain at least one lowercase letter.")
             .Matches(@"[0-9]+").WithMessage("Your password must contain at least one number.")
             .Matches(@"[\!\?\*\.]+").WithMessage("Your password must contain at least one (!? *.).");
-    }
-
-    public bool checkUniqueEmail(string userEmail)
-    {
-        var _user = _userService.GetUserByUserEmail(userEmail);
-        if (_user == null) return true;
-        else return false;
     }
 }
