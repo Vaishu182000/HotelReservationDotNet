@@ -1,7 +1,10 @@
+using System.Collections.Generic;
 using AutoMapper;
 using Castle.Core.Logging;
 using HotelBooking.Data;
+using HotelBooking.Email;
 using HotelBooking.Models;
+using HotelBooking.SecretManager.Interface;
 using HotelBooking.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -16,6 +19,8 @@ public class BookingServiceIsExecuting
     private readonly Mock<DbInitializer> _mockContext;
     private readonly Mock<DbSet<Booking>> _mock;
     private readonly Mock<UserService> _userService;
+    private readonly Mock<IConfigSettings> _configSettings;
+    private readonly Mock<ISendEmail> _email;
 
     public BookingServiceIsExecuting()
     {
@@ -24,6 +29,8 @@ public class BookingServiceIsExecuting
         _mockContext = new Mock<DbInitializer>();
         _mock = new Mock<DbSet<Booking>>();
         _userService = new Mock<UserService>();
+        _email = new Mock<ISendEmail>();
+        _configSettings = new Mock<IConfigSettings>();
     }
 
     [Fact]
@@ -34,7 +41,7 @@ public class BookingServiceIsExecuting
         _mockContext.Setup(m => m.Booking).Returns(_mock.Object);
         
         //act
-        var service = new BookingService(_mockContext.Object, _userService.Object, _logger.Object, _mapper.Object);
+        var service = new BookingService(_mockContext.Object, _userService.Object, _logger.Object, _mapper.Object, _configSettings.Object, _email.Object);
         var result = service.deleteBooking(1);
         
         //assert

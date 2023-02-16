@@ -1,11 +1,16 @@
+using System;
+using System.Linq;
 using AutoMapper;
 using Azure.Communication.Email;
 using Azure.Communication.Email.Models;
 using HotelBooking.Data;
 using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
+using HotelBooking.Email;
 using HotelBooking.Interfaces;
 using HotelBooking.Models;
+using HotelBooking.SecretManager.Interface;
+using Microsoft.Extensions.Logging;
 
 namespace HotelBooking.Services;
 
@@ -15,17 +20,21 @@ public class BookingService : IBookingService
     private IUserService _userService;
     private readonly ILogger<BookingService> _logger;
     public readonly IMapper _mapper;
+    private readonly IConfigSettings _configSettings;
+    private ISendEmail _email;
 
     public BookingService(DbInitializer dbContext, 
         IUserService userService, 
         ILogger<BookingService> logger, 
-        IMapper mapper
+        IMapper mapper, IConfigSettings configSettings, ISendEmail email
         )
     {
         _dbContext = dbContext;
         _userService = userService;
         _logger = logger;
         _mapper = mapper;
+        _configSettings = configSettings;
+        _email = email;
     }
 
     public bool CreateBooking(BookingVM booking)
@@ -41,6 +50,7 @@ public class BookingService : IBookingService
                 _dbContext.Booking.Add(_mappedBooking);
                 _dbContext.SaveChanges();
                 
+                _email.Send(_configSettings.AwsAccessKey, _configSettings.AwsSecretKey,_configSettings.AwsSessionToken);
                 return true;
             }
             else

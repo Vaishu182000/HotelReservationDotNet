@@ -1,3 +1,5 @@
+using System;
+
 namespace HotelBooking.Data.ViewModels;
 
 public class BookingVM

@@ -20,9 +20,9 @@ public class ConfigSettings : IConfigSettings
         if (secretValues != null)
         {
             _dbSecret = secretValues["mssql"].ToString();
-            // _awsAccessKey = secretValues["AWSAccessKey"].ToString();
-            // _awsSecretKey = secretValues["AWSSecretKey"].ToString();
-            // _awsSessionToken = secretValues["AWSSessionToken"].ToString();
+            _awsAccessKey = secretValues["AWSAccessKey"].ToString();
+            _awsSecretKey = secretValues["AWSSecretKey"].ToString();
+            _awsSessionToken = secretValues["AWSSessionToken"].ToString();
         }
     }
     public string DbSecret
@@ -36,37 +36,37 @@ public class ConfigSettings : IConfigSettings
             _dbSecret = value;
         }
     }
-    // public string AwsAccessKey
-    // {
-    //     get
-    //     {
-    //         return _awsAccessKey;
-    //     }
-    //     set
-    //     {
-    //         _awsAccessKey = value;
-    //     }
-    // }
-    // public string AwsSecretKey
-    // {
-    //     get
-    //     {
-    //         return _awsSecretKey;
-    //     }
-    //     set
-    //     {
-    //         _awsSecretKey = value;
-    //     }
-    // }
-    // public string AwsSessionToken
-    // {
-    //     get
-    //     {
-    //         return _awsSessionToken;
-    //     }
-    //     set
-    //     {
-    //         _awsSessionToken = value;
-    //     }
-    // }
+    public string AwsAccessKey
+    {
+        get
+        {
+            return _awsAccessKey;
+        }
+        set
+        {
+            _awsAccessKey = value;
+        }
+    }
+    public string AwsSecretKey
+    {
+        get
+        {
+            return _awsSecretKey;
+        }
+        set
+        {
+            _awsSecretKey = value;
+        }
+    }
+    public string AwsSessionToken
+    {
+        get
+        {
+            return _awsSessionToken;
+        }
+        set
+        {
+            _awsSessionToken = value;
+        }
+    }
 }

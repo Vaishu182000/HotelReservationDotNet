@@ -1,9 +1,13 @@
+using System.Collections.Generic;
+using System.Linq;
 using AutoMapper;
 using Castle.Core.Logging;
 using HotelBooking.Data;
+using HotelBooking.Email;
 using HotelBooking.Helpers;
 using HotelBooking.Models;
 using HotelBooking.S3;
+using HotelBooking.SecretManager.Interface;
 using HotelBooking.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -20,6 +24,7 @@ public class RoomServiceIsExecuting
     private readonly Mock<HotelService> _hotelService;
     private readonly Mock<StringSplitHelper> _stringSplitHelper;
     private readonly Mock<IUploadToS3> _s3;
+    private readonly Mock<IConfigSettings> _configSettings;
 
     public RoomServiceIsExecuting()
     {
@@ -30,6 +35,7 @@ public class RoomServiceIsExecuting
         _hotelService = new Mock<HotelService>();
         _stringSplitHelper = new Mock<StringSplitHelper>();
         _s3 = new Mock<IUploadToS3>();
+        _configSettings = new Mock<IConfigSettings>();
     }
 
     [Fact]
@@ -47,7 +53,7 @@ public class RoomServiceIsExecuting
         
         //act
         var service = new RoomService(_mockContext.Object, _hotelService.Object, _mapper.Object, _logger.Object,
-            _stringSplitHelper.Object, _s3.Object);
+            _stringSplitHelper.Object, _s3.Object, _configSettings.Object);
         var rooms = service.GetRoomByRoomName("GRT1");
         
         //assert

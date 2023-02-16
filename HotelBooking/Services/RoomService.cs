@@ -1,4 +1,7 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 using Amazon.S3;
 using Amazon.S3.Model;
 using AutoMapper;
@@ -10,6 +13,8 @@ using HotelBooking.Helpers;
 using HotelBooking.Interfaces;
 using HotelBooking.Models;
 using HotelBooking.S3;
+using HotelBooking.SecretManager.Interface;
+using Microsoft.Extensions.Logging;
 
 namespace HotelBooking.Services
 {
@@ -23,12 +28,13 @@ namespace HotelBooking.Services
         private readonly ILogger<RoomService> _logger;
         private StringSplitHelper _stringSplitHelper;
         private IUploadToS3 _s3;
+        private readonly IConfigSettings _configSettings;
         public RoomService(DbInitializer dbContext,
             IHotelService hotelService,
             IMapper mapper,
             ILogger<RoomService> logger,
             StringSplitHelper stringSplitHelper,
-            IUploadToS3 s3
+            IUploadToS3 s3, IConfigSettings configSettings
             )
         {
             _dbContext = dbContext;
@@ -37,6 +43,7 @@ namespace HotelBooking.Services
             _logger = logger;
             _stringSplitHelper = stringSplitHelper;
             _s3 = s3;
+            _configSettings = configSettings;
         }
 
         public async Task<bool> createRoom(RoomVM room)
@@ -51,7 +58,8 @@ namespace HotelBooking.Services
 
                 var _mappedroom = _mapper.Map<Room>(room);
 
-                var image = await _s3.Upload(room.roomImage, fileName);
+                var image = await _s3.Upload(room.roomImage, fileName, _configSettings.AwsAccessKey, _configSettings.AwsSecretKey, 
+                    _configSettings.AwsSessionToken);
                 
                 _mappedroom.roomImage = image;
                 _dbContext.Room.Add(_mappedroom);

@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using AutoMapper;
 using HotelBooking.Data;
 using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
 using HotelBooking.Interfaces;
 using HotelBooking.Models;
+using Microsoft.Extensions.Logging;
 
 namespace HotelBooking.Services
 {

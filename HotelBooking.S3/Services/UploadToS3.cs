@@ -6,12 +6,8 @@ namespace HotelBooking.S3;
 
 public class UploadToS3 : IUploadToS3
 {
-    public async Task<string> Upload(IFormFile image, string filname)
+    public async Task<string> Upload(IFormFile image, string filname, string awsAccessKey, string awsSecretKey, string awsSessionToken)
     {
-        var awsAccessKey = "";
-        var awsSecretKey = "";
-        var awsSessionToken =
-            "";
         var client = new AmazonS3Client(awsAccessKey, awsSecretKey, awsSessionToken);
         using (var ms = new MemoryStream())
         {

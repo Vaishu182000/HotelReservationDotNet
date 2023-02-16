@@ -7,19 +7,19 @@ public interface IConfigSettings
         get;
         set;
     }
-    // string AwsAccessKey
-    // {
-    //     get;
-    //     set;
-    // }
-    // string AwsSecretKey
-    // {
-    //     get;
-    //     set;
-    // }
-    // string AwsSessionToken
-    // {
-    //     get;
-    //     set;
-    // }
+    string AwsAccessKey
+    {
+        get;
+        set;
+    }
+    string AwsSecretKey
+    {
+        get;
+        set;
+    }
+    string AwsSessionToken
+    {
+        get;
+        set;
+    }
 }

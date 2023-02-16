@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using HotelBooking.Data.ViewModels;
 using HotelBooking.Models;
 

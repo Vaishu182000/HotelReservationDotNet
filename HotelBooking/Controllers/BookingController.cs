@@ -1,10 +1,14 @@
+using System;
 using HotelBooking.Data;
 using HotelBooking.Data.Constants;
 using HotelBooking.Data.ViewModels;
+using HotelBooking.Email;
 using HotelBooking.Interfaces;
+using HotelBooking.SecretManager.Interface;
 using HotelBooking.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace HotelBooking.Controllers;
 

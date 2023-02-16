@@ -1,3 +1,5 @@
+using System.Linq;
+using System.Threading.Tasks;
 using HotelBooking.Data.ViewModels;
 using HotelBooking.Models;
 

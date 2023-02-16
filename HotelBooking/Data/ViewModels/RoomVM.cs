@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Http;
+
 namespace HotelBooking.Data.ViewModels;
 
 public class RoomVM

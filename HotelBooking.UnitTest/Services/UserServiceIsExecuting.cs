@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using AutoMapper;
 using HotelBooking.Data;
 using HotelBooking.Data.ViewModels;
@@ -20,7 +22,6 @@ public class UserServiceIsExecuting
     private readonly Mock<DbInitializer> _mockContext;
     private readonly Mock<IConfiguration> _config;
     private readonly Mock<EncryptHelper> _encrypt;
-    private readonly Mock<ISendEmail> _email;
 
     public UserServiceIsExecuting()
     {
@@ -30,7 +31,6 @@ public class UserServiceIsExecuting
         _mockContext = new Mock<DbInitializer>();
         _config = new Mock<IConfiguration>();
         _encrypt = new Mock<EncryptHelper>();
-        _email = new Mock<ISendEmail>();
     }
 
     [Fact]
@@ -47,7 +47,7 @@ public class UserServiceIsExecuting
         _mockContext.Setup(m => m.User).Returns(_mock.Object);
 
         var service = new UserService(_mockContext.Object, _mapper.Object, _logger.Object, _config.Object,
-            _encrypt.Object, _email.Object);
+            _encrypt.Object);
         var actual = service.UserSignUp(userList[0]);
         
         // _mock.Verify(m => m.Add(It.IsAny<User>()), Times.Once());
@@ -69,7 +69,7 @@ public class UserServiceIsExecuting
         _mockContext.Setup(c => c.User).Returns(_mock.Object);
 
         var service = new UserService(_mockContext.Object, _mapper.Object, _logger.Object, _config.Object,
-            _encrypt.Object, _email.Object);
+            _encrypt.Object);
         var user = service.GetUserByUserEmail("vaishnavis@presidio.com");
         
         Assert.Equal(1, user.userId);

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using AutoMapper;
 using HotelBooking.Data;
 using HotelBooking.Data.Constants;
@@ -11,6 +12,9 @@ using HotelBooking.Helpers;
 using HotelBooking.Interfaces;
 using Microsoft.IdentityModel.Tokens;
 using HotelBooking.Email;
+using HotelBooking.SecretManager.Interface;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 
 namespace HotelBooking.Services
 {
@@ -21,16 +25,14 @@ namespace HotelBooking.Services
         private readonly ILogger<UserService> _logger;
         public IConfiguration _configuration;
         private EncryptHelper _encryptHelper;
-        private ISendEmail _email;
 
-        public UserService(DbInitializer dbContext, IMapper mapper, ILogger<UserService> logger, IConfiguration config, EncryptHelper encryptHelper, ISendEmail email)
+        public UserService(DbInitializer dbContext, IMapper mapper, ILogger<UserService> logger, IConfiguration config, EncryptHelper encryptHelper)
         {
             _dbContext = dbContext;
             _mapper = mapper;
             _logger = logger;
             _configuration = config;
             _encryptHelper = encryptHelper;
-            _email = email;
         }
         public UserService() {}
 
@@ -52,7 +54,7 @@ namespace HotelBooking.Services
                         _dbContext.User.Add(_mappedUser);
                         _dbContext.SaveChanges();
                         _logger.LogInformation(SuccessResponse.UserSignUp);
-                        
+
                         return true;
                     }
                     else
@@ -129,8 +131,7 @@ namespace HotelBooking.Services
                         claims,
                         expires: DateTime.UtcNow.AddMinutes(10),
                         signingCredentials: signIn);
-
-                    _email.Send();
+                    
                     return new JwtSecurityTokenHandler().WriteToken(token);
                 }
                 else

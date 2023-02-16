@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 using System.Text;
 using Azure.Identity;
 using FluentValidation.AspNetCore;
@@ -12,6 +13,9 @@ using HotelBooking.SecretManager.Services;
 using HotelBooking.SecretManager.Settings;
 using HotelBooking.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;

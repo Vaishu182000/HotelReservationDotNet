@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using HotelBooking.Models;
 
 namespace HotelBooking.Data;
